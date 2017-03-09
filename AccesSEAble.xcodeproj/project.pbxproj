@@ -13,6 +13,7 @@
 		4966A02B1E718E4600C15572 /* AccesSEAble.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4966A0291E718E4600C15572 /* AccesSEAble.xcdatamodeld */; };
 		4966A02D1E718E4600C15572 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4966A02C1E718E4600C15572 /* Assets.xcassets */; };
 		4966A0301E718E4600C15572 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4966A02E1E718E4600C15572 /* LaunchScreen.storyboard */; };
+		4966A0391E719F2E00C15572 /* assets_accesseable in Resources */ = {isa = PBXBuildFile; fileRef = 4966A0381E719F2E00C15572 /* assets_accesseable */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4966A02C1E718E4600C15572 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4966A02F1E718E4600C15572 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4966A0311E718E4600C15572 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4966A0381E719F2E00C15572 /* assets_accesseable */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets_accesseable; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		4966A0211E718E4500C15572 /* AccesSEAble */ = {
 			isa = PBXGroup;
 			children = (
+				4966A0371E719DA200C15572 /* assets */,
 				4966A0221E718E4600C15572 /* AppDelegate.swift */,
 				4966A0241E718E4600C15572 /* ViewController.swift */,
 				4966A0261E718E4600C15572 /* Main.storyboard */,
@@ -65,6 +68,14 @@
 				4966A0291E718E4600C15572 /* AccesSEAble.xcdatamodeld */,
 			);
 			path = AccesSEAble;
+			sourceTree = "<group>";
+		};
+		4966A0371E719DA200C15572 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				4966A0381E719F2E00C15572 /* assets_accesseable */,
+			);
+			name = assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +140,7 @@
 				4966A0301E718E4600C15572 /* LaunchScreen.storyboard in Resources */,
 				4966A02D1E718E4600C15572 /* Assets.xcassets in Resources */,
 				4966A0281E718E4600C15572 /* Main.storyboard in Resources */,
+				4966A0391E719F2E00C15572 /* assets_accesseable in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
