@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4966A0231E718E4600C15572 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4966A0221E718E4600C15572 /* AppDelegate.swift */; };
-		4966A0251E718E4600C15572 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4966A0241E718E4600C15572 /* ViewController.swift */; };
+		4966A0251E718E4600C15572 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4966A0241E718E4600C15572 /* HomeViewController.swift */; };
 		4966A0281E718E4600C15572 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4966A0261E718E4600C15572 /* Main.storyboard */; };
 		4966A02B1E718E4600C15572 /* AccesSEAble.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4966A0291E718E4600C15572 /* AccesSEAble.xcdatamodeld */; };
 		4966A02D1E718E4600C15572 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4966A02C1E718E4600C15572 /* Assets.xcassets */; };
@@ -19,7 +19,7 @@
 /* Begin PBXFileReference section */
 		4966A01F1E718E4500C15572 /* AccesSEAble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccesSEAble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4966A0221E718E4600C15572 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4966A0241E718E4600C15572 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4966A0241E718E4600C15572 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4966A0271E718E4600C15572 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4966A02A1E718E4600C15572 /* AccesSEAble.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AccesSEAble.xcdatamodel; sourceTree = "<group>"; };
 		4966A02C1E718E4600C15572 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 			children = (
 				4966A0381E719F2E00C15572 /* assets_accesseable */,
 				4966A0221E718E4600C15572 /* AppDelegate.swift */,
-				4966A0241E718E4600C15572 /* ViewController.swift */,
+				4966A0241E718E4600C15572 /* HomeViewController.swift */,
 				4966A0261E718E4600C15572 /* Main.storyboard */,
 				4966A02C1E718E4600C15572 /* Assets.xcassets */,
 				4966A02E1E718E4600C15572 /* LaunchScreen.storyboard */,
@@ -144,7 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4966A02B1E718E4600C15572 /* AccesSEAble.xcdatamodeld in Sources */,
-				4966A0251E718E4600C15572 /* ViewController.swift in Sources */,
+				4966A0251E718E4600C15572 /* HomeViewController.swift in Sources */,
 				4966A0231E718E4600C15572 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
