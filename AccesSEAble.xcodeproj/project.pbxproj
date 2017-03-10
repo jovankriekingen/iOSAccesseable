@@ -58,7 +58,7 @@
 		4966A0211E718E4500C15572 /* AccesSEAble */ = {
 			isa = PBXGroup;
 			children = (
-				4966A0371E719DA200C15572 /* assets */,
+				4966A0381E719F2E00C15572 /* assets_accesseable */,
 				4966A0221E718E4600C15572 /* AppDelegate.swift */,
 				4966A0241E718E4600C15572 /* ViewController.swift */,
 				4966A0261E718E4600C15572 /* Main.storyboard */,
@@ -68,14 +68,6 @@
 				4966A0291E718E4600C15572 /* AccesSEAble.xcdatamodeld */,
 			);
 			path = AccesSEAble;
-			sourceTree = "<group>";
-		};
-		4966A0371E719DA200C15572 /* assets */ = {
-			isa = PBXGroup;
-			children = (
-				4966A0381E719F2E00C15572 /* assets_accesseable */,
-			);
-			name = assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +307,7 @@
 				4966A0361E718E4600C15572 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
