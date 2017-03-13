@@ -203,6 +203,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="kAF-am-CbR" kind="show" id="9Qf-Hg-krG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mVg-el-bLu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -269,13 +272,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Openbare toiletten" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7H-aS-cbK">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Openbare toiletten" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7H-aS-cbK">
                                         <rect key="frame" x="0.0" y="47.5" width="250" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bezienswaardigheden en musea" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zp9-AN-1PE">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Bezienswaardigheden en musea" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zp9-AN-1PE">
                                         <rect key="frame" x="0.0" y="94" width="250" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -345,6 +348,34 @@
             </objects>
             <point key="canvasLocation" x="2965.5999999999999" y="1187.8560719640182"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="JDg-9t-W9m">
+            <objects>
+                <tableViewController id="8Uw-ck-hzt" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="y3m-MV-dYW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="nkF-mP-NNw">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nkF-mP-NNw" id="7ty-M8-1oP">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8Uw-ck-hzt" id="92p-aH-8uM"/>
+                            <outlet property="delegate" destination="8Uw-ck-hzt" id="IMk-0q-1Ac"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R98-8f-tw2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2966" y="1883"/>
+        </scene>
         <!--MapVC-->
         <scene sceneID="Tic-mt-6Q3">
             <objects>
@@ -373,6 +404,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJR-CZ-FHX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3613.5999999999999" y="1187.8560719640182"/>
+        </scene>
+        <!--LanguageVC-->
+        <scene sceneID="e2V-Bq-z8a">
+            <objects>
+                <viewController title="LanguageVC" id="kAF-am-CbR" userLabel="LanguageVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dP3-61-zWD"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xa0-WS-dj3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jja-Oq-XHs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cOJ-Ab-RT2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3443" y="-573"/>
         </scene>
         <!--FavoritesVC-->
         <scene sceneID="hBO-Zb-VYB">
@@ -420,7 +469,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uik-Dt-x5s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4922" y="1021"/>
+            <point key="canvasLocation" x="5162" y="1188"/>
         </scene>
         <!--RecentVC-->
         <scene sceneID="fEw-KJ-hkv">
@@ -512,7 +561,7 @@ MAHO Wouter (version 1)</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YtC-eg-eDv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4260" y="1020.5397301349326"/>
+            <point key="canvasLocation" x="4290" y="1188"/>
         </scene>
         <!--SettingsVC-->
         <scene sceneID="QEh-DC-eqk">
@@ -527,13 +576,13 @@ MAHO Wouter (version 1)</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="center" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SUn-IU-XJC">
-                                <rect key="frame" x="16" y="72" width="343" height="539"/>
+                                <rect key="frame" x="16" y="72" width="343" height="290"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lY-iB-x3K">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="WDl-N4-37o"/>
+                                            <constraint firstAttribute="height" constant="50" id="t2v-yf-bow"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                         <state key="normal" title="Taal wijzigen">
@@ -544,7 +593,7 @@ MAHO Wouter (version 1)</string>
                                         <rect key="frame" x="0.0" y="60" width="343" height="50"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="PdA-R2-uPe"/>
+                                            <constraint firstAttribute="height" constant="50" id="M2p-es-7Yg"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                         <state key="normal" title="Nederlands">
@@ -555,7 +604,7 @@ MAHO Wouter (version 1)</string>
                                         <rect key="frame" x="0.0" y="120" width="343" height="50"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="6iV-Bz-5vl"/>
+                                            <constraint firstAttribute="height" constant="50" id="pN5-eZ-Y0b"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                         <state key="normal" title="Frans">
@@ -566,7 +615,7 @@ MAHO Wouter (version 1)</string>
                                         <rect key="frame" x="0.0" y="180" width="343" height="50"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="qgz-Vo-8Dn"/>
+                                            <constraint firstAttribute="height" constant="50" id="OQL-gt-95C"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                         <state key="normal" title="Engels">
@@ -574,8 +623,11 @@ MAHO Wouter (version 1)</string>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GaZ-43-foA">
-                                        <rect key="frame" x="0.0" y="240" width="343" height="299"/>
+                                        <rect key="frame" x="0.0" y="240" width="343" height="50"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="168-kJ-xl8"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                         <state key="normal" title="Update Data">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -587,16 +639,15 @@ MAHO Wouter (version 1)</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="SUn-IU-XJC" firstAttribute="leading" secondItem="Eg3-oY-VGx" secondAttribute="leadingMargin" id="27U-Zl-ZJ9"/>
-                            <constraint firstItem="SUn-IU-XJC" firstAttribute="centerY" secondItem="Eg3-oY-VGx" secondAttribute="centerY" constant="8" id="7Pd-qE-rGU"/>
                             <constraint firstItem="SUn-IU-XJC" firstAttribute="centerX" secondItem="Eg3-oY-VGx" secondAttribute="centerX" id="8Xf-6r-hwC"/>
-                            <constraint firstItem="SUn-IU-XJC" firstAttribute="top" secondItem="5k5-KS-3dV" secondAttribute="bottom" constant="8" id="Rzl-wB-SZG"/>
+                            <constraint firstItem="SUn-IU-XJC" firstAttribute="top" secondItem="5k5-KS-3dV" secondAttribute="bottom" constant="8" symbolic="YES" id="Rzl-wB-SZG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SUn-IU-XJC" secondAttribute="trailing" id="zfc-jL-YCL"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15X-HC-Mfa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3757.5999999999999" y="259.52023988005999"/>
+            <point key="canvasLocation" x="3647" y="214"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fWi-Qp-hnX">
