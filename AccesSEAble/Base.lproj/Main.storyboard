@@ -374,24 +374,6 @@
             </objects>
             <point key="canvasLocation" x="3613.5999999999999" y="1187.8560719640182"/>
         </scene>
-        <!--LanguageVC-->
-        <scene sceneID="e2V-Bq-z8a">
-            <objects>
-                <viewController title="LanguageVC" id="kAF-am-CbR" userLabel="LanguageVC" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="dP3-61-zWD"/>
-                        <viewControllerLayoutGuide type="bottom" id="Xa0-WS-dj3"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Jja-Oq-XHs">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cOJ-Ab-RT2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3758" y="-414"/>
-        </scene>
         <!--FavoritesVC-->
         <scene sceneID="hBO-Zb-VYB">
             <objects>
@@ -554,7 +536,7 @@ MAHO Wouter (version 1)</string>
                                             <constraint firstAttribute="height" constant="50" id="WDl-N4-37o"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                        <state key="normal" title="Change Language">
+                                        <state key="normal" title="Taal wijzigen">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
@@ -565,7 +547,7 @@ MAHO Wouter (version 1)</string>
                                             <constraint firstAttribute="height" constant="50" id="PdA-R2-uPe"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                        <state key="normal" title="Change Language">
+                                        <state key="normal" title="Nederlands">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
@@ -576,7 +558,7 @@ MAHO Wouter (version 1)</string>
                                             <constraint firstAttribute="height" constant="50" id="6iV-Bz-5vl"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                        <state key="normal" title="Change Language">
+                                        <state key="normal" title="Frans">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
@@ -587,7 +569,7 @@ MAHO Wouter (version 1)</string>
                                             <constraint firstAttribute="height" constant="50" id="qgz-Vo-8Dn"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                        <state key="normal" title="Change Language">
+                                        <state key="normal" title="Engels">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
