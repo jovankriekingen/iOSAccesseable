@@ -287,7 +287,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Overnachten" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1O-Zh-QFM">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="Overnachten" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1O-Zh-QFM">
                                         <rect key="frame" x="0.0" y="187" width="250" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -299,7 +299,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Hellingen (van dijk naar strand)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xr-cJ-maa">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="Hellingen (van dijk naar strand)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xr-cJ-maa">
                                         <rect key="frame" x="0.0" y="279.5" width="250" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -344,34 +344,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4rz-jy-xTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2965.5999999999999" y="1187.8560719640182"/>
-        </scene>
-        <!--Table View Controller-->
-        <scene sceneID="JDg-9t-W9m">
-            <objects>
-                <tableViewController id="8Uw-ck-hzt" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="y3m-MV-dYW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="nkF-mP-NNw">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nkF-mP-NNw" id="7ty-M8-1oP">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="8Uw-ck-hzt" id="92p-aH-8uM"/>
-                            <outlet property="delegate" destination="8Uw-ck-hzt" id="IMk-0q-1Ac"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="R98-8f-tw2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2966" y="1883"/>
         </scene>
         <!--MapVC-->
         <scene sceneID="Tic-mt-6Q3">
@@ -431,12 +403,24 @@
                     <view key="view" contentMode="scaleToFill" id="DyL-UZ-0ek">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nnp-su-lzq">
+                                <rect key="frame" x="0.0" y="72" width="375" height="575"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Nnp-su-lzq" secondAttribute="trailing" id="1aj-EY-HyL"/>
+                            <constraint firstItem="Nnp-su-lzq" firstAttribute="top" secondItem="T0e-96-SOE" secondAttribute="bottom" constant="8" symbolic="YES" id="9Oe-wu-K94"/>
+                            <constraint firstAttribute="bottom" secondItem="Nnp-su-lzq" secondAttribute="bottom" constant="20" symbolic="YES" id="InD-Fi-R8h"/>
+                            <constraint firstItem="Nnp-su-lzq" firstAttribute="leading" secondItem="DyL-UZ-0ek" secondAttribute="leading" id="a6Z-S3-0Xi"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jD1-Oe-fD6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2295" y="1188"/>
+            <point key="canvasLocation" x="2293.5999999999999" y="1187.8560719640182"/>
         </scene>
         <!--ProfileVC-->
         <scene sceneID="hLX-x1-HlK">
@@ -467,12 +451,24 @@
                     <view key="view" contentMode="scaleToFill" id="OkK-nu-AwV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZmY-La-iB8">
+                                <rect key="frame" x="0.0" y="72" width="375" height="575"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZmY-La-iB8" firstAttribute="leading" secondItem="OkK-nu-AwV" secondAttribute="leading" id="6wN-wP-ol0"/>
+                            <constraint firstItem="ZmY-La-iB8" firstAttribute="top" secondItem="du5-4r-YuU" secondAttribute="bottom" constant="8" symbolic="YES" id="74u-ht-n0w"/>
+                            <constraint firstAttribute="trailing" secondItem="ZmY-La-iB8" secondAttribute="trailing" id="LC7-kE-ocQ"/>
+                            <constraint firstAttribute="bottom" secondItem="ZmY-La-iB8" secondAttribute="bottom" constant="20" symbolic="YES" id="Wo1-go-Xle"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C0e-C1-vQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1646" y="1188"/>
+            <point key="canvasLocation" x="1645.5999999999999" y="1187.8560719640182"/>
         </scene>
         <!--InfoVC-->
         <scene sceneID="qcZ-Zw-xu3">
