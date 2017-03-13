@@ -434,12 +434,24 @@
                     <view key="view" contentMode="scaleToFill" id="DyL-UZ-0ek">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nnp-su-lzq">
+                                <rect key="frame" x="0.0" y="72" width="375" height="575"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Nnp-su-lzq" secondAttribute="trailing" id="1aj-EY-HyL"/>
+                            <constraint firstItem="Nnp-su-lzq" firstAttribute="top" secondItem="T0e-96-SOE" secondAttribute="bottom" constant="8" symbolic="YES" id="9Oe-wu-K94"/>
+                            <constraint firstAttribute="bottom" secondItem="Nnp-su-lzq" secondAttribute="bottom" constant="20" symbolic="YES" id="InD-Fi-R8h"/>
+                            <constraint firstItem="Nnp-su-lzq" firstAttribute="leading" secondItem="DyL-UZ-0ek" secondAttribute="leading" id="a6Z-S3-0Xi"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jD1-Oe-fD6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2295" y="1188"/>
+            <point key="canvasLocation" x="2293.5999999999999" y="1187.8560719640182"/>
         </scene>
         <!--ProfileVC-->
         <scene sceneID="hLX-x1-HlK">
@@ -470,12 +482,24 @@
                     <view key="view" contentMode="scaleToFill" id="OkK-nu-AwV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZmY-La-iB8">
+                                <rect key="frame" x="0.0" y="72" width="375" height="575"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZmY-La-iB8" firstAttribute="leading" secondItem="OkK-nu-AwV" secondAttribute="leading" id="6wN-wP-ol0"/>
+                            <constraint firstItem="ZmY-La-iB8" firstAttribute="top" secondItem="du5-4r-YuU" secondAttribute="bottom" constant="8" symbolic="YES" id="74u-ht-n0w"/>
+                            <constraint firstAttribute="trailing" secondItem="ZmY-La-iB8" secondAttribute="trailing" id="LC7-kE-ocQ"/>
+                            <constraint firstAttribute="bottom" secondItem="ZmY-La-iB8" secondAttribute="bottom" constant="20" symbolic="YES" id="Wo1-go-Xle"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C0e-C1-vQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1646" y="1188"/>
+            <point key="canvasLocation" x="1645.5999999999999" y="1187.8560719640182"/>
         </scene>
         <!--InfoVC-->
         <scene sceneID="qcZ-Zw-xu3">
@@ -561,7 +585,7 @@ MAHO Wouter (version 1)</string>
                                             <constraint firstAttribute="height" constant="50" id="t2v-yf-bow"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                        <state key="normal" title="Change Language">
+                                        <state key="normal" title="Taal wijzigen">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
@@ -572,7 +596,7 @@ MAHO Wouter (version 1)</string>
                                             <constraint firstAttribute="height" constant="50" id="M2p-es-7Yg"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                        <state key="normal" title="Change Language">
+                                        <state key="normal" title="Nederlands">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
@@ -583,7 +607,7 @@ MAHO Wouter (version 1)</string>
                                             <constraint firstAttribute="height" constant="50" id="pN5-eZ-Y0b"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                        <state key="normal" title="Change Language">
+                                        <state key="normal" title="Frans">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
@@ -594,7 +618,7 @@ MAHO Wouter (version 1)</string>
                                             <constraint firstAttribute="height" constant="50" id="OQL-gt-95C"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                        <state key="normal" title="Change Language">
+                                        <state key="normal" title="Engels">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
