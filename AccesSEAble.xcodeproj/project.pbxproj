@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		318A57081E768D4C0008A397 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318A57071E768D4C0008A397 /* MapViewController.swift */; };
 		318A570A1E768F820008A397 /* RecentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318A57091E768F820008A397 /* RecentViewController.swift */; };
+		318A570C1E769C240008A397 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318A570B1E769C240008A397 /* FavoriteViewController.swift */; };
 		4966A0231E718E4600C15572 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4966A0221E718E4600C15572 /* AppDelegate.swift */; };
 		4966A0251E718E4600C15572 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4966A0241E718E4600C15572 /* HomeViewController.swift */; };
 		4966A0281E718E4600C15572 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4966A0261E718E4600C15572 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		318A57071E768D4C0008A397 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		318A57091E768F820008A397 /* RecentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentViewController.swift; sourceTree = "<group>"; };
+		318A570B1E769C240008A397 /* FavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		4966A01F1E718E4500C15572 /* AccesSEAble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccesSEAble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4966A0221E718E4600C15572 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4966A0241E718E4600C15572 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				4966A0311E718E4600C15572 /* Info.plist */,
 				4966A0291E718E4600C15572 /* AccesSEAble.xcdatamodeld */,
 				318A57071E768D4C0008A397 /* MapViewController.swift */,
+				318A570B1E769C240008A397 /* FavoriteViewController.swift */,
 			);
 			path = AccesSEAble;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4966A02B1E718E4600C15572 /* AccesSEAble.xcdatamodeld in Sources */,
+				318A570C1E769C240008A397 /* FavoriteViewController.swift in Sources */,
 				318A570A1E768F820008A397 /* RecentViewController.swift in Sources */,
 				4966A0251E718E4600C15572 /* HomeViewController.swift in Sources */,
 				4966A0231E718E4600C15572 /* AppDelegate.swift in Sources */,
