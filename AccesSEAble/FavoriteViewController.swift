@@ -27,8 +27,9 @@ class RecentViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         // Dit zou de tableview moeten opvullen met de waarden uit de tabel
+        let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
+        
         let recentItem = itemList[indexPath.row]
         let naam = recentItem.value(forKey: "NAAM")
         let straat = recentItem.value(forKey: "ADRES_STRAAT")
@@ -36,14 +37,14 @@ class RecentViewController: UIViewController, UITableViewDataSource, UITableView
         let postCode = recentItem.value(forKey: "PNR")
         let gemeente = recentItem.value(forKey: "GEMEENTE")
         
-        cell?.textLabel?.text = naam as? String
-        cell?.textLabel?.text = straat as? String
-        cell?.textLabel?.text = straatNr as? String
-        cell?.textLabel?.text = naam as? String
-        cell?.textLabel?.text = postCode as? String
-        cell?.textLabel?.text = gemeente as? String
+        cell.textLabel?.text = naam as? String
+        cell.textLabel?.text = straat as? String
+        cell.textLabel?.text = straatNr as? String
+        cell.textLabel?.text = naam as? String
+        cell.textLabel?.text = postCode as? String
+        cell.textLabel?.text = gemeente as? String
         
-        return cell!
+        return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
