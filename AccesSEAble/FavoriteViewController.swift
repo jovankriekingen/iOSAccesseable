@@ -28,7 +28,7 @@ class RecentViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        
+        // Dit zou de tableview moeten opvullen met de waarden uit de tabel
         let recentItem = itemList[indexPath.row]
         let naam = recentItem.value(forKey: "NAAM")
         let straat = recentItem.value(forKey: "ADRES_STRAAT")
