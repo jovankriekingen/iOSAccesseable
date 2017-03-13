@@ -63,6 +63,7 @@
 				4966A0381E719F2E00C15572 /* assets_accesseable */,
 				4966A0221E718E4600C15572 /* AppDelegate.swift */,
 				4966A0241E718E4600C15572 /* HomeViewController.swift */,
+				318A57091E768F820008A397 /* RecentViewController.swift */,
 				4966A0261E718E4600C15572 /* Main.storyboard */,
 				4966A02C1E718E4600C15572 /* Assets.xcassets */,
 				4966A02E1E718E4600C15572 /* LaunchScreen.storyboard */,
@@ -147,9 +148,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4966A02B1E718E4600C15572 /* AccesSEAble.xcdatamodeld in Sources */,
+				318A570C1E769C240008A397 /* FavoriteViewController.swift in Sources */,
+				318A570A1E768F820008A397 /* RecentViewController.swift in Sources */,
 				4966A0251E718E4600C15572 /* HomeViewController.swift in Sources */,
 				09095B761E768E8600749993 /* SearchViewController.swift in Sources */,
 				4966A0231E718E4600C15572 /* AppDelegate.swift in Sources */,
+				318A57081E768D4C0008A397 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
