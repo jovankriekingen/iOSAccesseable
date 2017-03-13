@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 
-class RecentViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class FavoriteViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var itemList:[NSManagedObject] = []
     var context:NSManagedObjectContext?
