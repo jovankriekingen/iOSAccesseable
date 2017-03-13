@@ -203,6 +203,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="kAF-am-CbR" kind="show" id="9Qf-Hg-krG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mVg-el-bLu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -418,7 +421,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cOJ-Ab-RT2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3758" y="-414"/>
+            <point key="canvasLocation" x="3443" y="-573"/>
         </scene>
         <!--FavoritesVC-->
         <scene sceneID="hBO-Zb-VYB">
@@ -454,7 +457,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uik-Dt-x5s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4922" y="1021"/>
+            <point key="canvasLocation" x="5162" y="1188"/>
         </scene>
         <!--RecentVC-->
         <scene sceneID="fEw-KJ-hkv">
@@ -534,7 +537,7 @@ MAHO Wouter (version 1)</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YtC-eg-eDv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4260" y="1020.5397301349326"/>
+            <point key="canvasLocation" x="4290" y="1188"/>
         </scene>
         <!--SettingsVC-->
         <scene sceneID="QEh-DC-eqk">
@@ -620,7 +623,7 @@ MAHO Wouter (version 1)</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15X-HC-Mfa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3758" y="251"/>
+            <point key="canvasLocation" x="3647" y="214"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fWi-Qp-hnX">
