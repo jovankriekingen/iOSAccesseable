@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		31399EAE1E77DEB00044622C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31399EAD1E77DEB00044622C /* DetailViewController.swift */; };
 		31399EB01E77E4020044622C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31399EAF1E77E4020044622C /* ProfileViewController.swift */; };
+		31399EB21E7800300044622C /* RecentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31399EB11E7800300044622C /* RecentViewController.swift */; };
+		31399EB51E78031E0044622C /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31399EB31E78031E0044622C /* FavoriteViewController.swift */; };
+		31399EB61E78031E0044622C /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31399EB41E78031E0044622C /* FavoriteViewController.xib */; };
+		31399EB81E7812A60044622C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31399EB71E7812A60044622C /* SearchViewController.swift */; };
 		318A57081E768D4C0008A397 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318A57071E768D4C0008A397 /* MapViewController.swift */; };
-		318A570A1E768F820008A397 /* RecentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318A57091E768F820008A397 /* RecentViewController.swift */; };
-		318A570C1E769C240008A397 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318A570B1E769C240008A397 /* FavoriteViewController.swift */; };
 		4966A0231E718E4600C15572 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4966A0221E718E4600C15572 /* AppDelegate.swift */; };
 		4966A0251E718E4600C15572 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4966A0241E718E4600C15572 /* HomeViewController.swift */; };
 		4966A0281E718E4600C15572 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4966A0261E718E4600C15572 /* Main.storyboard */; };
@@ -24,9 +26,11 @@
 /* Begin PBXFileReference section */
 		31399EAD1E77DEB00044622C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		31399EAF1E77E4020044622C /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		31399EB11E7800300044622C /* RecentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentViewController.swift; sourceTree = "<group>"; };
+		31399EB31E78031E0044622C /* FavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		31399EB41E78031E0044622C /* FavoriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
+		31399EB71E7812A60044622C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		318A57071E768D4C0008A397 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		318A57091E768F820008A397 /* RecentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentViewController.swift; sourceTree = "<group>"; };
-		318A570B1E769C240008A397 /* FavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		4966A01F1E718E4500C15572 /* AccesSEAble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccesSEAble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4966A0221E718E4600C15572 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4966A0241E718E4600C15572 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +72,7 @@
 		4966A0211E718E4500C15572 /* AccesSEAble */ = {
 			isa = PBXGroup;
 			children = (
+				31399EB11E7800300044622C /* RecentViewController.swift */,
 				4966A0381E719F2E00C15572 /* assets_accesseable */,
 				4966A0221E718E4600C15572 /* AppDelegate.swift */,
 				4966A0241E718E4600C15572 /* HomeViewController.swift */,
@@ -77,9 +82,11 @@
 				4966A0311E718E4600C15572 /* Info.plist */,
 				4966A0291E718E4600C15572 /* AccesSEAble.xcdatamodeld */,
 				318A57071E768D4C0008A397 /* MapViewController.swift */,
-				318A570B1E769C240008A397 /* FavoriteViewController.swift */,
 				31399EAD1E77DEB00044622C /* DetailViewController.swift */,
 				31399EAF1E77E4020044622C /* ProfileViewController.swift */,
+				31399EB31E78031E0044622C /* FavoriteViewController.swift */,
+				31399EB41E78031E0044622C /* FavoriteViewController.xib */,
+				31399EB71E7812A60044622C /* SearchViewController.swift */,
 			);
 			path = AccesSEAble;
 			sourceTree = "<group>";
@@ -146,6 +153,7 @@
 				4966A0301E718E4600C15572 /* LaunchScreen.storyboard in Resources */,
 				4966A02D1E718E4600C15572 /* Assets.xcassets in Resources */,
 				4966A0281E718E4600C15572 /* Main.storyboard in Resources */,
+				31399EB61E78031E0044622C /* FavoriteViewController.xib in Resources */,
 				4966A0391E719F2E00C15572 /* assets_accesseable in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,10 +166,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4966A02B1E718E4600C15572 /* AccesSEAble.xcdatamodeld in Sources */,
+				31399EB21E7800300044622C /* RecentViewController.swift in Sources */,
 				4966A0251E718E4600C15572 /* HomeViewController.swift in Sources */,
+				31399EB81E7812A60044622C /* SearchViewController.swift in Sources */,
 				4966A0231E718E4600C15572 /* AppDelegate.swift in Sources */,
 				318A57081E768D4C0008A397 /* MapViewController.swift in Sources */,
 				31399EB01E77E4020044622C /* ProfileViewController.swift in Sources */,
+				31399EB51E78031E0044622C /* FavoriteViewController.swift in Sources */,
 				31399EAE1E77DEB00044622C /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

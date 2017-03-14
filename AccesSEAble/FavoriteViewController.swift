@@ -1,17 +1,16 @@
 //
-//  RecentViewController.swift
+//  FavoriteViewController.swift
 //  AccesSEAble
 //
-//  Created by mobapp10 on 13/03/17.
+//  Created by mobapp10 on 14/03/17.
 //  Copyright © 2017 jo van kriekingen. All rights reserved.
 //
 
 import UIKit
 import CoreData
 
-
-class RecentViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
+class FavoriteViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    @IBOutlet weak var favorietenTabel: UITableView!
     var itemList:[NSManagedObject] = []
     var context:NSManagedObjectContext?
     
@@ -50,17 +49,5 @@ class RecentViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemList.count
     }
-    
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+
 }
