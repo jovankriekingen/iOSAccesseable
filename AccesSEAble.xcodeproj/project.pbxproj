@@ -58,7 +58,6 @@
 		4966A0161E718E4500C15572 = {
 			isa = PBXGroup;
 			children = (
-				319ACA0D1E783AFB00EE92E1 /* ASea.xcdatamodeld */,
 				4966A0211E718E4500C15572 /* AccesSEAble */,
 				4966A0201E718E4500C15572 /* Products */,
 			);
@@ -75,6 +74,7 @@
 		4966A0211E718E4500C15572 /* AccesSEAble */ = {
 			isa = PBXGroup;
 			children = (
+				319ACA0D1E783AFB00EE92E1 /* ASea.xcdatamodeld */,
 				4966A0381E719F2E00C15572 /* assets_accesseable */,
 				4966A0261E718E4600C15572 /* Main.storyboard */,
 				4966A02E1E718E4600C15572 /* LaunchScreen.storyboard */,
@@ -351,7 +351,7 @@
 			);
 			currentVersion = 319ACA0E1E783AFB00EE92E1 /* ASea.xcdatamodel */;
 			name = ASea.xcdatamodeld;
-			path = ../AcceSEAble/AcceSEAble/ASea.xcdatamodeld;
+			path = ../../AcceSEAble/AcceSEAble/ASea.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
