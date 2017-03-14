@@ -228,7 +228,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am looking for" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyD-Na-xsi">
-                                <rect key="frame" x="129" y="129" width="118" height="21"/>
+                                <rect key="frame" x="129.5" y="129" width="117.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="GhL-0M-kBZ"/>
                                 </constraints>
@@ -343,6 +343,7 @@
                             <constraint firstItem="7Gs-Y5-Lgw" firstAttribute="leading" secondItem="c1X-IU-ddF" secondAttribute="leadingMargin" id="Am2-SV-Pry"/>
                             <constraint firstItem="7Gs-Y5-Lgw" firstAttribute="leading" secondItem="vKj-7J-hh2" secondAttribute="leading" id="CQZ-9F-Cm6"/>
                             <constraint firstItem="iCr-H4-2sR" firstAttribute="top" secondItem="vKj-7J-hh2" secondAttribute="bottom" constant="29" id="DTq-7f-KMg"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="vKj-7J-hh2" secondAttribute="leading" id="LGs-sG-8Cg"/>
                             <constraint firstItem="vKj-7J-hh2" firstAttribute="leading" secondItem="iCr-H4-2sR" secondAttribute="leading" id="NHY-3N-BG1"/>
                             <constraint firstItem="vKj-7J-hh2" firstAttribute="top" secondItem="7Gs-Y5-Lgw" secondAttribute="bottom" constant="53" id="abz-ZO-lVg"/>
                             <constraint firstItem="7Gs-Y5-Lgw" firstAttribute="centerX" secondItem="WyD-Na-xsi" secondAttribute="centerX" id="aro-vi-E6P"/>
