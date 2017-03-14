@@ -13,9 +13,9 @@
 		31399EB51E78031E0044622C /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31399EB31E78031E0044622C /* FavoriteViewController.swift */; };
 		31399EB61E78031E0044622C /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31399EB41E78031E0044622C /* FavoriteViewController.xib */; };
 		31399EB81E7812A60044622C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31399EB71E7812A60044622C /* SearchViewController.swift */; };
-		31399EC11E7820ED0044622C /* ASea.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 31399EBF1E7820ED0044622C /* ASea.xcdatamodeld */; };
 		31399EC31E7822F90044622C /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31399EC21E7822F90044622C /* UpdateViewController.swift */; };
 		318A57081E768D4C0008A397 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318A57071E768D4C0008A397 /* MapViewController.swift */; };
+		319ACA0F1E783AFB00EE92E1 /* ASea.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 319ACA0D1E783AFB00EE92E1 /* ASea.xcdatamodeld */; };
 		4966A0231E718E4600C15572 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4966A0221E718E4600C15572 /* AppDelegate.swift */; };
 		4966A0251E718E4600C15572 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4966A0241E718E4600C15572 /* HomeViewController.swift */; };
 		4966A0281E718E4600C15572 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4966A0261E718E4600C15572 /* Main.storyboard */; };
@@ -31,9 +31,9 @@
 		31399EB31E78031E0044622C /* FavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		31399EB41E78031E0044622C /* FavoriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
 		31399EB71E7812A60044622C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		31399EC01E7820ED0044622C /* ASea.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ASea.xcdatamodel; sourceTree = "<group>"; };
 		31399EC21E7822F90044622C /* UpdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
 		318A57071E768D4C0008A397 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		319ACA0E1E783AFB00EE92E1 /* ASea.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ASea.xcdatamodel; sourceTree = "<group>"; };
 		4966A01F1E718E4500C15572 /* AccesSEAble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccesSEAble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4966A0221E718E4600C15572 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4966A0241E718E4600C15572 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +58,7 @@
 		4966A0161E718E4500C15572 = {
 			isa = PBXGroup;
 			children = (
+				319ACA0D1E783AFB00EE92E1 /* ASea.xcdatamodeld */,
 				4966A0211E718E4500C15572 /* AccesSEAble */,
 				4966A0201E718E4500C15572 /* Products */,
 			);
@@ -78,7 +79,6 @@
 				4966A0261E718E4600C15572 /* Main.storyboard */,
 				4966A02E1E718E4600C15572 /* LaunchScreen.storyboard */,
 				4966A02C1E718E4600C15572 /* Assets.xcassets */,
-				31399EBF1E7820ED0044622C /* ASea.xcdatamodeld */,
 				4966A0311E718E4600C15572 /* Info.plist */,
 				4966A0221E718E4600C15572 /* AppDelegate.swift */,
 				4966A0241E718E4600C15572 /* HomeViewController.swift */,
@@ -176,8 +176,8 @@
 				31399EB01E77E4020044622C /* ProfileViewController.swift in Sources */,
 				31399EB51E78031E0044622C /* FavoriteViewController.swift in Sources */,
 				31399EAE1E77DEB00044622C /* DetailViewController.swift in Sources */,
-				31399EC11E7820ED0044622C /* ASea.xcdatamodeld in Sources */,
 				31399EC31E7822F90044622C /* UpdateViewController.swift in Sources */,
+				319ACA0F1E783AFB00EE92E1 /* ASea.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,14 +344,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		31399EBF1E7820ED0044622C /* ASea.xcdatamodeld */ = {
+		319ACA0D1E783AFB00EE92E1 /* ASea.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				31399EC01E7820ED0044622C /* ASea.xcdatamodel */,
+				319ACA0E1E783AFB00EE92E1 /* ASea.xcdatamodel */,
 			);
-			currentVersion = 31399EC01E7820ED0044622C /* ASea.xcdatamodel */;
+			currentVersion = 319ACA0E1E783AFB00EE92E1 /* ASea.xcdatamodel */;
 			name = ASea.xcdatamodeld;
-			path = ../../../../Downloads/ASea.xcdatamodeld;
+			path = ../AcceSEAble/AcceSEAble/ASea.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
