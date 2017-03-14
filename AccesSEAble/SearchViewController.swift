@@ -1,5 +1,5 @@
 //
-//  ProfileViewController.swift
+//  SearchViewController.swift
 //  AccesSEAble
 //
 //  Created by mobapp10 on 14/03/17.
@@ -8,10 +8,8 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class SearchViewController: UIViewController {
 
-    @IBOutlet weak var lblProfielNaam: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,8 +21,6 @@ class ProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func btnNieuwProfiel() {
-    }
 
     /*
     // MARK: - Navigation

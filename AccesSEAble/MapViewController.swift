@@ -10,9 +10,16 @@ import UIKit
 import MapKit
 
 class MapViewController: UIViewController, MKMapViewDelegate {
-
+    @IBOutlet weak var mapView: MKMapView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let mapCoord = CLLocationCoordinate2DMake(51.026811, 3.128074)
+        let mapSpan = MKCoordinateSpanMake(1,1)
+        let centerRegion = MKCoordinateRegionMake(mapCoord, mapSpan)
+        
+        mapView.region = centerRegion
 
         // Do any additional setup after loading the view.
     }

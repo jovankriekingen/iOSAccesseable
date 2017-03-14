@@ -242,7 +242,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCr-H4-2sR">
                                 <rect key="frame" x="16" y="477" width="343" height="46"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                 <state key="normal" title="Zoek">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -364,10 +364,10 @@
             </objects>
             <point key="canvasLocation" x="2964" y="1186.0569715142431"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="ICD-b7-fi5">
             <objects>
-                <viewController id="amw-FH-lbk" sceneMemberID="viewController">
+                <viewController id="amw-FH-lbk" customClass="DetailViewController" customModule="AccesSEAble" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="T8r-HE-JCu"/>
                         <viewControllerLayoutGuide type="bottom" id="7ru-OU-hc5"/>
@@ -376,7 +376,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iuW-1e-jo0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="assets_accesseable/PlaceIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="iuW-1e-jo0">
                                 <rect key="frame" x="16" y="28" width="343" height="273"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Naam:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vK4-hH-Sxp">
@@ -466,7 +466,7 @@
         <!--MapVC-->
         <scene sceneID="Tic-mt-6Q3">
             <objects>
-                <viewController title="Kaart" id="HeK-hp-MQk" userLabel="MapVC" sceneMemberID="viewController">
+                <viewController title="Kaart" id="HeK-hp-MQk" userLabel="MapVC" customClass="MapViewController" customModule="AccesSEAble" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zDd-ke-mD4"/>
                         <viewControllerLayoutGuide type="bottom" id="o8U-UT-O9S"/>
@@ -487,6 +487,9 @@
                             <constraint firstAttribute="trailing" secondItem="GSD-bY-pR4" secondAttribute="trailing" id="nkf-1Q-60d"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="GSD-bY-pR4" id="PXA-qU-PXD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJR-CZ-FHX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -495,7 +498,7 @@
         <!--FavoritesVC-->
         <scene sceneID="hBO-Zb-VYB">
             <objects>
-                <viewController title="Favorieten" id="hyl-Cp-8Or" userLabel="FavoritesVC" sceneMemberID="viewController">
+                <viewController title="Favorieten" id="hyl-Cp-8Or" userLabel="FavoritesVC" customClass="FavoriteViewController" customModule="AccesSEAble" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="T0e-96-SOE"/>
                         <viewControllerLayoutGuide type="bottom" id="VEZ-Bv-Now"/>
@@ -507,6 +510,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nnp-su-lzq">
                                 <rect key="frame" x="0.0" y="72" width="375" height="575"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="hyl-Cp-8Or" id="Nbe-C1-cuX"/>
+                                    <outlet property="delegate" destination="hyl-Cp-8Or" id="opf-sG-51t"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -517,6 +524,9 @@
                             <constraint firstItem="Nnp-su-lzq" firstAttribute="leading" secondItem="DyL-UZ-0ek" secondAttribute="leading" id="a6Z-S3-0Xi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="favorietenTabel" destination="Nnp-su-lzq" id="oMA-VK-Vc8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jD1-Oe-fD6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -525,7 +535,7 @@
         <!--ProfileVC-->
         <scene sceneID="hLX-x1-HlK">
             <objects>
-                <viewController title="Profiel" id="kO1-Sf-oSe" userLabel="ProfileVC" sceneMemberID="viewController">
+                <viewController title="Profiel" id="kO1-Sf-oSe" userLabel="ProfileVC" customClass="ProfileViewController" customModule="AccesSEAble" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lRN-hb-qS5"/>
                         <viewControllerLayoutGuide type="bottom" id="CjE-5s-ARq"/>
@@ -534,7 +544,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1L4-gz-fkA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="assets_accesseable/profielTop.png" translatesAutoresizingMaskIntoConstraints="NO" id="1L4-gz-fkA">
                                 <rect key="frame" x="16" y="72" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -552,9 +562,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCK-Lb-9WM">
+                                <rect key="frame" x="16" y="230" width="150" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.90307112068965523" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Nieuw Profiel">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnNieuwProfiel" destination="kO1-Sf-oSe" eventType="touchUpInside" id="2Is-MN-Yoo"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oFf-B8-MV3">
+                                <rect key="frame" x="16" y="268" width="150" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="lblProfielNaam" destination="3MK-Tv-Plt" id="DXt-EG-8gv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uik-Dt-x5s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -563,7 +596,7 @@
         <!--RecentVC-->
         <scene sceneID="fEw-KJ-hkv">
             <objects>
-                <viewController title="Recent" id="VKh-ba-ycu" userLabel="RecentVC" sceneMemberID="viewController">
+                <viewController title="Recent" id="VKh-ba-ycu" userLabel="RecentVC" customClass="RecentViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="du5-4r-YuU"/>
                         <viewControllerLayoutGuide type="bottom" id="oNo-PD-21b"/>
@@ -575,6 +608,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZmY-La-iB8">
                                 <rect key="frame" x="0.0" y="72" width="375" height="575"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="VKh-ba-ycu" id="rLi-aw-lQC"/>
+                                    <outlet property="delegate" destination="VKh-ba-ycu" id="fkg-S3-cbA"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -585,6 +622,9 @@
                             <constraint firstAttribute="bottom" secondItem="ZmY-La-iB8" secondAttribute="bottom" constant="20" symbolic="YES" id="Wo1-go-Xle"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="recentTabel" destination="ZmY-La-iB8" id="He5-hY-9NK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C0e-C1-vQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -758,9 +798,11 @@ MAHO Wouter (version 1)</string>
         </scene>
     </scenes>
     <resources>
+        <image name="assets_accesseable/PlaceIcon.png" width="16" height="16"/>
         <image name="assets_accesseable/abt.png" width="16" height="16"/>
         <image name="assets_accesseable/fvrts.png" width="16" height="16"/>
         <image name="assets_accesseable/inDeBuurt.png" width="16" height="16"/>
+        <image name="assets_accesseable/profielTop.png" width="16" height="16"/>
         <image name="assets_accesseable/profile.png" width="16" height="16"/>
         <image name="assets_accesseable/recent.png" width="16" height="16"/>
         <image name="assets_accesseable/search.png" width="16" height="16"/>
