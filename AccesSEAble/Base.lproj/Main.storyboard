@@ -112,7 +112,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Kqh-Jf-5jr" firstAttribute="height" secondItem="2dF-g6-5wn" secondAttribute="height" id="08g-Ps-QRR"/>
                             <constraint firstItem="3pO-Kg-aQd" firstAttribute="width" secondItem="dZc-wM-E46" secondAttribute="width" id="0av-L1-MUy"/>
@@ -658,14 +658,6 @@
                                     <action selector="btnNieuwProfiel" destination="kO1-Sf-oSe" eventType="touchUpInside" id="2Is-MN-Yoo"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oFf-B8-MV3">
-                                <rect key="frame" x="16" y="268" width="150" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                </segments>
-                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
