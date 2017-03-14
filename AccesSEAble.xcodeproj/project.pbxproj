@@ -13,11 +13,12 @@
 		31399EB51E78031E0044622C /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31399EB31E78031E0044622C /* FavoriteViewController.swift */; };
 		31399EB61E78031E0044622C /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31399EB41E78031E0044622C /* FavoriteViewController.xib */; };
 		31399EB81E7812A60044622C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31399EB71E7812A60044622C /* SearchViewController.swift */; };
+		31399EC11E7820ED0044622C /* ASea.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 31399EBF1E7820ED0044622C /* ASea.xcdatamodeld */; };
+		31399EC31E7822F90044622C /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31399EC21E7822F90044622C /* UpdateViewController.swift */; };
 		318A57081E768D4C0008A397 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318A57071E768D4C0008A397 /* MapViewController.swift */; };
 		4966A0231E718E4600C15572 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4966A0221E718E4600C15572 /* AppDelegate.swift */; };
 		4966A0251E718E4600C15572 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4966A0241E718E4600C15572 /* HomeViewController.swift */; };
 		4966A0281E718E4600C15572 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4966A0261E718E4600C15572 /* Main.storyboard */; };
-		4966A02B1E718E4600C15572 /* AccesSEAble.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4966A0291E718E4600C15572 /* AccesSEAble.xcdatamodeld */; };
 		4966A02D1E718E4600C15572 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4966A02C1E718E4600C15572 /* Assets.xcassets */; };
 		4966A0301E718E4600C15572 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4966A02E1E718E4600C15572 /* LaunchScreen.storyboard */; };
 		4966A0391E719F2E00C15572 /* assets_accesseable in Resources */ = {isa = PBXBuildFile; fileRef = 4966A0381E719F2E00C15572 /* assets_accesseable */; };
@@ -30,12 +31,13 @@
 		31399EB31E78031E0044622C /* FavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		31399EB41E78031E0044622C /* FavoriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
 		31399EB71E7812A60044622C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		31399EC01E7820ED0044622C /* ASea.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ASea.xcdatamodel; sourceTree = "<group>"; };
+		31399EC21E7822F90044622C /* UpdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
 		318A57071E768D4C0008A397 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4966A01F1E718E4500C15572 /* AccesSEAble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccesSEAble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4966A0221E718E4600C15572 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4966A0241E718E4600C15572 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4966A0271E718E4600C15572 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4966A02A1E718E4600C15572 /* AccesSEAble.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AccesSEAble.xcdatamodel; sourceTree = "<group>"; };
 		4966A02C1E718E4600C15572 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4966A02F1E718E4600C15572 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4966A0311E718E4600C15572 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,21 +74,22 @@
 		4966A0211E718E4500C15572 /* AccesSEAble */ = {
 			isa = PBXGroup;
 			children = (
-				31399EB11E7800300044622C /* RecentViewController.swift */,
 				4966A0381E719F2E00C15572 /* assets_accesseable */,
+				4966A0261E718E4600C15572 /* Main.storyboard */,
+				4966A02E1E718E4600C15572 /* LaunchScreen.storyboard */,
+				4966A02C1E718E4600C15572 /* Assets.xcassets */,
+				31399EBF1E7820ED0044622C /* ASea.xcdatamodeld */,
+				4966A0311E718E4600C15572 /* Info.plist */,
 				4966A0221E718E4600C15572 /* AppDelegate.swift */,
 				4966A0241E718E4600C15572 /* HomeViewController.swift */,
-				4966A0261E718E4600C15572 /* Main.storyboard */,
-				4966A02C1E718E4600C15572 /* Assets.xcassets */,
-				4966A02E1E718E4600C15572 /* LaunchScreen.storyboard */,
-				4966A0311E718E4600C15572 /* Info.plist */,
-				4966A0291E718E4600C15572 /* AccesSEAble.xcdatamodeld */,
+				31399EB11E7800300044622C /* RecentViewController.swift */,
 				318A57071E768D4C0008A397 /* MapViewController.swift */,
 				31399EAD1E77DEB00044622C /* DetailViewController.swift */,
 				31399EAF1E77E4020044622C /* ProfileViewController.swift */,
 				31399EB31E78031E0044622C /* FavoriteViewController.swift */,
-				31399EB41E78031E0044622C /* FavoriteViewController.xib */,
 				31399EB71E7812A60044622C /* SearchViewController.swift */,
+				31399EB41E78031E0044622C /* FavoriteViewController.xib */,
+				31399EC21E7822F90044622C /* UpdateViewController.swift */,
 			);
 			path = AccesSEAble;
 			sourceTree = "<group>";
@@ -165,7 +168,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4966A02B1E718E4600C15572 /* AccesSEAble.xcdatamodeld in Sources */,
 				31399EB21E7800300044622C /* RecentViewController.swift in Sources */,
 				4966A0251E718E4600C15572 /* HomeViewController.swift in Sources */,
 				31399EB81E7812A60044622C /* SearchViewController.swift in Sources */,
@@ -174,6 +176,8 @@
 				31399EB01E77E4020044622C /* ProfileViewController.swift in Sources */,
 				31399EB51E78031E0044622C /* FavoriteViewController.swift in Sources */,
 				31399EAE1E77DEB00044622C /* DetailViewController.swift in Sources */,
+				31399EC11E7820ED0044622C /* ASea.xcdatamodeld in Sources */,
+				31399EC31E7822F90044622C /* UpdateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,13 +344,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		4966A0291E718E4600C15572 /* AccesSEAble.xcdatamodeld */ = {
+		31399EBF1E7820ED0044622C /* ASea.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				4966A02A1E718E4600C15572 /* AccesSEAble.xcdatamodel */,
+				31399EC01E7820ED0044622C /* ASea.xcdatamodel */,
 			);
-			currentVersion = 4966A02A1E718E4600C15572 /* AccesSEAble.xcdatamodel */;
-			path = AccesSEAble.xcdatamodeld;
+			currentVersion = 31399EC01E7820ED0044622C /* ASea.xcdatamodel */;
+			name = ASea.xcdatamodeld;
+			path = ../../../../Downloads/ASea.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

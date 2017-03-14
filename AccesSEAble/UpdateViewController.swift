@@ -1,5 +1,5 @@
 //
-//  SearchViewController.swift
+//  UpdateViewController.swift
 //  AccesSEAble
 //
 //  Created by mobapp10 on 14/03/17.
@@ -8,16 +8,8 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
-    @IBOutlet weak var swiReca: UISwitch!
-    @IBOutlet weak var swiToilet: UISwitch!
-    @IBOutlet weak var swiBezienswaardigheden: UISwitch!
-    @IBOutlet weak var swiInfoKantoren: UISwitch!
-    @IBOutlet weak var swiOvernachten: UISwitch!
-    @IBOutlet weak var swiParking: UISwitch!
-    @IBOutlet weak var swiHelling: UISwitch!
+class UpdateViewController: UIViewController {
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,9 +21,9 @@ class SearchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func btnZoek() {
+    @IBAction func btnUpdate() {
+        
     }
-    
 
     /*
     // MARK: - Navigation

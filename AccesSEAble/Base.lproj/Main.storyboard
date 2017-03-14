@@ -247,6 +247,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="btnZoek" destination="SCH-Ty-eXc" eventType="touchUpInside" id="TTw-jU-RCZ"/>
                                     <segue destination="98Q-dv-6hz" kind="show" id="MDN-Ap-rJZ"/>
                                 </connections>
                             </button>
@@ -362,6 +363,15 @@
                             <constraint firstItem="7Gs-Y5-Lgw" firstAttribute="top" secondItem="peb-yR-ZZD" secondAttribute="bottom" constant="8" id="ypS-Rd-xcc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="swiBezienswaardigheden" destination="B6c-mC-R2u" id="xeB-Iz-UlW"/>
+                        <outlet property="swiHelling" destination="YXu-U5-cRR" id="TvC-Os-S71"/>
+                        <outlet property="swiInfoKantoren" destination="ViT-7Y-tGT" id="c2P-lD-YEO"/>
+                        <outlet property="swiOvernachten" destination="HeQ-xc-hC4" id="Qnp-IL-3os"/>
+                        <outlet property="swiParking" destination="Ivi-oK-raD" id="SS8-oJ-9ve"/>
+                        <outlet property="swiReca" destination="6JZ-1k-KfP" id="fK8-Q5-7I8"/>
+                        <outlet property="swiToilet" destination="6sl-eq-utq" id="Qmf-Mi-a7E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4rz-jy-xTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -771,7 +781,7 @@ MAHO Wouter (version 1)</string>
         <!--SettingsVC-->
         <scene sceneID="QEh-DC-eqk">
             <objects>
-                <viewController title="Instellingen" id="uXN-KQ-QQH" userLabel="SettingsVC" sceneMemberID="viewController">
+                <viewController title="Instellingen" id="uXN-KQ-QQH" userLabel="SettingsVC" customClass="UpdateViewController" customModule="AccesSEAble" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5k5-KS-3dV"/>
                         <viewControllerLayoutGuide type="bottom" id="cie-cx-wpo"/>
@@ -837,6 +847,9 @@ MAHO Wouter (version 1)</string>
                                         <state key="normal" title="Update Data">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnUpdate" destination="uXN-KQ-QQH" eventType="touchUpInside" id="ukv-gd-PP7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
