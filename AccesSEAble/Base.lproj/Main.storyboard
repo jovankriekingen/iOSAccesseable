@@ -28,7 +28,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="SearchButton" image="search.png"/>
                                 <connections>
-                                    <segue destination="SCH-Ty-eXc" kind="show" id="vLI-9X-AgO"/>
+                                    <segue destination="SCH-Ty-eXc" kind="show" identifier="search" id="vLI-9X-AgO"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZc-wM-E46">
@@ -211,7 +211,7 @@
         <!--SearchVC-->
         <scene sceneID="pkM-ln-0cd">
             <objects>
-                <viewController title="SearchVC" id="SCH-Ty-eXc" userLabel="SearchVC" sceneMemberID="viewController">
+                <viewController title="SearchVC" id="SCH-Ty-eXc" userLabel="SearchVC" customClass="SearchViewController" customModule="AccesSEAble" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="peb-yR-ZZD"/>
                         <viewControllerLayoutGuide type="bottom" id="OQu-5X-aVa"/>
