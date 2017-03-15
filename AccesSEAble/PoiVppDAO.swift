@@ -79,8 +79,8 @@ public class poiDAO {
                 rowPOI.parking_lengte_uitstapzone_tekst = poiMember.value(forKey: "parking_lengte_uitstapzone_tekst") as? String
                 rowPOI.parking_ondergrond_materiaal = poiMember.value(forKey: "parking_ondergrond_materiaal") as? String
                 
-                rowPOI.stop_lat = poiMember.value(forKey: "LAT") as? String
-                rowPOI.stop_lon = poiMember.value(forKey: "LON") as? String
+                rowPOI.lat = poiMember.value(forKey: "LAT") as? String
+                rowPOI.lon = poiMember.value(forKey: "LON") as? String
                 
                 
             }
