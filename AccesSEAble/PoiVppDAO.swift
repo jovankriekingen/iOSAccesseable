@@ -27,9 +27,6 @@ public class poiDAO {
         return req
     }
     
-    
-    
-    
     func parsePOI (context:NSManagedObjectContext)
     {
         
@@ -119,7 +116,7 @@ public class vppDAO {
                 rowVPP.adres_nr = vppMember.value(forKey: "ADRES_NR") as? String
                 rowVPP.postcode = vppMember.value(forKey: "POSTCODE") as? String
                 rowVPP.gemeente = vppMember.value(forKey: "GEMEENTE") as? String
-                rowVPP.·lat = vppMember.value(forKey: "LAT") as? String
+                rowVPP.lat = vppMember.value(forKey: "LAT") as? String
                 rowVPP.lon = vppMember.value(forKey: "LON") as? String
                 rowVPP.deelgemeente = vppMember.value(forKey: "DEELGEMEENTE") as? String
                 rowVPP.regio = vppMember.value(forKey: "REGIO") as? String

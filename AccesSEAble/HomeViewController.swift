@@ -9,11 +9,12 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    var appdell:AppDelegate = AppDelegate()
     
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    appdell = AppDelegate()
     // Do any additional setup after loading the view, typically from a nib.
   }
 

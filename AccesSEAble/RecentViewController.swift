@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 
-class LijstweergaveViewController: UITableViewController, UIViewController, UITableViewDataSource, UITableViewDelegate {
+class LijstweergaveViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     
     var itemList:[NSManagedObject] = []

@@ -13,7 +13,7 @@ public class DAO {
     
     init() {
         let poidao = poiDAO()
-        let appDell = AppDelegate()
+        
         poidao.parsePOI(context: appDell.persistentContainer.viewContext)
     }
 }
