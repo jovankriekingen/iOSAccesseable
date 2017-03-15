@@ -7,13 +7,54 @@
 //
 
 import Foundation
+import CoreData
 
 public class DAO {
-    let mainDAO = DAO()
+    static let mainDAO = DAO.init()
     
-    init() {
-        let poidao = poiDAO()
+    lazy var persistentContainer: NSPersistentContainer = {
         
-        poidao.parsePOI(context: appDell.persistentContainer.viewContext)
+        let container = NSPersistentContainer(name: "ASea")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        })
+        return container
+    }()
+
+    private init() {
+        let parser = parserMethodes()
+        //parsen en laten opslaan binnen context, dit komt uit CoreData container
+        parser.parsePOI(context: persistentContainer.viewContext)
+    }
+    
+    
+    func getPOILijst() -> [POI]
+    {
+        let req = NSFetchRequest<NSFetchRequestResult>.init(entityName: "POI")
+        
+        do {
+            let pointsOfInterest = try persistentContainer.viewContext.fetch(req) as! [POI]
+            return pointsOfInterest
+        } catch {
+            print("Opvragen poi niet mogelijk!")
+        }
+        
+        return []
+    }
+
+    
+    func saveContext () {
+        let context = persistentContainer.viewContext
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+        }
     }
 }

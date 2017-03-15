@@ -13,8 +13,7 @@ import CoreData
 
 public class tramDAO {
     
-    func parseTram (context:NSManagedObjectContext)
-    {
+    func parseTram (context:NSManagedObjectContext) {
         
         let url = URL(string: "http://web10.weopendata.com/measurements/tram.json")
         do {
