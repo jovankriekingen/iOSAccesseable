@@ -31,8 +31,8 @@ class SearchViewController: UIViewController {
     
     @IBAction func btnZoek() {
         if swiBezienswaardigheden.isOn {
-            let poidao = poiDAO()
-            poidao.getPOILijst()
+            
+            print(DAO.mainDAO.getPOILijst())
             
         }
     }

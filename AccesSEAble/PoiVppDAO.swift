@@ -11,22 +11,9 @@ import Foundation
 import CoreData
 
 
-public class poiDAO {
+public class parserMethodes {
     
-    func getPOILijst() -> [POI]
-    {
-        let req = NSFetchRequest<NSFetchRequestResult>.init(entityName: "POI")
         
-        do {
-            let pointsOfInterest = try persistentContainer.viewContext.fetch(req) as! [POI]
-            return pointsOfInterest
-        } catch {
-            print("Opvragen restaurants niet mogelijk!")
-        }
-        
-        return req
-    }
-    
     func parsePOI (context:NSManagedObjectContext)
     {
         
