@@ -12,6 +12,9 @@ import CoreData
 
 
 public class tramDAO {
+  
+  func parseTram (context:NSManagedObjectContext)
+  {
     
     func parseTram (context:NSManagedObjectContext) {
         
@@ -47,5 +50,32 @@ public class tramDAO {
             print("parse error tram")
         }
     }
+  }
 }
 
+public class infoDAO {
+  func parseInfo(context:NSManagedObjectContext) {
+    let url = URL(string: "http://web10.weopendata.com/measurements/info.json")
+    do{
+      
+      let infoData = try Info(contentsOf: url!)
+      let infoArray:NSArray = try JSONSerialization.jsonObject(with: infoData) as! NSArray
+      
+      for item in infoArray {
+        
+        let infoMember:NSDictionary = item as! NSDictionary
+        let rowInfo = Info(context: context)
+        
+        
+        rowInfo.
+        
+        
+      }
+      
+      
+    }
+    
+    
+  }
+  
+}
