@@ -46,8 +46,7 @@ public class tramDAO {
             }
         } catch  {
             print("parse error tram")
-            
         }
-
-
     }
+}
+

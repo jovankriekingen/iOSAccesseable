@@ -13,6 +13,23 @@ import CoreData
 
 public class poiDAO {
     
+    func getPOILijst() -> [POI]
+    {
+        let req = NSFetchRequest<NSFetchRequestResult>.init(entityName: "POI")
+        
+        do {
+            let pointsOfInterest = try persistentContainer.viewContext.fetch(req) as! [POI]
+            return pointsOfInterest
+        } catch {
+            print("Opvragen restaurants niet mogelijk!")
+        }
+        
+        return req
+    }
+    
+    
+    
+    
     func parsePOI (context:NSManagedObjectContext)
     {
         
@@ -69,12 +86,14 @@ public class poiDAO {
             }
         } catch  {
             print("parse error POI")
-            
         }
+    }
+    
+    
         
         
 }
-}
+
 
 public class vppDAO {
     
@@ -100,8 +119,8 @@ public class vppDAO {
                 rowVPP.adres_nr = vppMember.value(forKey: "ADRES_NR") as? String
                 rowVPP.postcode = vppMember.value(forKey: "POSTCODE") as? String
                 rowVPP.gemeente = vppMember.value(forKey: "GEMEENTE") as? String
-                rowVPP.stop_lat = vppMember.value(forKey: "LAT") as? String
-                rowVPP.stop_lon = vppMember.value(forKey: "LON") as? String
+                rowVPP.·lat = vppMember.value(forKey: "LAT") as? String
+                rowVPP.lon = vppMember.value(forKey: "LON") as? String
                 rowVPP.deelgemeente = vppMember.value(forKey: "DEELGEMEENTE") as? String
                 rowVPP.regio = vppMember.value(forKey: "REGIO") as? String
                 rowVPP.parking_aanduiding_verkeersbord = vppMember.value(forKey: "parking_aanduiding_verkeersbord") as? String
@@ -121,9 +140,7 @@ public class vppDAO {
             }
         } catch  {
             print("parse error VPP")
-            
         }
-        
-        
+    }
 }
-}
+

@@ -24,6 +24,7 @@
 		4966A0391E719F2E00C15572 /* assets_accesseable in Resources */ = {isa = PBXBuildFile; fileRef = 4966A0381E719F2E00C15572 /* assets_accesseable */; };
 		496A757A1E78461B0048AA6B /* InfoTramLogiesDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A75791E78461B0048AA6B /* InfoTramLogiesDAO.swift */; };
 		B160A0791E78F85C004787C4 /* PoiVppDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B160A0781E78F85C004787C4 /* PoiVppDAO.swift */; };
+		B160A07B1E790FEA004787C4 /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B160A07A1E790FEA004787C4 /* DAO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		4966A0381E719F2E00C15572 /* assets_accesseable */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets_accesseable; sourceTree = "<group>"; };
 		496A75791E78461B0048AA6B /* InfoTramLogiesDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTramLogiesDAO.swift; sourceTree = "<group>"; };
 		B160A0781E78F85C004787C4 /* PoiVppDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoiVppDAO.swift; sourceTree = "<group>"; };
+		B160A07A1E790FEA004787C4 /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				31399EC21E7822F90044622C /* UpdateViewController.swift */,
 				496A75791E78461B0048AA6B /* InfoTramLogiesDAO.swift */,
 				B160A0781E78F85C004787C4 /* PoiVppDAO.swift */,
+				B160A07A1E790FEA004787C4 /* DAO.swift */,
 			);
 			path = AccesSEAble;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				B160A0791E78F85C004787C4 /* PoiVppDAO.swift in Sources */,
 				31399EAE1E77DEB00044622C /* DetailViewController.swift in Sources */,
 				31399EC31E7822F90044622C /* UpdateViewController.swift in Sources */,
+				B160A07B1E790FEA004787C4 /* DAO.swift in Sources */,
 				09095BE21E78415400749993 /* ASea.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
