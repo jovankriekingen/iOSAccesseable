@@ -30,7 +30,7 @@ public class parserMethodes {
                 
                 let rowPOI = POI(context: context)
                 
-                
+                //De kollommen worden (hoop ik) met deze blok ingevuld
                 rowPOI.id_westkans = poiMember.value(forKey: "ID_WESTKANS") as? String
                 rowPOI.id_westtoer = poiMember.value(forKey: "ID_WESTTOER") as? String
                 rowPOI.type = poiMember.value(forKey: "TYPE") as? String
@@ -46,22 +46,22 @@ public class parserMethodes {
                 rowPOI.fax = poiMember.value(forKey: "FAX") as? String
                 rowPOI.web = poiMember.value(forKey: "WEB") as? String
                 rowPOI.mail = poiMember.value(forKey: "MAIL") as? String
-                rowPOI.openingsuren = poiMember.value(forKey: "openingsuren") as? String
+                rowPOI.openingsuren = poiMember.value(forKey: "OPENINGSUREN") as? String
                 rowPOI.score = poiMember.value(forKey: "SCORE") as? String
                 rowPOI.voorzieningen_blinden_doven = poiMember.value(forKey: "voorzieningen_blinden_doven") as? String
-                rowPOI.parking_score = poiMember.value(forKey: "parking_score") as? String
-                rowPOI.parking_aanduiding_verkeersbord = poiMember.value(forKey: "parking_aanduiding_verkeersbord") as? String
-                rowPOI.parking_aanduiding_omlijning = poiMember.value(forKey: "parking_aanduiding_omlijning") as? String
-                rowPOI.parking_aanduiding_zichtbaar = poiMember.value(forKey: "parking_aanduiding_zichtbaar") as? String
-                rowPOI.parking_aanduiding_score = poiMember.value(forKey: "parking_aanduiding_score") as? String
-                rowPOI.parking_orientatie = poiMember.value(forKey: "parking_orientatie") as? String
-                rowPOI.parking_breedte_data = poiMember.value(forKey: "parking_breedte_data") as? String
-                rowPOI.parking_lengte_data = poiMember.value(forKey: "parking_lengte_data") as? String
-                rowPOI.parking_breedte_tekst = poiMember.value(forKey: "parking_breedte_tekst") as? String
-                rowPOI.parking_lengte_tekst = poiMember.value(forKey: "parking_lengte_tekst") as? String
-                rowPOI.parking_breedte_uitstapzone_tekst = poiMember.value(forKey: "parking_breedte_uitstapzone_tekst") as? String
-                rowPOI.parking_lengte_uitstapzone_tekst = poiMember.value(forKey: "parking_lengte_uitstapzone_tekst") as? String
-                rowPOI.parking_ondergrond_materiaal = poiMember.value(forKey: "parking_ondergrond_materiaal") as? String
+                rowPOI.parking_score = poiMember.value(forKey: "PARKING_SCORE") as? String
+                rowPOI.parking_aanduiding_verkeersbord = poiMember.value(forKey: "PARKING_AANDUIDING_VERKEERSBORD") as? String
+                rowPOI.parking_aanduiding_omlijning = poiMember.value(forKey: "PARKING_AANDUIDING_OMLIJNING") as? String
+                rowPOI.parking_aanduiding_zichtbaar = poiMember.value(forKey: "PARKING_AANDUIDING_ZICHTBAAR") as? String
+                rowPOI.parking_aanduiding_score = poiMember.value(forKey: "PARKING_AANDUIDING_SCORE") as? String
+                rowPOI.parking_orientatie = poiMember.value(forKey: "PARKING_ORIENTATIE") as? String
+                rowPOI.parking_breedte_data = poiMember.value(forKey: "PARKING_BREEDTE_DATA") as? String
+                rowPOI.parking_lengte_data = poiMember.value(forKey: "PARKING_LENGTE_DATA") as? String
+                rowPOI.parking_breedte_tekst = poiMember.value(forKey: "PARKING_BREEDTE_TEKST") as? String
+                rowPOI.parking_lengte_tekst = poiMember.value(forKey: "PARKING_LENGTE_TEKST") as? String
+                rowPOI.parking_breedte_uitstapzone_tekst = poiMember.value(forKey: "PARKING_PARKING_BREEDTE_UITSTAPZONE_TEKST") as? String
+                rowPOI.parking_lengte_uitstapzone_tekst = poiMember.value(forKey: "PARKING_LENGTE_UITSTAPZONE_TEKST") as? String
+                rowPOI.parking_ondergrond_materiaal = poiMember.value(forKey: "PARKING_ONDERGROND_MATERIAAL") as? String
                 
                 rowPOI.lat = poiMember.value(forKey: "LAT") as? String
                 rowPOI.lon = poiMember.value(forKey: "LON") as? String
@@ -72,14 +72,6 @@ public class parserMethodes {
             print("parse error POI")
         }
     }
-    
-    
-        
-        
-}
-
-
-public class vppDAO {
     
     func parseVPP (context:NSManagedObjectContext)
     {
@@ -107,19 +99,19 @@ public class vppDAO {
                 rowVPP.lon = vppMember.value(forKey: "LON") as? String
                 rowVPP.deelgemeente = vppMember.value(forKey: "DEELGEMEENTE") as? String
                 rowVPP.regio = vppMember.value(forKey: "REGIO") as? String
-                rowVPP.parking_aanduiding_verkeersbord = vppMember.value(forKey: "parking_aanduiding_verkeersbord") as? String
-                rowVPP.parking_aanduiding_omlijning = vppMember.value(forKey: "parking_aanduiding_omlijning") as? String
-                rowVPP.parking_aanduiding_score = vppMember.value(forKey: "parking_aanduiding_score") as? String
-                rowVPP.parking_orientatie = vppMember.value(forKey: "parking_orientatie") as? String
-                rowVPP.parking_breedte_data = vppMember.value(forKey: "parking_breedte_data") as? String
-                rowVPP.parking_lengte_data = vppMember.value(forKey: "parking_lengte_data") as? String
-                rowVPP.parking_ondergrond_materiaal = vppMember.value(forKey: "parking_ondergrond_materiaal") as? String
-                rowVPP.parking_ondergrond_materiaal_score = vppMember.value(forKey: "parking_ondergrond_materiaal_score") as? String
-                rowVPP.parking_breedte_tekst = vppMember.value(forKey: "parking_breedte_tekst") as? String
-                rowVPP.parking_lengte_tekst = vppMember.value(forKey: "parking_lengte_tekst") as? String
-                rowVPP.parking_breedte_uitstapzone_tekst = vppMember.value(forKey: "parking_breedte_uitstapzone_tekst") as? String
-                rowVPP.parking_lengte_uitstapzone_tekst = vppMember.value(forKey: "parking_lengte_uitstapzone_tekst") as? String
-                rowVPP.url_picture_main = vppMember.value(forKey: "url_picture_main") as? String
+                rowVPP.parking_aanduiding_verkeersbord = vppMember.value(forKey: "PARKING_AANDUIDING_VERKEERSBORD") as? String
+                rowVPP.parking_aanduiding_omlijning = vppMember.value(forKey: "PARKING_AANDUIDING_OMLIJNING") as? String
+                rowVPP.parking_aanduiding_score = vppMember.value(forKey: "PARKING_AANDUIDING_SCORE") as? String
+                rowVPP.parking_orientatie = vppMember.value(forKey: "PARKING_ORIENTATIE") as? String
+                rowVPP.parking_breedte_data = vppMember.value(forKey: "PARKING_BREEDTE_DATA") as? String
+                rowVPP.parking_lengte_data = vppMember.value(forKey: "PARKING_LENGTE_DATA") as? String
+                rowVPP.parking_ondergrond_materiaal = vppMember.value(forKey: "PARKING_ONDERGROND_MATERIAAL") as? String
+                rowVPP.parking_ondergrond_materiaal_score = vppMember.value(forKey: "PARKING_ONDERGROND_MATERIAAL_score") as? String
+                rowVPP.parking_breedte_tekst = vppMember.value(forKey: "PARKING_BREEDTE_TEKST") as? String
+                rowVPP.parking_lengte_tekst = vppMember.value(forKey: "PARKING_LENGTE_TEKST") as? String
+                rowVPP.parking_breedte_uitstapzone_tekst = vppMember.value(forKey: "PARKING_PARKING_BREEDTE_UITSTAPZONE_TEKST") as? String
+                rowVPP.parking_lengte_uitstapzone_tekst = vppMember.value(forKey: "PARKING_LENGTE_UITSTAPZONE_TEKST") as? String
+                rowVPP.url_picture_main = vppMember.value(forKey: "URL_PICTURE_MAIN") as? String
                 
             }
         } catch  {
