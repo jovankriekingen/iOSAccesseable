@@ -363,9 +363,6 @@
                             <constraint firstItem="WyD-Na-xsi" firstAttribute="top" secondItem="7Gs-Y5-Lgw" secondAttribute="bottom" constant="11" id="y4p-Ip-TjJ"/>
                             <constraint firstItem="7Gs-Y5-Lgw" firstAttribute="top" secondItem="peb-yR-ZZD" secondAttribute="bottom" constant="8" id="ypS-Rd-xcc"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="jLt-hu-hUr" appends="YES" id="25u-go-G2g"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="swiBezienswaardigheden" destination="B6c-mC-R2u" id="xeB-Iz-UlW"/>
@@ -379,11 +376,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4rz-jy-xTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="jLt-hu-hUr">
-                    <connections>
-                        <action selector="tapToetsenbordWeg:" destination="SCH-Ty-eXc" id="87i-Hc-B6k"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2964" y="1186.0569715142431"/>
         </scene>

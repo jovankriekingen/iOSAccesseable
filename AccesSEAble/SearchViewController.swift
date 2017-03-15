@@ -18,13 +18,14 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var swiHelling: UISwitch!
     @IBOutlet var zoekBalk: UISearchBar!
     
-    @IBAction func tapToetsenbordWeg(_ sender: UITapGestureRecognizer) {
-        dismissKeyboard()
+    func toetsenbord() {
+        if zoekBalk.isFocused {
+            view.endEditing(false)
+        } else {
+            view.endEditing(true)
+        }
     }
     
-    func dismissKeyboard() {
-        view.endEditing(true)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -9,7 +9,7 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+//https://www.hackingwithswift.com/read/38/7/examples-of-using-nspredicate-to-filter-nsfetchrequest
     @IBOutlet weak var lblProfielNaam: UILabel!
     
     override func viewDidLoad() {
