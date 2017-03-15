@@ -16,7 +16,7 @@ public class tramDAO {
   func parseTram (context:NSManagedObjectContext)
   {
     
-    let url = URL(string: "http://web10.weopendata.com/measurements/tram.json")
+    let url = URL(string: "https://web10.weopendata.com/measurements/tram.json")
     do {
       
       let tramData = try Data(contentsOf: url!)
@@ -52,7 +52,7 @@ public class tramDAO {
 
 public class infoDAO {
   func parseInfo(context:NSManagedObjectContext) {
-    let url = URL(string: "http://web10.weopendata.com/measurements/info.json")
+    let url = URL(string: "https://web10.weopendata.com/measurements/info.json")
     do{
       
       let infoData = try Info(contentsOf: url!)
@@ -64,7 +64,6 @@ public class infoDAO {
         let rowInfo = Info(context: context)
         
         
-        rowInfo.
         
         
       }
