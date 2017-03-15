@@ -23,6 +23,7 @@
 		4966A0301E718E4600C15572 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4966A02E1E718E4600C15572 /* LaunchScreen.storyboard */; };
 		4966A0391E719F2E00C15572 /* assets_accesseable in Resources */ = {isa = PBXBuildFile; fileRef = 4966A0381E719F2E00C15572 /* assets_accesseable */; };
 		496A757A1E78461B0048AA6B /* InfoTramLogiesDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A75791E78461B0048AA6B /* InfoTramLogiesDAO.swift */; };
+		B160A0791E78F85C004787C4 /* poiVppDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B160A0781E78F85C004787C4 /* poiVppDAO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		4966A0311E718E4600C15572 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4966A0381E719F2E00C15572 /* assets_accesseable */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets_accesseable; sourceTree = "<group>"; };
 		496A75791E78461B0048AA6B /* InfoTramLogiesDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTramLogiesDAO.swift; sourceTree = "<group>"; };
+		B160A0781E78F85C004787C4 /* poiVppDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = poiVppDAO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				31399EB41E78031E0044622C /* FavoriteViewController.xib */,
 				31399EC21E7822F90044622C /* UpdateViewController.swift */,
 				496A75791E78461B0048AA6B /* InfoTramLogiesDAO.swift */,
+				B160A0781E78F85C004787C4 /* poiVppDAO.swift */,
 			);
 			path = AccesSEAble;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				318A57081E768D4C0008A397 /* MapViewController.swift in Sources */,
 				31399EB01E77E4020044622C /* ProfileViewController.swift in Sources */,
 				31399EB51E78031E0044622C /* FavoriteViewController.swift in Sources */,
+				B160A0791E78F85C004787C4 /* poiVppDAO.swift in Sources */,
 				31399EAE1E77DEB00044622C /* DetailViewController.swift in Sources */,
 				31399EC31E7822F90044622C /* UpdateViewController.swift in Sources */,
 				09095BE21E78415400749993 /* ASea.xcdatamodeld in Sources */,
