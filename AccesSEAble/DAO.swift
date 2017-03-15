@@ -31,9 +31,23 @@ public class DAO {
     }
     
     
-    func getPOILijst() -> [POI]
-    {
+    func getPOILijst() -> [POI] {
         let req = NSFetchRequest<NSFetchRequestResult>.init(entityName: "POI")
+        
+        do {
+            let pointsOfInterest = try persistentContainer.viewContext.fetch(req) as! [POI]
+            
+            return pointsOfInterest
+        } catch {
+            print("Opvragen poi niet mogelijk!")
+        }
+        
+        return []
+    }
+    
+    func getPOILijstMetZoek(zoekVoorwaarde: String) -> [POI] {
+        var req = NSFetchRequest<NSFetchRequestResult>.init(entityName: "POI")
+        var naamIsZoek = NSPredicate(format: "NAAM == \(zoekVoorwaarde)")
         
         do {
             let pointsOfInterest = try persistentContainer.viewContext.fetch(req) as! [POI]
@@ -41,7 +55,6 @@ public class DAO {
         } catch {
             print("Opvragen poi niet mogelijk!")
         }
-        
         return []
     }
 

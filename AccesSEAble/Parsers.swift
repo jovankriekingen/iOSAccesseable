@@ -30,7 +30,7 @@ public class parserMethodes {
                 
                 let rowPOI = POI(context: context)
                 
-                //De kollommen worden (hoop ik) met deze blok ingevuld
+                //De entiteiten worden (normaal gezien) met deze blok ingevuld
                 rowPOI.id_westkans = poiMember.value(forKey: "ID_WESTKANS") as? String
                 rowPOI.id_westtoer = poiMember.value(forKey: "ID_WESTTOER") as? String
                 rowPOI.type = poiMember.value(forKey: "TYPE") as? String

@@ -16,7 +16,15 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var swiOvernachten: UISwitch!
     @IBOutlet weak var swiParking: UISwitch!
     @IBOutlet weak var swiHelling: UISwitch!
-
+    @IBOutlet var zoekBalk: UISearchBar!
+    
+    @IBAction func tapToetsenbordWeg(_ sender: UITapGestureRecognizer) {
+        dismissKeyboard()
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +39,7 @@ class SearchViewController: UIViewController {
     
     @IBAction func btnZoek() {
         if swiBezienswaardigheden.isOn {
-            print(DAO.mainDAO.getPOILijst())
+            DAO.mainDAO.getPOILijstMetZoek(zoekVoorwaarde: zoekBalk.text!)
         }
     }
     
