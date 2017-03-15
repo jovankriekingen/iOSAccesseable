@@ -52,7 +52,7 @@ public class tramDAO {
 
 public class infoDAO {
   func parseInfo(context:NSManagedObjectContext) {
-    let url = URL(string: "http://web10.weopendata.com/measurements/info.json")
+    let url = URL(string: "https://web10.weopendata.com/measurements/info.json")
     do{
       
       let infoData = try Data(contentsOf: url!)
