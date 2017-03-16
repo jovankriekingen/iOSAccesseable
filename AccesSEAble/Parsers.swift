@@ -70,6 +70,59 @@ public class parserMethodes {
       print("parse error POI")
     }
   }
+    
+    func parseDijken( context:NSManagedObjectContext)
+    {
+        //waar staan de gegevens
+        let url = URL(string: "http://web10.weopendata.com/measurements/dijk")
+        do {
+            let dijkData = try Data(contentsOf: url!)
+            let dijkArray:NSArray = try JSONSerialization.jsonObject(with: dijkData ) as! NSArray
+            
+            for item in dijkArray{
+                
+                let dijkObject:NSDictionary = item as! NSDictionary
+                let volgendeDijk = Dijk(context: context)
+                
+                let adres_locatieStr = dijkObject.value(forKey: "adres_locatie") as! String
+                volgendeDijk.adres_locatie = adres_locatieStr
+                
+                volgendeDijk.naam = dijkObject.value(forKey: "naam") as? String
+            }
+        } catch  {
+            print("Fout bij binnehalen van de data")
+        }
+    }
+
+    func parseRecas( context:NSManagedObjectContext)
+    {
+        //waar staan de gegevens
+        let url = URL(string: "http://web10.weopendata.com/measurements/reca")
+        //exceptions mogelijk bv. geen internet
+        do {
+            //data binnentrekken van url en in array opslaan
+            let recaData = try Data(contentsOf: url!)
+            let recaArray:NSArray = try JSONSerialization.jsonObject(with: recaData) as! NSArray
+            
+            //elk item in array overlopen om gegevens uit te halen
+            for item in recaArray {
+                
+                let recaObject:NSDictionary = item as! NSDictionary
+                //entiteit aanmaken, context = verwijzing naar waar opgeslaan
+                let volgendeReca = Reca(context: context)
+                
+                //strings omzetten waar nodig
+                let adres_straatStr = recaObject.value(forKey: "adres_straat") as! String
+                volgendeReca.adres_straat =  adres_straatStr
+                
+                volgendeReca.naam = recaObject.value(forKey: "naam") as? String
+                //rest keys nog niet geparset
+            }
+        } catch  {
+            print("Fout bij binnenhalen van de data")
+        }
+    }
+
   
   
   func parseVPP (context:NSManagedObjectContext)
