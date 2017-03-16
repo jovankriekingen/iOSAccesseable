@@ -11,57 +11,57 @@ import CoreData
 
 
 class LijstweergaveViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+  
+  
+  var itemList:[NSManagedObject] = []
+  var context:NSManagedObjectContext?
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    // Do any additional setup after loading the view.
+  }
+  
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    // Dit zou de tableview moeten opvullen met de waarden uit de tabel
     
-    var itemList:[NSManagedObject] = []
-    var context:NSManagedObjectContext?
+    let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    let recentItem = itemList[indexPath.row]
+    let naam = recentItem.value(forKey: "NAAM")
+    let straat = recentItem.value(forKey: "ADRES_STRAAT")
+    let straatNr = recentItem.value(forKey: "ADRES_NR")
+    let postCode = recentItem.value(forKey: "PNR")
+    let gemeente = recentItem.value(forKey: "GEMEENTE")
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // Dit zou de tableview moeten opvullen met de waarden uit de tabel
-        
-        let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
-        
-        let recentItem = itemList[indexPath.row]
-        let naam = recentItem.value(forKey: "NAAM")
-        let straat = recentItem.value(forKey: "ADRES_STRAAT")
-        let straatNr = recentItem.value(forKey: "ADRES_NR")
-        let postCode = recentItem.value(forKey: "PNR")
-        let gemeente = recentItem.value(forKey: "GEMEENTE")
-        
-        cell.textLabel?.text = naam as? String
-        cell.textLabel?.text = straat as? String
-        cell.textLabel?.text = straatNr as? String
-        cell.textLabel?.text = naam as? String
-        cell.textLabel?.text = postCode as? String
-        cell.textLabel?.text = gemeente as? String
-        
-        return cell
-    }
+    cell.textLabel?.text = naam as? String
+    cell.textLabel?.text = straat as? String
+    cell.textLabel?.text = straatNr as? String
+    cell.textLabel?.text = naam as? String
+    cell.textLabel?.text = postCode as? String
+    cell.textLabel?.text = gemeente as? String
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemList.count
-    }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    return cell
+  }
+  
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return itemList.count
+  }
+  
+  
+  
+  /*
+   // MARK: - Navigation
+   
+   // In a storyboard-based application, you will often want to do a little preparation before navigation
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+   // Get the new view controller using segue.destinationViewController.
+   // Pass the selected object to the new view controller.
+   }
+   */
+  
 }
