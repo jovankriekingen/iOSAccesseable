@@ -42,7 +42,7 @@ public class parserMethodes {
         rowPOI.mail = poiMember.value(forKey: "MAIL") as? String
         rowPOI.openingsuren = poiMember.value(forKey: "OPENINGSUREN") as? String
         rowPOI.score = poiMember.value(forKey: "SCORE") as? String
-        rowPOI.voorzieningen_blinden_doven = poiMember.value(forKey: "voorzieningen_blinden_doven") as? String
+        rowPOI.voorzieningen_blinden_doven = poiMember.value(forKey: "VOORZIENINGEN_BLINDEN_DOVEN") as? String
         rowPOI.parking_score = poiMember.value(forKey: "PARKING_SCORE") as? String
         rowPOI.parking_aanduiding_verkeersbord = poiMember.value(forKey: "PARKING_AANDUIDING_VERKEERSBORD") as? String
         rowPOI.parking_aanduiding_omlijning = poiMember.value(forKey: "PARKING_AANDUIDING_OMLIJNING") as? String
