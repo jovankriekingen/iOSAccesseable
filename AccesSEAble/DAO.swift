@@ -26,8 +26,12 @@ public class DAO {
 
     private init() {
         let parser = parserMethodes()
+        
         //parsen en laten opslaan binnen context, dit komt uit CoreData container
         parser.parsePOI(context: persistentContainer.viewContext)
+        parser.parseVPP(context: persistentContainer.viewContext)
+        
+        saveContext()
     }
     
     
@@ -48,7 +52,7 @@ public class DAO {
     func getPOILijstMetZoek(zoekVoorwaarde: String) -> [POI] {
         var req = NSFetchRequest<NSFetchRequestResult>.init(entityName: "POI")
         //req.naamIsZoek = NSPredicate(format: "naam contains[c] %@", zoekVoorwaarde)
-        let zoekenOpInputText = NSPredicate(format: "NAAM contains %@", zoekVoorwaarde as String)
+        let zoekenOpInputText = NSPredicate(format: "naam CONTAINS[c] %@", zoekVoorwaarde)
         req.predicate = zoekenOpInputText
 
         do {
@@ -57,7 +61,7 @@ public class DAO {
         } catch {
             print("Opvragen poi niet mogelijk!")
         }
-        return [] as Array
+        return []
     }
 
     

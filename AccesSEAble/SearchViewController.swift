@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class SearchViewController: UIViewController {
     @IBOutlet weak var swiReca: UISwitch!
@@ -17,6 +18,8 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var swiParking: UISwitch!
     @IBOutlet weak var swiHelling: UISwitch!
     @IBOutlet var zoekBalk: UISearchBar!
+    
+    var zoekresultaten:[NSManagedObject]?
     
     func toetsenbord() {
         if zoekBalk.isFocused {
@@ -39,8 +42,26 @@ class SearchViewController: UIViewController {
     }
     
     @IBAction func btnZoek() {
+        if swiReca.isOn {
+            
+        }
+        if swiToilet.isOn {
+            
+        }
         if swiBezienswaardigheden.isOn {
-            DAO.mainDAO.getPOILijstMetZoek(zoekVoorwaarde: zoekBalk.text!)
+           zoekresultaten?.append(contentsOf: DAO.mainDAO.getPOILijstMetZoek(zoekVoorwaarde: zoekBalk.text!))
+        }
+        if swiInfoKantoren.isOn {
+            
+        }
+        if swiOvernachten.isOn {
+            
+        }
+        if swiParking.isOn {
+            
+        }
+        if swiHelling.isOn {
+            
         }
     }
     
