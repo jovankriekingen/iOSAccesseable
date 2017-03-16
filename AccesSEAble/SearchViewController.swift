@@ -54,7 +54,6 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
             
         }
         if swiBezienswaardigheden.isOn {
-            
             for item in DAO.mainDAO.getPOILijstMetZoek(zoekVoorwaarde: searchText)
             {
                 zoekresultaten.append(item)
