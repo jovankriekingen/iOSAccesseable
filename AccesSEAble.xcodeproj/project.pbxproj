@@ -61,7 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				4966A0211E718E4500C15572 /* AccesSEAble */,
-				4966A0201E718E4500C15572 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +70,7 @@
 				4966A01F1E718E4500C15572 /* AccesSEAble.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		4966A0211E718E4500C15572 /* AccesSEAble */ = {
@@ -93,6 +93,7 @@
 				31399EC21E7822F90044622C /* UpdateViewController.swift */,
 				B160A0781E78F85C004787C4 /* Parsers.swift */,
 				B160A07A1E790FEA004787C4 /* DAO.swift */,
+				4966A0201E718E4500C15572 /* Products */,
 			);
 			path = AccesSEAble;
 			sourceTree = "<group>";
