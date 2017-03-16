@@ -36,6 +36,7 @@ public class DAO {
         parser.parseTram(context: persistentContainer.viewContext)
         parser.parseLogies(context: persistentContainer.viewContext)
         
+        
         saveContext()
     }
     
