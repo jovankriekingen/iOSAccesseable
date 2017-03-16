@@ -12,96 +12,93 @@ import Foundation
 import CoreData
 
 public class DAO {
-    static let mainDAO = DAO.init()
+  static let mainDAO = DAO.init()
+  
+  lazy var persistentContainer: NSPersistentContainer = {
     
-    lazy var persistentContainer: NSPersistentContainer = {
+    let container = NSPersistentContainer(name: "ASea")
+    container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+      if let error = error as NSError? {
         
-        let container = NSPersistentContainer(name: "ASea")
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            if let error = error as NSError? {
-                
-                fatalError("Unresolved error \(error), \(error.userInfo)")
-            }
-        })
-        return container
-    }()
+        fatalError("Unresolved error \(error), \(error.userInfo)")
+      }
+    })
+    return container
+  }()
+  
+  private init() {
+    let parser = parserMethodes()
+    //parsen en laten opslaan binnen context, dit komt uit CoreData container
     
-    private init() {
-        let parser = parserMethodes()
-        //parsen en laten opslaan binnen context, dit komt uit CoreData container
-        
-        //parser.parseDijk(context: persistentContainer.viewContext)
-        parser.parseInfo(context: persistentContainer.viewContext)
-        //parser.parseLogies(context: persistentContainer.viewContext)
-        parser.parsePOI(context: persistentContainer.viewContext)
-        //parser.parseSanitair(context: persistentContainer.viewContext)
-        //parser.parseTram(context: persistentContainer.viewContext)
-        //parser.parseReca(context: persistentContainer.viewContext)
-        parser.parseVPP(context: persistentContainer.viewContext)
-        
-        saveContext()
+    //parser.parseDijk(context: persistentContainer.viewContext)
+    parser.parseInfo(context: persistentContainer.viewContext)
+    //parser.parseLogies(context: persistentContainer.viewContext)
+    parser.parsePOI(context: persistentContainer.viewContext)
+    //parser.parseSanitair(context: persistentContainer.viewContext)
+    //parser.parseTram(context: persistentContainer.viewContext)
+    //parser.parseReca(context: persistentContainer.viewContext)
+    parser.parseVPP(context: persistentContainer.viewContext)
+    
+    saveContext()
+  }
+  
+  //MARK: Dijk functies
+  func getAlleDijken() -> [Dijk] {
+    let request = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Dijk")
+    
+    do {
+      let dijken = try persistentContainer.viewContext.fetch(request) as! [Dijk]
+      
+      return dijken
+    } catch {
+      print("Opvragen dijken mislukt!")
     }
     
-    //MARK: Dijk functies
-    func getAlleDijken() -> [Dijk] {
-        let request = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Dijk")
-        
-        do {
-            let dijken = try persistentContainer.viewContext.fetch(request) as! [Dijk]
-            
-            return dijken
-        } catch {
-            print("Opvragen dijken mislukt!")
-        }
-        
-        return []
+    return []
+  }
+  
+  //MARK: Info functies
+  func getAlleInfoKantoren() -> [Info] {
+    let request = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Info")
+    
+    do {
+      let infoKantoren = try persistentContainer.viewContext.fetch(request) as! [Info]
+      
+      return infoKantoren
+    } catch {
+      print("Opvragen infokantoren mislukt!")
     }
     
-    //MARK: Info functies
-    func getAlleInfoKantoren() -> [Info] {
-        let request = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Info")
-        
-        do {
-            let infoKantoren = try persistentContainer.viewContext.fetch(request) as! [Info]
-            
-            return infoKantoren
-        } catch {
-            print("Opvragen infokantoren mislukt!")
-        }
-        
-        return []
+    return []
+  }
+  
+  
+  //MARK: Logie functies
+  func getAlleLogies() -> [Logies] {
+    let request = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Logies")
+    
+    do {
+      let logies = try persistentContainer.viewContext.fetch(request) as! [Logies]
+      
+      return logies
+    } catch {
+      print("Opvragen logies mislukt!")
     }
     
+    return []
+  }
+  
+  //MARK: POI functies
+  func getAllePOI() -> [POI] {
+    let request = NSFetchRequest<NSFetchRequestResult>.init(entityName: "POI")
     
-    //MARK: Logie functies
-    func getAlleLogies() -> [Logies] {
-        let request = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Logies")
-        
-        do {
-            let logies = try persistentContainer.viewContext.fetch(request) as! [Logies]
-            
-            return logies
-        } catch {
-            print("Opvragen logies mislukt!")
-        }
-        
-        return []
-    }
     
-    //MARK: POI functies
-    func getAllePOI() -> [POI] {
-        let request = NSFetchRequest<NSFetchRequestResult>.init(entityName: "POI")
-        
-        
-        do {
-            let pointsOfInterest = try persistentContainer.viewContext.fetch(request) as! [POI]
-            
-            return pointsOfInterest
-        } catch {
-            print("Opvragen poi mislukt!")
-        }
-        
-        return []
+    do {
+      let pointsOfInterest = try persistentContainer.viewContext.fetch(request) as! [POI]
+      
+      return pointsOfInterest
+    } catch {
+      print("Opvragen poi mislukt!")
     }
     
     func getPOILijstMetZoek(zoekVoorwaarde: String) -> [POI] {
@@ -118,65 +115,64 @@ public class DAO {
         }
         return []
     }
+    return []
+  }
+  
+  //MARK: Reca functies
+  func getAlleReca() -> [Reca] {
+    let request = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Reca")
     
-    //MARK: Reca functies
-    func getAlleReca() -> [Reca] {
-        let request = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Reca")
-        
-        do {
-            let recaLijst = try persistentContainer.viewContext.fetch(request) as! [Reca]
-            
-            return recaLijst
-        } catch {
-            print("Opvragen reca mislukt!")
-        }
-        
-        return []
+    do {
+      let recaLijst = try persistentContainer.viewContext.fetch(request) as! [Reca]
+      
+      return recaLijst
+    } catch {
+      print("Opvragen reca mislukt!")
     }
     
-    //MARK: Sanitair functies
-    func getAlleSanitair() -> [Sanitair] {
-        let request = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Sanitair")
-        
-        do {
-            let sanitairLijst = try persistentContainer.viewContext.fetch(request) as! [Sanitair]
-            
-            return sanitairLijst
-        } catch {
-            print("Opvragen wc's mislukt!")
-        }
-        
-        return []
+    return []
+  }
+  
+  //MARK: Sanitair functies
+  func getAlleSanitair() -> [Sanitair] {
+    let request = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Sanitair")
+    
+    do {
+      let sanitairLijst = try persistentContainer.viewContext.fetch(request) as! [Sanitair]
+      
+      return sanitairLijst
+    } catch {
+      print("Opvragen wc's mislukt!")
     }
     
-    //MARK: Tram functies
-    func getAlleTram() -> [Tram] {
-        let request = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Tram")
-        
-        do {
-            let tramLijst = try persistentContainer.viewContext.fetch(request) as! [Tram]
-            
-            return tramLijst
-        } catch {
-            print("Opvragen tramhaltes mislukt!")
-        }
-        
-        return []
+    return []
+  }
+  
+  //MARK: Tram functies
+  func getAlleTram() -> [Tram] {
+    let request = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Tram")
+    
+    do {
+      let tramLijst = try persistentContainer.viewContext.fetch(request) as! [Tram]
+      
+      return tramLijst
+    } catch {
+      print("Opvragen tramhaltes mislukt!")
     }
     
-    //MARK: VPP functies
-    func getAlleVPP() -> [VPP] {
-        let request = NSFetchRequest<NSFetchRequestResult>.init(entityName: "VPP")
-        
-        do {
-            let parkeerplaatsenLijst = try persistentContainer.viewContext.fetch(request) as! [VPP]
-            
-            return parkeerplaatsenLijst
-        } catch {
-            print("Opvragen vpp mislukt!")
-        }
-        
-        return []
+    return []
+  }
+  
+  //MARK: VPP functies
+  func getAlleVPP() -> [VPP] {
+    let request = NSFetchRequest<NSFetchRequestResult>.init(entityName: "VPP")
+    
+    do {
+      let parkeerplaatsenLijst = try persistentContainer.viewContext.fetch(request) as! [VPP]
+      
+      return parkeerplaatsenLijst
+    } catch {
+      print("Opvragen vpp mislukt!")
     }
         
     func saveContext () {
@@ -190,4 +186,5 @@ public class DAO {
             }
         }
     }
+  }
 }
