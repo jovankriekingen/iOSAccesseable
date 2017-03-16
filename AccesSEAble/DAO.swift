@@ -28,14 +28,16 @@ public class DAO {
     
     private init() {
         let parser = parserMethodes()
-        
         //parsen en laten opslaan binnen context, dit komt uit CoreData container
-        parser.parsePOI(context: persistentContainer.viewContext)
-        parser.parseVPP(context: persistentContainer.viewContext)
-        parser.parseInfo(context: persistentContainer.viewContext)
-        parser.parseTram(context: persistentContainer.viewContext)
-        parser.parseLogies(context: persistentContainer.viewContext)
         
+        //parser.parseDijk(context: persistentContainer.viewContext)
+        parser.parseInfo(context: persistentContainer.viewContext)
+        //parser.parseLogies(context: persistentContainer.viewContext)
+        parser.parsePOI(context: persistentContainer.viewContext)
+        //parser.parseSanitair(context: persistentContainer.viewContext)
+        //parser.parseTram(context: persistentContainer.viewContext)
+        //parser.parseReca(context: persistentContainer.viewContext)
+        parser.parseVPP(context: persistentContainer.viewContext)
         
         saveContext()
     }
@@ -70,6 +72,7 @@ public class DAO {
         return []
     }
     
+    
     //MARK: Logie functies
     func getAlleLogies() -> [Logies] {
         let request = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Logies")
@@ -88,6 +91,7 @@ public class DAO {
     //MARK: POI functies
     func getAllePOI() -> [POI] {
         let request = NSFetchRequest<NSFetchRequestResult>.init(entityName: "POI")
+        
         
         do {
             let pointsOfInterest = try persistentContainer.viewContext.fetch(request) as! [POI]

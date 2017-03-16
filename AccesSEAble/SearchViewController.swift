@@ -42,7 +42,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     }
     
     @IBAction func btnZoek() {
-   
+        print(DAO.mainDAO.getAllePOI())
     }
     
     
