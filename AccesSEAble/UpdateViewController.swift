@@ -22,7 +22,6 @@ class UpdateViewController: UIViewController {
     }
     
     @IBAction func btnUpdate() {
-        
     }
 
     /*
