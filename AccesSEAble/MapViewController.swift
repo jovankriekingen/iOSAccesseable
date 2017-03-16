@@ -8,9 +8,28 @@
 
 import UIKit
 import MapKit
+import CoreData
 
-class MapViewController: UIViewController, MKMapViewDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate{
+    
+    var item:[NSManagedObject]?
+    var locationManager = CLLocationManager()
+    
+    
     @IBOutlet weak var mapView: MKMapView!
+    
+    func checkLocationAuthorizationStatus()
+    {
+        if CLLocationManager.authorizationStatus() == .authorizedAlways
+        {
+            mapView.showsUserLocation = true
+        } else {
+            
+            locationManager.requestWhenInUseAuthorization()
+        }
+    }
+    
+    
     
     
     override func viewDidLoad() {
@@ -29,15 +48,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+        //Update de locatie van de gebruiker
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

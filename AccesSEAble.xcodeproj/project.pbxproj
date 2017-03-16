@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		09095BE21E78415400749993 /* ASea.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09095BE01E78415400749993 /* ASea.xcdatamodeld */; };
-		097DBC1C1E7AA60300FA851E /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097DBC1B1E7AA60300FA851E /* JSONParser.swift */; };
 		31399EAE1E77DEB00044622C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31399EAD1E77DEB00044622C /* DetailViewController.swift */; };
 		31399EB01E77E4020044622C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31399EAF1E77E4020044622C /* ProfileViewController.swift */; };
 		31399EB21E7800300044622C /* RecentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31399EB11E7800300044622C /* RecentViewController.swift */; };
@@ -28,7 +27,6 @@
 
 /* Begin PBXFileReference section */
 		09095BE11E78415400749993 /* ASea.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ASea.xcdatamodel; sourceTree = "<group>"; };
-		097DBC1B1E7AA60300FA851E /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONParser.swift; path = ../../../Downloads/JSONParser.swift; sourceTree = "<group>"; };
 		31399EAD1E77DEB00044622C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		31399EAF1E77E4020044622C /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		31399EB11E7800300044622C /* RecentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentViewController.swift; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 		4966A0211E718E4500C15572 /* AccesSEAble */ = {
 			isa = PBXGroup;
 			children = (
-				097DBC1B1E7AA60300FA851E /* JSONParser.swift */,
 				09095BE01E78415400749993 /* ASea.xcdatamodeld */,
 				4966A0381E719F2E00C15572 /* assets_accesseable */,
 				4966A0261E718E4600C15572 /* Main.storyboard */,
@@ -178,7 +175,6 @@
 				4966A0251E718E4600C15572 /* HomeViewController.swift in Sources */,
 				31399EB81E7812A60044622C /* SearchViewController.swift in Sources */,
 				4966A0231E718E4600C15572 /* AppDelegate.swift in Sources */,
-				097DBC1C1E7AA60300FA851E /* JSONParser.swift in Sources */,
 				318A57081E768D4C0008A397 /* MapViewController.swift in Sources */,
 				31399EB01E77E4020044622C /* ProfileViewController.swift in Sources */,
 				31399EB51E78031E0044622C /* FavoriteViewController.swift in Sources */,
