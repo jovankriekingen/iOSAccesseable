@@ -25,10 +25,10 @@ public class parserMethodes {
         let rowPOI = POI(context: context)
         
         //strings omzetten waar nodig
-        let latStr = poiMember.value(forKey: "LAT") as! String
-        rowPOI.lat = Double(latStr)!
-        let lonStr = poiMember.value(forKey: "LON") as! String
-        rowPOI.lon = Double(lonStr)!
+        //let latStr = poiMember.value(forKey: "LAT") as! String
+        //rowPOI.lat = Double(latStr)!
+        //let lonStr = poiMember.value(forKey: "LON") as! String
+        //rowPOI.lon = Double(lonStr)!
         
         //De entiteiten worden (normaal gezien) met deze blok ingevuld
         rowPOI.id_westkans = poiMember.value(forKey: "ID_WESTKANS") as? String
@@ -62,7 +62,8 @@ public class parserMethodes {
         rowPOI.parking_breedte_uitstapzone_tekst = poiMember.value(forKey: "PARKING_PARKING_BREEDTE_UITSTAPZONE_TEKST") as? String
         rowPOI.parking_lengte_uitstapzone_tekst = poiMember.value(forKey: "PARKING_LENGTE_UITSTAPZONE_TEKST") as? String
         rowPOI.parking_ondergrond_materiaal = poiMember.value(forKey: "PARKING_ONDERGROND_MATERIAAL") as? String
-        
+        rowPOI.lat = poiMember.value(forKey: "LAT") as! Double
+        rowPOI.lon = poiMember.value(forKey: "LON") as! Double
         
         
       }
@@ -140,10 +141,10 @@ public class parserMethodes {
         let rowVPP = VPP(context: context)
         
         //strings omzetten waar nodig
-        let latStr = vppMember.value(forKey: "LAT") as! String
-        rowVPP.lat = Double(latStr)!
-        let lonStr = vppMember.value(forKey: "LON") as! String
-        rowVPP.lon = Double(lonStr)!
+        // let latStr = vppMember.value(forKey: "LAT") as! String
+        //rowVPP.lat = Double(latStr)!
+        // let lonStr = vppMember.value(forKey: "LON") as! String
+        // rowVPP.lon = Double(lonStr)!
         
         rowVPP.id_westkans = vppMember.value(forKey: "ID_WESTKANS") as? String
         rowVPP.adres_straat = vppMember.value(forKey: "ADRES_STRAAT") as? String
@@ -165,6 +166,10 @@ public class parserMethodes {
         rowVPP.parking_breedte_uitstapzone_tekst = vppMember.value(forKey: "PARKING_PARKING_BREEDTE_UITSTAPZONE_TEKST") as? String
         rowVPP.parking_lengte_uitstapzone_tekst = vppMember.value(forKey: "PARKING_LENGTE_UITSTAPZONE_TEKST") as? String
         rowVPP.url_picture_main = vppMember.value(forKey: "URL_PICTURE_MAIN") as? String
+        rowVPP.lat = vppMember.value(forKey: "LAT") as! Double
+        rowVPP.lon = vppMember.value(forKey: "LON") as! Double
+
+        
         
       }
     } catch  {
@@ -189,10 +194,10 @@ public class parserMethodes {
         let rowTram = Tram(context: context)
         
         //strings omzetten waar nodig
-        let latStr = tramMember.value(forKey: "LAT") as! String
-        rowTram.stop_lat = Double(latStr)!
-        let lonStr = tramMember.value(forKey: "LON") as! String
-        rowTram.stop_lon = Double(lonStr)!
+        //let latStr = tramMember.value(forKey: "LAT") as! String
+        //rowTram.stop_lat = Double(latStr)!
+        //let lonStr = tramMember.value(forKey: "LON") as! String
+        //rowTram.stop_lon = Double(lonStr)!
         
         rowTram.stop_id = tramMember.value(forKey: "stop_id") as? String
         rowTram.stop_code = tramMember.value(forKey: "stop_code") as? String
@@ -203,6 +208,11 @@ public class parserMethodes {
         rowTram.location_type = tramMember.value(forKey: "location_type") as? String
         rowTram.parent_station = tramMember.value(forKey: "parent_station") as? String
         rowTram.weelchair_boarding = tramMember.value(forKey: "weelchair_boarding") as? String
+        rowTram.stop_lat = tramMember.value(forKey: "stop_lat") as! Double
+        rowTram.stop_lon = tramMember.value(forKey: "stop_lon") as! Double
+
+        
+        
         print(tramMember)
       }
     } catch  {
@@ -224,10 +234,10 @@ public class parserMethodes {
         let rowInfo = Info(context: context)
         
         //strings omzetten waar nodig
-        let latStr = infoMember.value(forKey: "LAT") as! String
-        rowInfo.lat = Double(latStr)!
-        let lonStr = infoMember.value(forKey: "LON") as! String
-        rowInfo.lon = Double(lonStr)!
+        //let latStr = infoMember.value(forKey: "LAT") as! String
+        //rowInfo.lat = Double(latStr)!
+        //let lonStr = infoMember.value(forKey: "LON") as! String
+        //rowInfo.lon = Double(lonStr)!
         
         rowInfo.id_westkans = infoMember.value(forKey: "ID_WESTKANS") as? String
         rowInfo.id_westtoer = infoMember.value(forKey: "ID_WESTTOER") as? String
@@ -325,8 +335,8 @@ public class parserMethodes {
         rowInfo.url_picture_extra2 = infoMember.value(forKey: "URL_PICTURE_EXTRA2") as? String
         rowInfo.x = infoMember.value(forKey: "X") as? String
         rowInfo.y = infoMember.value(forKey: "Y") as? String
-        // rowInfo.lat = infoMember.value(forKey: "LAT") as? String
-        // rowInfo.lon = infoMember.value(forKey: "LON") as? String
+        rowInfo.lat = infoMember.value(forKey: "LAT") as! Double
+        rowInfo.lon = infoMember.value(forKey: "LON") as! Double
       }
     } catch {
     }
@@ -347,10 +357,10 @@ public class parserMethodes {
         let rowLogies = Logies(context: context)
         
         //strings omzetten waar nodig
-        let latStr = logiesMember.value(forKey: "LAT") as! String
-        rowLogies.lat = Double(latStr)!
-        let lonStr = logiesMember.value(forKey: "LON") as! String
-        rowLogies.lon = Double(lonStr)!
+        // let latStr = logiesMember.value(forKey: "LAT") as! String
+        //rowLogies.lat = Double(latStr)!
+        //let lonStr = logiesMember.value(forKey: "LON") as! String
+        //rowLogies.lon = Double(lonStr)!
         
         rowLogies.id_westkans = logiesMember.value(forKey: "ID_WESTKANS") as? String
         rowLogies.id_westtoer = logiesMember.value(forKey: "ID_WESTTOER") as? String
@@ -377,6 +387,9 @@ public class parserMethodes {
         rowLogies.url_picture_extra2 = logiesMember.value(forKey: "URL_PICTURE_EXTRA2") as? String
         rowLogies.x = logiesMember.value(forKey: "X") as? String
         rowLogies.y = logiesMember.value(forKey: "Y") as? String
+        rowLogies.lat = logiesMember.value(forKey: "LAT") as! Double
+        rowLogies.lon = logiesMember.value(forKey: "LON") as! Double
+        
               }
     } catch {
     }
@@ -398,10 +411,10 @@ func parseSanitair (context:NSManagedObjectContext)
       let rowSanitair = Sanitair(context: context)
       
       //strings omzetten waar nodig
-      let latStr = sanitairMember.value(forKey: "LAT") as! String
-      rowSanitair.lat = Double(latStr)!
-      let lonStr = sanitairMember.value(forKey: "LON") as! String
-      rowSanitair.lon = Double(lonStr)!
+      //let latStr = sanitairMember.value(forKey: "LAT") as! String
+      //rowSanitair.lat = Double(latStr)!
+      //let lonStr = sanitairMember.value(forKey: "LON") as! String
+      //rowSanitair.lon = Double(lonStr)!
       
       rowSanitair.id_westkans = sanitairMember.value(forKey: "ID_WESTKANS") as? String
       rowSanitair.id_westtoer = sanitairMember.value(forKey: "ID_WESTTOER") as? String
@@ -409,7 +422,9 @@ func parseSanitair (context:NSManagedObjectContext)
       rowSanitair.subtype = sanitairMember.value(forKey: "SUBTYPE") as? String
       rowSanitair.naam = sanitairMember.value(forKey: "NAAM") as? String
       rowSanitair.adres_straat = sanitairMember.value(forKey: "ADRES_STRAAT") as? String
-      
+      rowSanitair.lat = sanitairMember.value(forKey: "LAT") as! Double
+      rowSanitair.lon = sanitairMember.value(forKey: "LON") as! Double
+
       
     }
   } catch {
@@ -432,10 +447,10 @@ func parseReca (context:NSManagedObjectContext)
       let rowReca = Reca(context: context)
       
       //strings omzetten waar nodig
-      let latStr = recaMember.value(forKey: "LAT") as! String
-      rowReca.lat = Double(latStr)!
-      let lonStr = recaMember.value(forKey: "LON") as! String
-      rowReca.lon = Double(lonStr)!
+      //let latStr = recaMember.value(forKey: "LAT") as! String
+      //rowReca.lat = Double(latStr)!
+      //let lonStr = recaMember.value(forKey: "LON") as! String
+      //rowReca.lon = Double(lonStr)!
       
       rowReca.id_westkans = recaMember.value(forKey: "ID_WESTKANS") as? String
       rowReca.id_westtoer = recaMember.value(forKey: "ID_WESTTOER") as? String
@@ -443,7 +458,9 @@ func parseReca (context:NSManagedObjectContext)
       rowReca.naam = recaMember.value(forKey: "NAAM") as? String
       rowReca.adres_straat = recaMember.value(forKey: "ADRES_STRAAT") as? String
       rowReca.adres_nr = recaMember.value(forKey: "ADRES_NR") as? String
-      
+      rowReca.lat = recaMember.value(forKey: "LAT") as! Double
+      rowReca.lon = recaMember.value(forKey: "LON") as! Double
+
       
       
     }
@@ -465,15 +482,18 @@ func parseDijk (context:NSManagedObjectContext)
       let rowDijk = Dijk(context: context)
       
       //strings omzetten waar nodig
-      let latStr = dijkMember.value(forKey: "LAT") as! String
-      rowDijk.lat = Double(latStr)!
-      let lonStr = dijkMember.value(forKey: "LON") as! String
-      rowDijk.lon = Double(lonStr)!
+      //let latStr = dijkMember.value(forKey: "LAT") as! String
+      //rowDijk.lat = Double(latStr)!
+      //let lonStr = dijkMember.value(forKey: "LON") as! String
+      // rowDijk.lon = Double(lonStr)!
       
       rowDijk.id_westkans = dijkMember.value(forKey: "ID_WESTKANS") as? String
       rowDijk.type = dijkMember.value(forKey: "TYPE") as? String
       rowDijk.naam = dijkMember.value(forKey: "NAAM") as? String
       rowDijk.adres_locatie = dijkMember.value(forKey: "ADRES_LOCATIE") as? String
+      rowDijk.postcode = dijkMember.value(forKey: "POSTCODE") as? String
+      rowDijk.lat = dijkMember.value(forKey: "LAT") as! Double
+      rowDijk.lon = dijkMember.value(forKey: "LON") as! Double
       
       
     }
