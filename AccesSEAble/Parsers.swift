@@ -331,4 +331,100 @@ public class parserMethodes {
 }
 
 
+func parseSanitair (context:NSManagedObjectContext)
+{
+  let url = URL(string: "http://web10.weopendata.com/measurements/sanitair.json")
+  do {
+    
+    let sanitairData = try Data(contentsOf: url!)
+    let sanitairArray:NSArray = try JSONSerialization.jsonObject(with: sanitairData) as! NSArray
+    
+    for item in sanitairArray {
+      
+      let sanitairMember:NSDictionary = item as! NSDictionary
+      let rowSanitair = Sanitair(context: context)
+      
+      //strings omzetten waar nodig
+      let latStr = sanitairMember.value(forKey: "LAT") as! String
+      rowSanitair.lat = Double(latStr)!
+      let lonStr = sanitairMember.value(forKey: "LON") as! String
+      rowSanitair.lon = Double(lonStr)!
+      
+      rowSanitair.id_westkans = sanitairMember.value(forKey: "ID_WESTKANS") as? String
+      rowSanitair.id_westtoer = sanitairMember.value(forKey: "ID_WESTTOER") as? String
+      rowSanitair.type = sanitairMember.value(forKey: "TYPE") as? String
+      rowSanitair.subtype = sanitairMember.value(forKey: "SUBTYPE") as? String
+      rowSanitair.naam = sanitairMember.value(forKey: "NAAM") as? String
+      rowSanitair.adres_straat = sanitairMember.value(forKey: "ADRES_STRAAT") as? String
+      
+      
+    }
+  } catch {
+  }
+}
+
+
+
+func parseReca (context:NSManagedObjectContext)
+{
+  let url = URL(string: "http://web10.weopendata.com/measurements/reca.json")
+  do {
+    
+    let recaData = try Data(contentsOf: url!)
+    let recaArray:NSArray = try JSONSerialization.jsonObject(with: recaData) as! NSArray
+    
+    for item in recaArray {
+      
+      let recaMember:NSDictionary = item as! NSDictionary
+      let rowReca = Reca(context: context)
+      
+      //strings omzetten waar nodig
+      let latStr = recaMember.value(forKey: "LAT") as! String
+      rowReca.lat = Double(latStr)!
+      let lonStr = recaMember.value(forKey: "LON") as! String
+      rowReca.lon = Double(lonStr)!
+      
+      rowReca.id_westkans = recaMember.value(forKey: "ID_WESTKANS") as? String
+      rowReca.id_westtoer = recaMember.value(forKey: "ID_WESTTOER") as? String
+      rowReca.type = recaMember.value(forKey: "TYPE") as? String
+      rowReca.naam = recaMember.value(forKey: "NAAM") as? String
+      rowReca.adres_straat = recaMember.value(forKey: "ADRES_STRAAT") as? String
+      rowReca.adres_nr = recaMember.value(forKey: "ADRES_NR") as? String
+      
+      
+      
+    }
+  } catch  {
+  }
+}
+
+func parseDijk (context:NSManagedObjectContext)
+{
+  let url = URL(string: "http://web10.weopendata.com/measurements/dijk")
+  do {
+    
+    let dijkData = try Data(contentsOf: url!)
+    let dijkArray:NSArray = try JSONSerialization.jsonObject(with: dijkData) as! NSArray
+    
+    for item in dijkArray {
+      
+      let dijkMember:NSDictionary = item as! NSDictionary
+      let rowDijk = Dijk(context: context)
+      
+      //strings omzetten waar nodig
+      let latStr = dijkMember.value(forKey: "LAT") as! String
+      rowDijk.lat = Double(latStr)!
+      let lonStr = dijkMember.value(forKey: "LON") as! String
+      rowDijk.lon = Double(lonStr)!
+      
+      rowDijk.id_westkans = dijkMember.value(forKey: "ID_WESTKANS") as? String
+      rowDijk.type = dijkMember.value(forKey: "TYPE") as? String
+      rowDijk.naam = dijkMember.value(forKey: "NAAM") as? String
+      rowDijk.adres_locatie = dijkMember.value(forKey: "ADRES_LOCATIE") as? String
+      
+      
+    }
+  } catch {
+  }
+}
 
