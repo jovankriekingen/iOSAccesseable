@@ -32,6 +32,9 @@ public class DAO {
         //parsen en laten opslaan binnen context, dit komt uit CoreData container
         parser.parsePOI(context: persistentContainer.viewContext)
         parser.parseVPP(context: persistentContainer.viewContext)
+        parser.parseInfo(context: persistentContainer.viewContext)
+        parser.parseTram(context: persistentContainer.viewContext)
+        parser.parseLogies(context: persistentContainer.viewContext)
         
         saveContext()
     }

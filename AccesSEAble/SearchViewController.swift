@@ -54,7 +54,10 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
             
         }
         if swiBezienswaardigheden.isOn {
-            zoekresultaten.append(contentsOf: DAO.mainDAO.getPOILijstMetZoek(zoekVoorwaarde: searchText))
+            for item in DAO.mainDAO.getPOILijstMetZoek(zoekVoorwaarde: searchText)
+            {
+                zoekresultaten.append(item)
+            }
         }
         if swiInfoKantoren.isOn {
             

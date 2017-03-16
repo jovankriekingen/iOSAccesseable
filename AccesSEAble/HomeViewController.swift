@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    let poiAlles = DAO.mainDAO.getAllePOI()
     // Do any additional setup after loading the view, typically from a nib.
   }
 
