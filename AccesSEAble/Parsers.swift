@@ -24,6 +24,12 @@ public class parserMethodes {
         let poiMember:NSDictionary = item as! NSDictionary
         let rowPOI = POI(context: context)
         
+        //strings omzetten waar nodig
+        let latStr = poiMember.value(forKey: "LAT") as! String
+        rowPOI.lat = Double(latStr)!
+        let lonStr = poiMember.value(forKey: "LON") as! String
+        rowPOI.lon = Double(lonStr)!
+        
         //De entiteiten worden (normaal gezien) met deze blok ingevuld
         rowPOI.id_westkans = poiMember.value(forKey: "ID_WESTKANS") as? String
         rowPOI.id_westtoer = poiMember.value(forKey: "ID_WESTTOER") as? String
@@ -56,8 +62,8 @@ public class parserMethodes {
         rowPOI.parking_breedte_uitstapzone_tekst = poiMember.value(forKey: "PARKING_PARKING_BREEDTE_UITSTAPZONE_TEKST") as? String
         rowPOI.parking_lengte_uitstapzone_tekst = poiMember.value(forKey: "PARKING_LENGTE_UITSTAPZONE_TEKST") as? String
         rowPOI.parking_ondergrond_materiaal = poiMember.value(forKey: "PARKING_ONDERGROND_MATERIAAL") as? String
-        rowPOI.lat = poiMember.value(forKey: "LAT") as? String
-        rowPOI.lon = poiMember.value(forKey: "LON") as? String
+        
+        
         
       }
     } catch  {
@@ -80,13 +86,17 @@ public class parserMethodes {
         let vppMember:NSDictionary = item as! NSDictionary
         let rowVPP = VPP(context: context)
         
+        //strings omzetten waar nodig
+        let latStr = vppMember.value(forKey: "LAT") as! String
+        rowVPP.lat = Double(latStr)!
+        let lonStr = vppMember.value(forKey: "LON") as! String
+        rowVPP.lon = Double(lonStr)!
+        
         rowVPP.id_westkans = vppMember.value(forKey: "ID_WESTKANS") as? String
         rowVPP.adres_straat = vppMember.value(forKey: "ADRES_STRAAT") as? String
         rowVPP.adres_nr = vppMember.value(forKey: "ADRES_NR") as? String
         rowVPP.postcode = vppMember.value(forKey: "POSTCODE") as? String
         rowVPP.gemeente = vppMember.value(forKey: "GEMEENTE") as? String
-        rowVPP.lat = vppMember.value(forKey: "LAT") as? String
-        rowVPP.lon = vppMember.value(forKey: "LON") as? String
         rowVPP.deelgemeente = vppMember.value(forKey: "DEELGEMEENTE") as? String
         rowVPP.regio = vppMember.value(forKey: "REGIO") as? String
         rowVPP.parking_aanduiding_verkeersbord = vppMember.value(forKey: "PARKING_AANDUIDING_VERKEERSBORD") as? String
@@ -125,12 +135,16 @@ public class parserMethodes {
         let tramMember:NSDictionary = item as! NSDictionary
         let rowTram = Tram(context: context)
         
+        //strings omzetten waar nodig
+        let latStr = tramMember.value(forKey: "LAT") as! String
+        rowTram.stop_lat = Double(latStr)!
+        let lonStr = tramMember.value(forKey: "LON") as! String
+        rowTram.stop_lon = Double(lonStr)!
+        
         rowTram.stop_id = tramMember.value(forKey: "stop_id") as? String
         rowTram.stop_code = tramMember.value(forKey: "stop_code") as? String
         rowTram.naam = tramMember.value(forKey: "stop_name") as? String
         rowTram.stop_desc = tramMember.value(forKey: "stop_desc") as? String
-        rowTram.stop_lat = tramMember.value(forKey: "stop_lat") as? String
-        rowTram.stop_lon = tramMember.value(forKey: "stop_lon") as? String
         rowTram.zone_id = tramMember.value(forKey: "zone_id") as? String
         rowTram.stop_url = tramMember.value(forKey: "stop_url") as? String
         rowTram.location_type = tramMember.value(forKey: "location_type") as? String
@@ -155,6 +169,12 @@ public class parserMethodes {
         
         let infoMember:NSDictionary = item as! NSDictionary
         let rowInfo = Info(context: context)
+        
+        //strings omzetten waar nodig
+        let latStr = infoMember.value(forKey: "LAT") as! String
+        rowInfo.lat = Double(latStr)!
+        let lonStr = infoMember.value(forKey: "LON") as! String
+        rowInfo.lon = Double(lonStr)!
         
         rowInfo.id_westkans = infoMember.value(forKey: "ID_WESTKANS") as? String
         rowInfo.id_westtoer = infoMember.value(forKey: "ID_WESTTOER") as? String
@@ -252,8 +272,8 @@ public class parserMethodes {
         rowInfo.url_picture_extra2 = infoMember.value(forKey: "URL_PICTURE_EXTRA2") as? String
         rowInfo.x = infoMember.value(forKey: "X") as? String
         rowInfo.y = infoMember.value(forKey: "Y") as? String
-        rowInfo.lat = infoMember.value(forKey: "LAT") as? String
-        rowInfo.lon = infoMember.value(forKey: "LON") as? String
+        // rowInfo.lat = infoMember.value(forKey: "LAT") as? String
+        // rowInfo.lon = infoMember.value(forKey: "LON") as? String
       }
     } catch {
     }
@@ -272,6 +292,12 @@ public class parserMethodes {
         
         let logiesMember:NSDictionary = item as! NSDictionary
         let rowLogies = Logies(context: context)
+        
+        //strings omzetten waar nodig
+        let latStr = logiesMember.value(forKey: "LAT") as! String
+        rowLogies.lat = Double(latStr)!
+        let lonStr = logiesMember.value(forKey: "LON") as! String
+        rowLogies.lon = Double(lonStr)!
         
         rowLogies.id_westkans = logiesMember.value(forKey: "ID_WESTKANS") as? String
         rowLogies.id_westtoer = logiesMember.value(forKey: "ID_WESTTOER") as? String
@@ -298,9 +324,7 @@ public class parserMethodes {
         rowLogies.url_picture_extra2 = logiesMember.value(forKey: "URL_PICTURE_EXTRA2") as? String
         rowLogies.x = logiesMember.value(forKey: "X") as? String
         rowLogies.y = logiesMember.value(forKey: "Y") as? String
-        rowLogies.lat = logiesMember.value(forKey: "LAT") as? String
-        rowLogies.lon = logiesMember.value(forKey: "LON") as? String
-      }
+              }
     } catch {
     }
   }
