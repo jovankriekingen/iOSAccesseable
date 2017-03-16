@@ -96,6 +96,7 @@
 				B160A0781E78F85C004787C4 /* Parsers.swift */,
 				B160A07A1E790FEA004787C4 /* DAO.swift */,
 				4966A0201E718E4500C15572 /* Products */,
+				0947FA3B1E7A486600CC500D /* JSONParser.swift */,
 			);
 			path = AccesSEAble;
 			sourceTree = "<group>";
