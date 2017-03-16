@@ -106,12 +106,12 @@ public class DAO {
     
     func getPOILijstMetZoek(zoekVoorwaarde: String) -> [POI] {
         let req = NSFetchRequest<NSFetchRequestResult>.init(entityName: "POI")
-        //req.naamIsZoek = NSPredicate(format: "naam contains[c] %@", zoekVoorwaarde)
         let zoekenOpInputText = NSPredicate(format: "naam CONTAINS[c] %@", zoekVoorwaarde)
         req.predicate = zoekenOpInputText
         
         do {
             let pointsOfInterest = try persistentContainer.viewContext.fetch(req) as! [POI]
+            print(pointsOfInterest)
             return pointsOfInterest
         } catch {
             print("Opvragen poi niet mogelijk!")
@@ -178,11 +178,7 @@ public class DAO {
         
         return []
     }
-    
-    
-    
-    
-    
+        
     func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {

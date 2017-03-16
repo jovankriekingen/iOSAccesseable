@@ -224,7 +224,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="yVW-te-A0z"/>
                                 </constraints>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="twitter" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
                                     <string>Title</string>
