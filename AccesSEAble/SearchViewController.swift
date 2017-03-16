@@ -16,7 +16,16 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var swiOvernachten: UISwitch!
     @IBOutlet weak var swiParking: UISwitch!
     @IBOutlet weak var swiHelling: UISwitch!
-
+    @IBOutlet var zoekBalk: UISearchBar!
+    
+    func toetsenbord() {
+        if zoekBalk.isFocused {
+            view.endEditing(false)
+        } else {
+            view.endEditing(true)
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +40,7 @@ class SearchViewController: UIViewController {
     
     @IBAction func btnZoek() {
         if swiBezienswaardigheden.isOn {
-            
-            print(DAO.mainDAO.getPOILijst())
-            
+            DAO.mainDAO.getPOILijstMetZoek(zoekVoorwaarde: zoekBalk.text!)
         }
     }
     

@@ -219,15 +219,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="7Gs-Y5-Lgw">
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="7Gs-Y5-Lgw" userLabel="ZoekBalk">
                                 <rect key="frame" x="16" y="72" width="343" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="yVW-te-A0z"/>
                                 </constraints>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="twitter" enablesReturnKeyAutomatically="YES"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
                             </searchBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am looking for" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyD-Na-xsi">
-                                <rect key="frame" x="129.5" y="129" width="117.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoek naar:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyD-Na-xsi">
+                                <rect key="frame" x="147.5" y="129" width="81.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="GhL-0M-kBZ"/>
                                 </constraints>
@@ -341,6 +345,7 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="OQu-5X-aVa" firstAttribute="top" secondItem="iCr-H4-2sR" secondAttribute="bottom" constant="144" id="0LC-wN-nch"/>
                             <constraint firstItem="7Gs-Y5-Lgw" firstAttribute="leading" secondItem="c1X-IU-ddF" secondAttribute="leadingMargin" id="Am2-SV-Pry"/>
@@ -367,6 +372,7 @@
                         <outlet property="swiParking" destination="Ivi-oK-raD" id="SS8-oJ-9ve"/>
                         <outlet property="swiReca" destination="6JZ-1k-KfP" id="fK8-Q5-7I8"/>
                         <outlet property="swiToilet" destination="6sl-eq-utq" id="Qmf-Mi-a7E"/>
+                        <outlet property="zoekBalk" destination="7Gs-Y5-Lgw" id="EDs-AT-ast"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4rz-jy-xTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -538,7 +544,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CWb-Rj-5fo" id="xpd-Wc-E9F">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
