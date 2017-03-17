@@ -231,13 +231,17 @@
                                 </connections>
                             </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoek naar:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyD-Na-xsi">
-                                <rect key="frame" x="147" y="131" width="81.5" height="20.5"/>
+                                <rect key="frame" x="147" y="131" width="82" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="81.5" id="3bo-0U-KLG"/>
+                                    <constraint firstAttribute="height" constant="20.5" id="YgN-es-bUw"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ADQ-I2-Nav" userLabel="Stack View Labels">
-                                <rect key="frame" x="102" y="171.5" width="246.5" height="224"/>
+                                <rect key="frame" x="102" y="172" width="246.5" height="224"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" text="Restaurants en cafés" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CcO-Z1-EcM">
                                         <rect key="frame" x="0.0" y="0.0" width="246.5" height="20.5"/>
@@ -284,7 +288,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vKj-7J-hh2" userLabel="Stack View Switches">
-                                <rect key="frame" x="43" y="166.5" width="49" height="236"/>
+                                <rect key="frame" x="43" y="167" width="49" height="236"/>
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6JZ-1k-KfP" userLabel="SwitchUseProfile">
                                         <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
@@ -312,11 +316,11 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="ADQ-I2-Nav" firstAttribute="top" secondItem="WyD-Na-xsi" secondAttribute="bottom" constant="20" id="4p8-q1-YMu"/>
+                            <constraint firstItem="WyD-Na-xsi" firstAttribute="centerX" secondItem="7Gs-Y5-Lgw" secondAttribute="centerX" id="8n7-ub-Hmt"/>
                             <constraint firstItem="WyD-Na-xsi" firstAttribute="top" secondItem="7Gs-Y5-Lgw" secondAttribute="bottom" constant="15" id="9za-cg-o1Z"/>
                             <constraint firstItem="vKj-7J-hh2" firstAttribute="top" secondItem="WyD-Na-xsi" secondAttribute="bottom" constant="15" id="ANT-pB-fQG"/>
                             <constraint firstItem="vKj-7J-hh2" firstAttribute="leading" secondItem="c1X-IU-ddF" secondAttribute="leadingMargin" constant="27" id="Ni6-kI-tJf"/>
                             <constraint firstItem="7Gs-Y5-Lgw" firstAttribute="leading" secondItem="c1X-IU-ddF" secondAttribute="leadingMargin" id="R0g-HD-k9K"/>
-                            <constraint firstItem="WyD-Na-xsi" firstAttribute="leading" secondItem="c1X-IU-ddF" secondAttribute="leading" constant="147" id="fjP-Z4-Hdl"/>
                             <constraint firstItem="7Gs-Y5-Lgw" firstAttribute="trailing" secondItem="c1X-IU-ddF" secondAttribute="trailingMargin" id="rvZ-Mj-qsB"/>
                             <constraint firstItem="7Gs-Y5-Lgw" firstAttribute="top" secondItem="peb-yR-ZZD" secondAttribute="bottom" constant="8" id="uDW-PO-UFk"/>
                             <constraint firstItem="ADQ-I2-Nav" firstAttribute="leading" secondItem="vKj-7J-hh2" secondAttribute="trailing" constant="10" id="vkC-hd-Ipa"/>
