@@ -31,7 +31,7 @@ public class DAO {
         //parsen en laten opslaan binnen context, dit komt uit CoreData container
        if(!UserDefaults.standard.bool(forKey: "db_al_gevuld"))
        {
-        //parser.parseDijk(context: persistentContainer.viewContext)
+        parser.parseDijk(context: persistentContainer.viewContext)
         parser.parseInfo(context: persistentContainer.viewContext)
         //parser.parseLogies(context: persistentContainer.viewContext)
         parser.parsePOI(context: persistentContainer.viewContext)
@@ -58,6 +58,20 @@ public class DAO {
             print("Opvragen dijken mislukt!")
         }
         
+        return []
+    }
+    
+    func getDijkLijstMetZoek(zoekVoorwaarde: String) -> [Dijk] {
+        let req = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Dijk")
+        let zoekenOpInputText = NSPredicate(format: "naam CONTAINS[c] %@", zoekVoorwaarde)
+        req.predicate = zoekenOpInputText
+        
+        do {
+            let dijken = try persistentContainer.viewContext.fetch(req) as! [Dijk]
+            return dijken
+        } catch {
+            print("Opvragen poi niet mogelijk!")
+        }
         return []
     }
     

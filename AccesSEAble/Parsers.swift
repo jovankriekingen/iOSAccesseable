@@ -40,6 +40,7 @@ public class parserMethodes {
       }
     } catch {
     }
+    print("dijk gelukt")
   }
   
   

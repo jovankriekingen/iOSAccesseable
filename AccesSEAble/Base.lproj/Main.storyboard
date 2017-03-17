@@ -218,6 +218,9 @@
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="7Gs-Y5-Lgw" userLabel="ZoekBalk">
                                 <rect key="frame" x="16" y="72" width="343" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="o6H-S8-1sD"/>
+                                </constraints>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
@@ -228,13 +231,69 @@
                                 </connections>
                             </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoek naar:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyD-Na-xsi">
-                                <rect key="frame" x="148" y="129" width="81.5" height="20.5"/>
+                                <rect key="frame" x="148" y="129" width="81.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="ADQ-I2-Nav" userLabel="Stack View Labels">
+                                <rect key="frame" x="113" y="162" width="246.5" height="234"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" text="Restaurants en cafés" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CcO-Z1-EcM">
+                                        <rect key="frame" x="0.0" y="0.0" width="246.5" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Openbare toiletten" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7H-aS-cbK">
+                                        <rect key="frame" x="0.0" y="42" width="246.5" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="E9o-Xq-m5S"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Bezienswaardigheden en musea" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zp9-AN-1PE">
+                                        <rect key="frame" x="0.0" y="85" width="246.5" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="IvE-c7-J3k"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infokantoren" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdN-15-VjM">
+                                        <rect key="frame" x="0.0" y="128" width="246.5" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="llR-ly-JUH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="Overnachten" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1O-Zh-QFM">
+                                        <rect key="frame" x="0.0" y="171" width="246.5" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Vms-bt-4g8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="Hellingen (van dijk naar strand)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xr-cJ-maa">
+                                        <rect key="frame" x="0.0" y="214" width="246.5" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="ARD-8L-6NY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vKj-7J-hh2" userLabel="Stack View Switches">
-                                <rect key="frame" x="16" y="171" width="49" height="277"/>
+                                <rect key="frame" x="16" y="157" width="49" height="236"/>
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6JZ-1k-KfP" userLabel="SwitchUseProfile">
                                         <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
@@ -251,94 +310,28 @@
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HeQ-xc-hC4" userLabel="SwitchLodgings">
                                         <rect key="frame" x="0.0" y="164" width="51" height="31"/>
                                     </switch>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="752" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ivi-oK-raD" userLabel="SwitchDisablepParking">
-                                        <rect key="frame" x="0.0" y="205" width="51" height="31"/>
-                                    </switch>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YXu-U5-cRR" userLabel="SwitchRestaurantsAndPubs">
-                                        <rect key="frame" x="0.0" y="246" width="51" height="31"/>
+                                        <rect key="frame" x="0.0" y="205" width="51" height="31"/>
                                     </switch>
                                 </subviews>
                                 <color key="backgroundColor" cyan="0.71164279360000005" magenta="0.3523924947" yellow="0.31941425800000001" black="0.0066206874329999997" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ADQ-I2-Nav" userLabel="Stack View Labels">
-                                <rect key="frame" x="112" y="176" width="247" height="267"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Restaurants en cafés" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CcO-Z1-EcM">
-                                        <rect key="frame" x="0.0" y="0.0" width="246.5" height="31"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="31" id="8a4-kR-3HX"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Openbare toiletten" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7H-aS-cbK">
-                                        <rect key="frame" x="0.0" y="41" width="246.5" height="31"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="31" id="i19-5c-Zh6"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Bezienswaardigheden en musea" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zp9-AN-1PE">
-                                        <rect key="frame" x="0.0" y="82" width="246.5" height="31"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infokantoren" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdN-15-VjM">
-                                        <rect key="frame" x="0.0" y="123" width="246.5" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="Kpj-gF-JEB"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="Overnachten" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1O-Zh-QFM">
-                                        <rect key="frame" x="0.0" y="154" width="246.5" height="31"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="31" id="mxm-re-rYR"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voorbehouden parkeerplaatsen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yf6-ju-nwp">
-                                        <rect key="frame" x="0.0" y="195" width="246.5" height="31"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="31" id="atI-yy-Z1A"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="Hellingen (van dijk naar strand)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xr-cJ-maa">
-                                        <rect key="frame" x="0.0" y="236" width="246.5" height="31"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="hdN-15-VjM" firstAttribute="centerY" secondItem="ADQ-I2-Nav" secondAttribute="centerY" id="B9G-On-tmM"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="7Gs-Y5-Lgw" firstAttribute="leading" secondItem="c1X-IU-ddF" secondAttribute="leadingMargin" id="4h2-fa-I6Q"/>
-                            <constraint firstItem="vKj-7J-hh2" firstAttribute="centerY" secondItem="ADQ-I2-Nav" secondAttribute="centerY" id="8Bt-V1-oC7"/>
-                            <constraint firstItem="WyD-Na-xsi" firstAttribute="top" secondItem="7Gs-Y5-Lgw" secondAttribute="bottom" constant="13" id="CrD-Ws-oo6"/>
-                            <constraint firstItem="7Gs-Y5-Lgw" firstAttribute="leading" secondItem="vKj-7J-hh2" secondAttribute="leading" id="FNo-Xx-0Gw"/>
-                            <constraint firstItem="7Gs-Y5-Lgw" firstAttribute="trailing" secondItem="c1X-IU-ddF" secondAttribute="trailingMargin" id="NTd-cZ-3dZ"/>
-                            <constraint firstItem="7Gs-Y5-Lgw" firstAttribute="top" secondItem="peb-yR-ZZD" secondAttribute="bottom" constant="8" id="aiV-1l-8fl"/>
-                            <constraint firstItem="OQu-5X-aVa" firstAttribute="top" secondItem="vKj-7J-hh2" secondAttribute="bottom" constant="219" id="o8i-q4-Rk3"/>
-                            <constraint firstItem="7Gs-Y5-Lgw" firstAttribute="trailing" secondItem="ADQ-I2-Nav" secondAttribute="trailing" id="q8b-Re-4yX"/>
-                            <constraint firstItem="WyD-Na-xsi" firstAttribute="leading" secondItem="c1X-IU-ddF" secondAttribute="leading" constant="148" id="qlz-5r-t1Q"/>
-                            <constraint firstItem="OQu-5X-aVa" firstAttribute="top" secondItem="ADQ-I2-Nav" secondAttribute="bottom" constant="224" id="vF6-Ec-Rwy"/>
+                            <constraint firstItem="WyD-Na-xsi" firstAttribute="top" secondItem="7Gs-Y5-Lgw" secondAttribute="bottom" constant="13" id="9za-cg-o1Z"/>
+                            <constraint firstItem="ADQ-I2-Nav" firstAttribute="top" secondItem="WyD-Na-xsi" secondAttribute="bottom" constant="12" id="G8N-RX-EqA"/>
+                            <constraint firstItem="7Gs-Y5-Lgw" firstAttribute="leading" secondItem="vKj-7J-hh2" secondAttribute="leading" id="IRv-Vd-dTI"/>
+                            <constraint firstItem="vKj-7J-hh2" firstAttribute="top" secondItem="7Gs-Y5-Lgw" secondAttribute="bottom" constant="41" id="LpO-rc-O9f"/>
+                            <constraint firstItem="OQu-5X-aVa" firstAttribute="top" secondItem="ADQ-I2-Nav" secondAttribute="bottom" constant="271" id="Nwk-FG-cMa"/>
+                            <constraint firstItem="7Gs-Y5-Lgw" firstAttribute="leading" secondItem="c1X-IU-ddF" secondAttribute="leadingMargin" id="R0g-HD-k9K"/>
+                            <constraint firstItem="ADQ-I2-Nav" firstAttribute="leading" secondItem="vKj-7J-hh2" secondAttribute="trailing" constant="48" id="apc-rF-Q5H"/>
+                            <constraint firstItem="WyD-Na-xsi" firstAttribute="leading" secondItem="c1X-IU-ddF" secondAttribute="leading" constant="148" id="fjP-Z4-Hdl"/>
+                            <constraint firstItem="7Gs-Y5-Lgw" firstAttribute="trailing" secondItem="c1X-IU-ddF" secondAttribute="trailingMargin" id="rvZ-Mj-qsB"/>
+                            <constraint firstItem="ADQ-I2-Nav" firstAttribute="leading" secondItem="c1X-IU-ddF" secondAttribute="leadingMargin" constant="97" id="sHP-5c-dqq"/>
+                            <constraint firstItem="7Gs-Y5-Lgw" firstAttribute="top" secondItem="peb-yR-ZZD" secondAttribute="bottom" constant="8" id="uDW-PO-UFk"/>
+                            <constraint firstItem="ADQ-I2-Nav" firstAttribute="top" secondItem="7Gs-Y5-Lgw" secondAttribute="bottom" constant="45.5" id="ywm-ME-FxR"/>
                         </constraints>
                     </view>
                     <connections>
@@ -346,7 +339,6 @@
                         <outlet property="swiHelling" destination="YXu-U5-cRR" id="TvC-Os-S71"/>
                         <outlet property="swiInfoKantoren" destination="ViT-7Y-tGT" id="c2P-lD-YEO"/>
                         <outlet property="swiOvernachten" destination="HeQ-xc-hC4" id="Qnp-IL-3os"/>
-                        <outlet property="swiParking" destination="Ivi-oK-raD" id="SS8-oJ-9ve"/>
                         <outlet property="swiReca" destination="6JZ-1k-KfP" id="fK8-Q5-7I8"/>
                         <outlet property="swiToilet" destination="6sl-eq-utq" id="Qmf-Mi-a7E"/>
                         <outlet property="zoekBalk" destination="7Gs-Y5-Lgw" id="EDs-AT-ast"/>
