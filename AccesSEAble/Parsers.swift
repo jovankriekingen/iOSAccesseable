@@ -35,8 +35,8 @@ public class parserMethodes {
         rowDijk.naam = dijkMember.value(forKey: "NAAM") as? String
         rowDijk.adres_locatie = dijkMember.value(forKey: "ADRES_LOCATIE") as? String
         rowDijk.postcode = dijkMember.value(forKey: "POSTCODE") as? String
-        rowDijk.lat = dijkMember.value(forKey: "LAT") as! Double
-        rowDijk.lon = dijkMember.value(forKey: "LON") as! Double
+        //rowDijk.lat = dijkMember.value(forKey: "LAT") as! Double
+        //rowDijk.lon = dijkMember.value(forKey: "LON") as! Double
       }
     } catch {
     }
@@ -218,6 +218,7 @@ public class parserMethodes {
       }
     } catch {
     }
+    print("logie gelukt")
   }
   
   func parsePOI (context:NSManagedObjectContext)
@@ -309,6 +310,7 @@ public class parserMethodes {
       }
     } catch  {
     }
+    print("reca gelukt")
   }
   
   func parseSanitair (context:NSManagedObjectContext)
@@ -343,6 +345,7 @@ public class parserMethodes {
       }
     } catch {
     }
+    print("wc gelukt")
   }
   
   
