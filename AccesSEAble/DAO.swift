@@ -36,7 +36,7 @@ public class DAO {
         parser.parseLogies(context: persistentContainer.viewContext)
         parser.parsePOI(context: persistentContainer.viewContext)
         parser.parseSanitair(context: persistentContainer.viewContext)
-        parser.parseTram(context: persistentContainer.viewContext)
+        //parser.parseTram(context: persistentContainer.viewContext)
         parser.parseReca(context: persistentContainer.viewContext)
         //parser.parseVPP(context: persistentContainer.viewContext)
         
