@@ -29,18 +29,18 @@ public class DAO {
     private init() {
         let parser = parserMethodes()
         //parsen en laten opslaan binnen context, dit komt uit CoreData container
-        if(!UserDefaults.standard.bool(forKey: "db_al_gevuld"))
-        {
-            //parser.parseDijk(context: persistentContainer.viewContext)
-            parser.parseInfo(context: persistentContainer.viewContext)
-            //parser.parseLogies(context: persistentContainer.viewContext)
-            parser.parsePOI(context: persistentContainer.viewContext)
-            //parser.parseSanitair(context: persistentContainer.viewContext)
-            //parser.parseTram(context: persistentContainer.viewContext)
-            //parser.parseReca(context: persistentContainer.viewContext)
-            //parser.parseVPP(context: persistentContainer.viewContext)
-            
-            UserDefaults.standard.set(true, forKey: "db_al_gevuld")
+       if(!UserDefaults.standard.bool(forKey: "db_al_gevuld"))
+       {
+        parser.parseDijk(context: persistentContainer.viewContext)
+        parser.parseInfo(context: persistentContainer.viewContext)
+        parser.parseLogies(context: persistentContainer.viewContext)
+        parser.parsePOI(context: persistentContainer.viewContext)
+        parser.parseSanitair(context: persistentContainer.viewContext)
+        //parser.parseTram(context: persistentContainer.viewContext)
+        parser.parseReca(context: persistentContainer.viewContext)
+        //parser.parseVPP(context: persistentContainer.viewContext)
+        
+        UserDefaults.standard.set(true, forKey: "db_al_gevuld")
         }
         
         saveContext()
@@ -67,13 +67,14 @@ public class DAO {
         req.predicate = zoekenOpInputText
         
         do {
-            let dijken = try persistentContainer.viewContext.fetch(req) as! [Dijk]
-            return dijken
+            let infoKantoren = try persistentContainer.viewContext.fetch(req) as! [Dijk]
+            return infoKantoren
         } catch {
-            print("Opvragen poi niet mogelijk!")
+            print("Opvragen dijken mislukt!")
         }
         return []
     }
+
     
     //MARK: Info functies
     func getAlleInfoKantoren() -> [Info] {
@@ -90,6 +91,20 @@ public class DAO {
         return []
     }
     
+    func getInfoLijstMetZoek(zoekVoorwaarde: String) -> [Info] {
+        let req = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Info")
+        let zoekenOpInputText = NSPredicate(format: "naam CONTAINS[c] %@", zoekVoorwaarde)
+        req.predicate = zoekenOpInputText
+        
+        do {
+            let infoKantoren = try persistentContainer.viewContext.fetch(req) as! [Info]
+            return infoKantoren
+        } catch {
+            print("Opvragen infokantoren mislukt!")
+        }
+        return []
+    }
+    
     
     //MARK: Logie functies
     func getAlleLogies() -> [Logies] {
@@ -103,6 +118,20 @@ public class DAO {
             print("Opvragen logies mislukt!")
         }
         
+        return []
+    }
+    
+    func getLogiesLijstMetZoek(zoekVoorwaarde: String) -> [Logies] {
+        let req = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Logies")
+        let zoekenOpInputText = NSPredicate(format: "naam CONTAINS[c] %@", zoekVoorwaarde)
+        req.predicate = zoekenOpInputText
+        
+        do {
+            let logies = try persistentContainer.viewContext.fetch(req) as! [Logies]
+            return logies
+        } catch {
+            print("Opvragen logies mislukt!")
+        }
         return []
     }
     
@@ -130,7 +159,7 @@ public class DAO {
             let pointsOfInterest = try persistentContainer.viewContext.fetch(req) as! [POI]
             return pointsOfInterest
         } catch {
-            print("Opvragen poi niet mogelijk!")
+            print("Opvragen poi mislukt!")
         }
         return []
     }
@@ -150,6 +179,20 @@ public class DAO {
         return []
     }
     
+    func getRecaLijstMetZoek(zoekVoorwaarde: String) -> [Reca] {
+        let req = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Reca")
+        let zoekenOpInputText = NSPredicate(format: "naam CONTAINS[c] %@", zoekVoorwaarde)
+        req.predicate = zoekenOpInputText
+        
+        do {
+            let recaLijst = try persistentContainer.viewContext.fetch(req) as! [Reca]
+            return recaLijst
+        } catch {
+            print("Opvragen reca mislukt!")
+        }
+        return []
+    }
+    
     //MARK: Sanitair functies
     func getAlleSanitair() -> [Sanitair] {
         let request = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Sanitair")
@@ -159,9 +202,23 @@ public class DAO {
             
             return sanitairLijst
         } catch {
-            print("Opvragen wc's mislukt!")
+            print("Opvragen reca mislukt!")
         }
         
+        return []
+    }
+    
+    func getSanitairLijstMetZoek(zoekVoorwaarde: String) -> [Sanitair] {
+        let req = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Sanitair")
+        let zoekenOpInputText = NSPredicate(format: "naam CONTAINS[c] %@", zoekVoorwaarde)
+        req.predicate = zoekenOpInputText
+        
+        do {
+            let saniLijst = try persistentContainer.viewContext.fetch(req) as! [Sanitair]
+            return saniLijst
+        } catch {
+            print("Opvragen reca mislukt!")
+        }
         return []
     }
     
@@ -177,6 +234,20 @@ public class DAO {
             print("Opvragen tramhaltes mislukt!")
         }
         
+        return []
+    }
+    
+    func getTramLijstMetZoek(zoekVoorwaarde: String) -> [Tram] {
+        let req = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Tram")
+        let zoekenOpInputText = NSPredicate(format: "naam CONTAINS[c] %@", zoekVoorwaarde)
+        req.predicate = zoekenOpInputText
+        
+        do {
+            let tramLijst = try persistentContainer.viewContext.fetch(req) as! [Tram]
+            return tramLijst
+        } catch {
+            print("Opvragen tram mislukt!")
+        }
         return []
     }
     

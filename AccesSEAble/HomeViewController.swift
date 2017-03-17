@@ -14,7 +14,13 @@ class HomeViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    let poiAlles = DAO.mainDAO.getAllePOI()
+    DAO.mainDAO.getAllePOI()
+    DAO.mainDAO.getAlleReca()
+    DAO.mainDAO.getAlleTram()
+    DAO.mainDAO.getAlleDijken()
+    DAO.mainDAO.getAlleLogies()
+    DAO.mainDAO.getAlleSanitair()
+    DAO.mainDAO.getAlleInfoKantoren()
     // Do any additional setup after loading the view, typically from a nib.
   }
   

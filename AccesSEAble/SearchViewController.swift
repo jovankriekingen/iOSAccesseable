@@ -47,35 +47,41 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         zoekresultaten.removeAll()
         if swiReca.isOn {
-            
+            for item in DAO.mainDAO.getRecaLijstMetZoek(zoekVoorwaarde: searchText)
+            {
+                zoekresultaten.append(item)
+            }
         }
         if swiToilet.isOn {
-            
+            for item in DAO.mainDAO.getSanitairLijstMetZoek(zoekVoorwaarde: searchText)
+            {
+                zoekresultaten.append(item)
+            }
         }
         if swiBezienswaardigheden.isOn {
-            print(DAO.mainDAO.getPOILijstMetZoek(zoekVoorwaarde: searchText).count)
             for item in DAO.mainDAO.getPOILijstMetZoek(zoekVoorwaarde: searchText)
             {
                 zoekresultaten.append(item)
             }
         }
         if swiInfoKantoren.isOn {
-            
+            for item in DAO.mainDAO.getInfoLijstMetZoek(zoekVoorwaarde: searchText)
+            {
+                zoekresultaten.append(item)
+            }
         }
         if swiOvernachten.isOn {
-            
-        }
-        if swiHelling.isOn {
-            print(DAO.mainDAO.getDijkLijstMetZoek(zoekVoorwaarde: searchText).count)
-            for item in DAO.mainDAO.getDijkLijstMetZoek(zoekVoorwaarde: searchText)
+            for item in DAO.mainDAO.getLogiesLijstMetZoek(zoekVoorwaarde: searchText)
             {
                 zoekresultaten.append(item)
             }
         }
         if swiHelling.isOn {
-            
+            for item in DAO.mainDAO.getDijkLijstMetZoek(zoekVoorwaarde: searchText)
+            {
+                zoekresultaten.append(item)
+            }
         }
-        
     }
     
 

@@ -35,8 +35,8 @@ public class parserMethodes {
                 rowDijk.naam = dijkMember.value(forKey: "NAAM") as? String
                 rowDijk.adres_locatie = dijkMember.value(forKey: "ADRES_LOCATIE") as? String
                 rowDijk.postcode = dijkMember.value(forKey: "POSTCODE") as? String
-                rowDijk.lat = dijkMember.value(forKey: "LAT") as! Double
-                rowDijk.lon = dijkMember.value(forKey: "LON") as! Double
+                //rowDijk.lat = dijkMember.value(forKey: "LAT") as! Double
+                //rowDijk.lon = dijkMember.value(forKey: "LON") as! Double
             }
         } catch {
         }
@@ -217,6 +217,7 @@ public class parserMethodes {
             }
         } catch {
         }
+        print("logie gelukt")
     }
     
     func parsePOI (context:NSManagedObjectContext)
@@ -274,7 +275,6 @@ public class parserMethodes {
         } catch  {
             print("parse error POI")
         }
-        print("poi gelukt")
     }
     
     func parseReca (context:NSManagedObjectContext)
@@ -308,6 +308,7 @@ public class parserMethodes {
             }
         } catch  {
         }
+        print("reca gelukt")
     }
     
     func parseSanitair (context:NSManagedObjectContext)
@@ -335,13 +336,11 @@ public class parserMethodes {
                 rowSanitair.subtype = sanitairMember.value(forKey: "SUBTYPE") as? String
                 rowSanitair.naam = sanitairMember.value(forKey: "NAAM") as? String
                 rowSanitair.adres_straat = sanitairMember.value(forKey: "ADRES_STRAAT") as? String
-                //rowSanitair.lat = sanitairMember.value(forKey: "LAT") as! Double
-                //rowSanitair.lon = sanitairMember.value(forKey: "LON") as! Double
                 
-                print(rowSanitair)
             }
         } catch {
         }
+        print("wc gelukt")
     }
     
     
@@ -379,9 +378,7 @@ public class parserMethodes {
         } catch  {
             print("parse error tram")
         }
-        print("tram gelukt")
     }
-    
     
     func parseVPP (context:NSManagedObjectContext)
     {
@@ -431,3 +428,4 @@ public class parserMethodes {
         print("vpp gelukt")
     }
 }
+
