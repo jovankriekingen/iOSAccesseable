@@ -61,6 +61,20 @@ public class DAO {
         return []
     }
     
+    func getDijkLijstMetZoek(zoekVoorwaarde: String) -> [Dijk] {
+        let req = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Dijk")
+        let zoekenOpInputText = NSPredicate(format: "naam CONTAINS[c] %@", zoekVoorwaarde)
+        req.predicate = zoekenOpInputText
+        
+        do {
+            let dijken = try persistentContainer.viewContext.fetch(req) as! [Dijk]
+            return dijken
+        } catch {
+            print("Opvragen poi niet mogelijk!")
+        }
+        return []
+    }
+    
     //MARK: Info functies
     func getAlleInfoKantoren() -> [Info] {
         let request = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Info")

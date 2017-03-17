@@ -15,7 +15,6 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var swiBezienswaardigheden: UISwitch!
     @IBOutlet weak var swiInfoKantoren: UISwitch!
     @IBOutlet weak var swiOvernachten: UISwitch!
-    @IBOutlet weak var swiParking: UISwitch!
     @IBOutlet weak var swiHelling: UISwitch!
     @IBOutlet var zoekBalk: UISearchBar!
     
@@ -66,8 +65,12 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         if swiOvernachten.isOn {
             
         }
-        if swiParking.isOn {
-            
+        if swiHelling.isOn {
+            print(DAO.mainDAO.getDijkLijstMetZoek(zoekVoorwaarde: searchText).count)
+            for item in DAO.mainDAO.getDijkLijstMetZoek(zoekVoorwaarde: searchText)
+            {
+                zoekresultaten.append(item)
+            }
         }
         if swiHelling.isOn {
             
