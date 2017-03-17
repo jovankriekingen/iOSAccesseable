@@ -37,7 +37,7 @@ public class DAO {
         //parser.parseSanitair(context: persistentContainer.viewContext)
         //parser.parseTram(context: persistentContainer.viewContext)
         //parser.parseReca(context: persistentContainer.viewContext)
-        parser.parseVPP(context: persistentContainer.viewContext)
+        //parser.parseVPP(context: persistentContainer.viewContext)
         
         saveContext()
     }

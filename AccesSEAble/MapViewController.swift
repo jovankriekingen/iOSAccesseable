@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreData
 
-class BuurtViewController: UIViewController, MKMapViewDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var mapview: MKMapView!
     
@@ -141,7 +141,7 @@ class BuurtViewController: UIViewController, MKMapViewDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //let view = sender as! MKPinAnnotationView
         let detailScherm = segue.destination as! DetailViewController
-        detailScherm.object = sender as! NSManagedObject?
+        detailScherm.object = (sender as! NSManagedObject?)!
     }
     
     func checkLocationAuthorization(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {

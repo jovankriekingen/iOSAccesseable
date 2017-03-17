@@ -24,13 +24,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AccesSEAble/DetailViewController.swift"
-            timestampString = "511370567.017413"
+            timestampString = "511434583.049952"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
             landmarkName = "DetailViewController"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AccesSEAble.DetailViewController.lblNummer.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  moduleName = "AccesSEAble"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mobapp13/Documents/iOSAccesseable/AccesSEAble/DetailViewController.swift"
+                  timestampString = "511435064.129416"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AccesSEAble.DetailViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;AccesSEAble.DetailViewController&gt;"
+                  moduleName = "AccesSEAble"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mobapp13/Documents/iOSAccesseable/AccesSEAble/DetailViewController.swift"
+                  timestampString = "511435064.132256"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "191">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
