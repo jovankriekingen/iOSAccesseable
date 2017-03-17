@@ -29,7 +29,8 @@ public class DAO {
     private init() {
         let parser = parserMethodes()
         //parsen en laten opslaan binnen context, dit komt uit CoreData container
-        
+       if(!UserDefaults.standard.bool(forKey: "db_al_gevuld"))
+       {
         //parser.parseDijk(context: persistentContainer.viewContext)
         parser.parseInfo(context: persistentContainer.viewContext)
         //parser.parseLogies(context: persistentContainer.viewContext)
@@ -38,6 +39,9 @@ public class DAO {
         //parser.parseTram(context: persistentContainer.viewContext)
         //parser.parseReca(context: persistentContainer.viewContext)
         //parser.parseVPP(context: persistentContainer.viewContext)
+        
+        UserDefaults.standard.set(true, forKey: "db_al_gevuld")
+        }
         
         saveContext()
     }
@@ -110,7 +114,6 @@ public class DAO {
         
         do {
             let pointsOfInterest = try persistentContainer.viewContext.fetch(req) as! [POI]
-            print(pointsOfInterest)
             return pointsOfInterest
         } catch {
             print("Opvragen poi niet mogelijk!")
