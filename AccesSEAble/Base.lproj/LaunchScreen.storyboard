@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,6 +23,10 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="assets_accesseable/accesseable.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dr8-Wi-pLc">
                                 <rect key="frame" x="62" y="208" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="CeK-Sy-TJM"/>
+                                    <constraint firstAttribute="width" constant="250" id="bGU-Lg-HOJ"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -31,8 +34,6 @@
                             <accessibilityTraits key="traits" notEnabled="YES"/>
                         </accessibility>
                         <constraints>
-                            <constraint firstItem="Dr8-Wi-pLc" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="188" id="05A-dD-EUj"/>
-                            <constraint firstItem="Dr8-Wi-pLc" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="46" id="KnT-3z-rJM"/>
                             <constraint firstItem="Dr8-Wi-pLc" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="sez-2C-xlG"/>
                             <constraint firstItem="Dr8-Wi-pLc" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="uyj-Gc-XC1"/>
                         </constraints>
