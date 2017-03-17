@@ -122,7 +122,7 @@ public class DAO {
     }
     
     func getLogiesLijstMetZoek(zoekVoorwaarde: String) -> [Logies] {
-        let req = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Dijk")
+        let req = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Logies")
         let zoekenOpInputText = NSPredicate(format: "naam CONTAINS[c] %@", zoekVoorwaarde)
         req.predicate = zoekenOpInputText
         
