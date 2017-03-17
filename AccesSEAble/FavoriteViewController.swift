@@ -10,9 +10,11 @@ import UIKit
 import CoreData
 
 class FavoriteViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
     @IBOutlet weak var favorietenTabel: UITableView!
     var itemList:[NSManagedObject] = []
     var context:NSManagedObjectContext?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,24 +32,21 @@ class FavoriteViewController: UIViewController, UITableViewDataSource, UITableVi
         let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
         
         let recentItem = itemList[indexPath.row]
-        let naam = recentItem.value(forKey: "NAAM")
-        let straat = recentItem.value(forKey: "ADRES_STRAAT")
-        let straatNr = recentItem.value(forKey: "ADRES_NR")
-        let postCode = recentItem.value(forKey: "PNR")
-        let gemeente = recentItem.value(forKey: "GEMEENTE")
+        let naam = recentItem.value(forKey: "naam")
+        
         
         cell.textLabel?.text = naam as? String
-        cell.textLabel?.text = straat as? String
-        cell.textLabel?.text = straatNr as? String
-        cell.textLabel?.text = naam as? String
-        cell.textLabel?.text = postCode as? String
-        cell.textLabel?.text = gemeente as? String
+        
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemList.count
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
 
 }

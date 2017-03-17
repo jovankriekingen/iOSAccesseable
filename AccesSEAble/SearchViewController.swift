@@ -24,7 +24,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
@@ -33,12 +33,20 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func btnZoek() {
-        
+    
+    
+    //MARK: searchbar functies
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        performSegue(withIdentifier: "zoekResultatenSegue", sender: zoekresultaten)
+        }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let segueAankomst = segue.destination as! FavoriteViewController
+        segueAankomst.itemList = zoekresultaten
     }
     
-    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        zoekresultaten.removeAll()
         if swiReca.isOn {
             
         }
@@ -46,6 +54,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
             
         }
         if swiBezienswaardigheden.isOn {
+            print(DAO.mainDAO.getPOILijstMetZoek(zoekVoorwaarde: searchText).count)
             for item in DAO.mainDAO.getPOILijstMetZoek(zoekVoorwaarde: searchText)
             {
                 zoekresultaten.append(item)
@@ -63,7 +72,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         if swiHelling.isOn {
             
         }
-        print(zoekresultaten)
+        
     }
     
 
