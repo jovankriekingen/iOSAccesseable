@@ -295,7 +295,7 @@ public class parserMethodes {
                 rowReca.lat = Double(latStr!)!
                 let lonStr = recaMember.value(forKey: "LON") as? String
                 rowReca.lon = Double(lonStr!)!
-                
+                rowReca.url_picture_main = recaMember.value(forKey: "URL_PICTURE_MAIN") as? String
                 rowReca.id_westkans = recaMember.value(forKey: "ID_WESTKANS") as? String
                 rowReca.id_westtoer = recaMember.value(forKey: "ID_WESTTOER") as? String
                 rowReca.type = recaMember.value(forKey: "TYPE") as? String
@@ -329,7 +329,7 @@ public class parserMethodes {
                 rowSanitair.lat = Double(latStr!)!
                 let lonStr = sanitairMember.value(forKey: "LON") as? String
                 rowSanitair.lon = Double(lonStr!)!
-                
+                rowSanitair.url_picture_main = sanitairMember.value(forKey: "URL_PICTURE_MAIN") as? String
                 rowSanitair.id_westkans = sanitairMember.value(forKey: "ID_WESTKANS") as? String
                 rowSanitair.id_westtoer = sanitairMember.value(forKey: "ID_WESTTOER") as? String
                 rowSanitair.type = sanitairMember.value(forKey: "TYPE") as? String

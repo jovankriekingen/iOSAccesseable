@@ -33,11 +33,24 @@ class FavoriteViewController: UIViewController, UITableViewDataSource, UITableVi
         
         let recentItem = itemList[indexPath.row]
         let naam = recentItem.value(forKey: "naam")
-        
+        let gemeente = recentItem.value(forKey: "gemeente")
+        let url_picture_main = recentItem.value(forKey: "url_picture_main")
         
         cell.textLabel?.text = naam as? String
+        cell.detailTextLabel?.text = gemeente as? String
         
-        
+        do {
+            if url_picture_main != nil {
+                let url =  URL.init(string: url_picture_main as! String)
+                let data = try Data.init(contentsOf: url!)
+                let image = UIImage.init(data: data)
+                
+                cell.imageView?.image = image
+                
+            }
+        } catch  {
+            cell.imageView?.image = UIImage.init(named: "POI.png")
+        }
         return cell
     }
     
