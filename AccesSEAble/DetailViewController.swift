@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class DetailViewController: UIViewController {
     @IBOutlet weak var imgAfbeelding: UIImageView!
@@ -15,7 +16,18 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var lblNummer: UILabel!
     @IBOutlet weak var lblGemeente: UILabel!
     @IBOutlet weak var lblPostcode: UILabel!
-
+    
+    var object: NSManagedObject
+    
+    init(object:NSManagedObject) {
+    
+        self.object = object
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		09095BE21E78415400749993 /* ASea.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09095BE01E78415400749993 /* ASea.xcdatamodeld */; };
+		09EBEB6D1E7BD40D0058BDF6 /* MyAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EBEB6C1E7BD40D0058BDF6 /* MyAnnotation.swift */; };
 		31399EAE1E77DEB00044622C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31399EAD1E77DEB00044622C /* DetailViewController.swift */; };
 		31399EB01E77E4020044622C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31399EAF1E77E4020044622C /* ProfileViewController.swift */; };
 		31399EB21E7800300044622C /* RecentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31399EB11E7800300044622C /* RecentViewController.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		09095BE11E78415400749993 /* ASea.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ASea.xcdatamodel; sourceTree = "<group>"; };
+		09EBEB6C1E7BD40D0058BDF6 /* MyAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAnnotation.swift; sourceTree = "<group>"; };
 		31399EAD1E77DEB00044622C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		31399EAF1E77E4020044622C /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		31399EB11E7800300044622C /* RecentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				B160A0781E78F85C004787C4 /* Parsers.swift */,
 				B160A07A1E790FEA004787C4 /* DAO.swift */,
 				4966A0201E718E4500C15572 /* Products */,
+				09EBEB6C1E7BD40D0058BDF6 /* MyAnnotation.swift */,
 			);
 			path = AccesSEAble;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				31399EC31E7822F90044622C /* UpdateViewController.swift in Sources */,
 				B160A07B1E790FEA004787C4 /* DAO.swift in Sources */,
 				09095BE21E78415400749993 /* ASea.xcdatamodeld in Sources */,
+				09EBEB6D1E7BD40D0058BDF6 /* MyAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -86,12 +86,12 @@ class BuurtViewController: UIViewController, MKMapViewDelegate {
                 mapview.addAnnotation(annotation6)
             }
         }
-        if (items["Parking"])!{
-            for vpp in VPP{
-                let annotation7:MyAnnotation = MyAnnotation.init(vpp: vpp)
-                mapview.addAnnotation(annotation7)
-            }
-        }
+        //if (items["Parking"])!{
+        //    for vpp in VPP{
+        //        let annotation7:MyAnnotation = MyAnnotation.init(vpp: vpp)
+        //        mapview.addAnnotation(annotation7)
+        //    }
+        //}
     }
     
     
@@ -135,7 +135,7 @@ class BuurtViewController: UIViewController, MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         //segue aanmaken naar het detailLocatieScherm
         let pin = view.annotation as? MyAnnotation
-        performSegue(withIdentifier: "kaartNaarDetail", sender: pin.object)
+        performSegue(withIdentifier: "kaartNaarDetail", sender: pin?.object)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
