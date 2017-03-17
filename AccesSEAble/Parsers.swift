@@ -218,5 +218,216 @@ public class parserMethodes {
     } catch {
     }
   }
-    
+  
+  func parsePOI (context:NSManagedObjectContext)
+  {
+    let url = URL(string: "http://web10.weopendata.com/measurements/poi.json")
+    do {
+      
+      let poiData = try Data(contentsOf: url!)
+      let poiArray:NSArray = try JSONSerialization.jsonObject(with: poiData) as! NSArray
+      
+      for item in poiArray {
+        
+        let poiMember:NSDictionary = item as! NSDictionary
+        let rowPOI = POI(context: context)
+        
+        //strings omzetten waar nodig
+        let latStr = poiMember.value(forKey: "LAT") as? String
+        rowPOI.lat = Double(latStr!)!
+        let lonStr = poiMember.value(forKey: "LON") as? String
+        rowPOI.lon = Double(lonStr!)!
+        
+        //De entiteiten worden (normaal gezien) met deze blok ingevuld
+        rowPOI.id_westkans = poiMember.value(forKey: "ID_WESTKANS") as? String
+        rowPOI.id_westtoer = poiMember.value(forKey: "ID_WESTTOER") as? String
+        rowPOI.type = poiMember.value(forKey: "TYPE") as? String
+        rowPOI.subtype = poiMember.value(forKey: "SUBTYPE") as? String
+        rowPOI.naam = poiMember.value(forKey: "NAAM") as? String
+        rowPOI.adres_straat = poiMember.value(forKey: "ADRES_STRAAT") as? String
+        rowPOI.adres_nr = poiMember.value(forKey: "ADRES_NR") as? String
+        rowPOI.postcode = poiMember.value(forKey: "PNR") as? String
+        rowPOI.gemeente = poiMember.value(forKey: "GEMEENTE") as? String
+        rowPOI.deelgemeente = poiMember.value(forKey: "DEELGEMEENTE") as? String
+        rowPOI.regio = poiMember.value(forKey: "REGIO") as? String
+        rowPOI.tel = poiMember.value(forKey: "TEL") as? String
+        rowPOI.fax = poiMember.value(forKey: "FAX") as? String
+        rowPOI.web = poiMember.value(forKey: "WEB") as? String
+        rowPOI.mail = poiMember.value(forKey: "MAIL") as? String
+        rowPOI.openingsuren = poiMember.value(forKey: "OPENINGSUREN") as? String
+        rowPOI.score = poiMember.value(forKey: "SCORE") as? String
+        rowPOI.voorzieningen_blinden_doven = poiMember.value(forKey: "VOORZIENINGEN_BLINDEN_DOVEN") as? String
+        rowPOI.parking_score = poiMember.value(forKey: "PARKING_SCORE") as? String
+        rowPOI.parking_aanduiding_verkeersbord = poiMember.value(forKey: "PARKING_AANDUIDING_VERKEERSBORD") as? String
+        rowPOI.parking_aanduiding_omlijning = poiMember.value(forKey: "PARKING_AANDUIDING_OMLIJNING") as? String
+        rowPOI.parking_aanduiding_zichtbaar = poiMember.value(forKey: "PARKING_AANDUIDING_ZICHTBAAR") as? String
+        rowPOI.parking_aanduiding_score = poiMember.value(forKey: "PARKING_AANDUIDING_SCORE") as? String
+        rowPOI.parking_orientatie = poiMember.value(forKey: "PARKING_ORIENTATIE") as? String
+        rowPOI.parking_breedte_data = poiMember.value(forKey: "PARKING_BREEDTE_DATA") as? String
+        rowPOI.parking_lengte_data = poiMember.value(forKey: "PARKING_LENGTE_DATA") as? String
+        rowPOI.parking_breedte_tekst = poiMember.value(forKey: "PARKING_BREEDTE_TEKST") as? String
+        rowPOI.parking_lengte_tekst = poiMember.value(forKey: "PARKING_LENGTE_TEKST") as? String
+        rowPOI.parking_breedte_uitstapzone_tekst = poiMember.value(forKey: "PARKING_PARKING_BREEDTE_UITSTAPZONE_TEKST") as? String
+        rowPOI.parking_lengte_uitstapzone_tekst = poiMember.value(forKey: "PARKING_LENGTE_UITSTAPZONE_TEKST") as? String
+        rowPOI.parking_ondergrond_materiaal = poiMember.value(forKey: "PARKING_ONDERGROND_MATERIAAL") as? String
+      }
+    } catch  {
+      print("parse error POI")
+    }
+    print("poi gelukt")
+  }
+  
+  func parseReca (context:NSManagedObjectContext)
+  {
+    let url = URL(string: "http://web10.weopendata.com/measurements/reca.json")
+    do {
+      
+      let recaData = try Data(contentsOf: url!)
+      let recaArray:NSArray = try JSONSerialization.jsonObject(with: recaData) as! NSArray
+      
+      for item in recaArray {
+        
+        let recaMember:NSDictionary = item as! NSDictionary
+        let rowReca = Reca(context: context)
+        
+        //strings omzetten waar nodig
+        let latStr = recaMember.value(forKey: "LAT") as? String
+        rowReca.lat = Double(latStr!)!
+        let lonStr = recaMember.value(forKey: "LON") as? String
+        rowReca.lon = Double(lonStr!)!
+        
+        rowReca.id_westkans = recaMember.value(forKey: "ID_WESTKANS") as? String
+        rowReca.id_westtoer = recaMember.value(forKey: "ID_WESTTOER") as? String
+        rowReca.type = recaMember.value(forKey: "TYPE") as? String
+        rowReca.naam = recaMember.value(forKey: "NAAM") as? String
+        rowReca.adres_straat = recaMember.value(forKey: "ADRES_STRAAT") as? String
+        rowReca.adres_nr = recaMember.value(forKey: "ADRES_NR") as? String
+        //rowReca.lat = recaMember.value(forKey: "LAT") as! Double
+        //rowReca.lon = recaMember.value(forKey: "LON") as! Double
+        
+      }
+    } catch  {
+    }
+  }
+  
+  func parseSanitair (context:NSManagedObjectContext)
+  {
+    let url = URL(string: "http://web10.weopendata.com/measurements/sanitair.json")
+    do {
+      
+      let sanitairData = try Data(contentsOf: url!)
+      let sanitairArray:NSArray = try JSONSerialization.jsonObject(with: sanitairData) as! NSArray
+      
+      for item in sanitairArray {
+        
+        let sanitairMember:NSDictionary = item as! NSDictionary
+        let rowSanitair = Sanitair(context: context)
+        
+        //strings omzetten waar nodig
+        let latStr = sanitairMember.value(forKey: "LAT") as? String
+        rowSanitair.lat = Double(latStr!)!
+        let lonStr = sanitairMember.value(forKey: "LON") as? String
+        rowSanitair.lon = Double(lonStr!)!
+        
+        rowSanitair.id_westkans = sanitairMember.value(forKey: "ID_WESTKANS") as? String
+        rowSanitair.id_westtoer = sanitairMember.value(forKey: "ID_WESTTOER") as? String
+        rowSanitair.type = sanitairMember.value(forKey: "TYPE") as? String
+        rowSanitair.subtype = sanitairMember.value(forKey: "SUBTYPE") as? String
+        rowSanitair.naam = sanitairMember.value(forKey: "NAAM") as? String
+        rowSanitair.adres_straat = sanitairMember.value(forKey: "ADRES_STRAAT") as? String
+        //rowSanitair.lat = sanitairMember.value(forKey: "LAT") as! Double
+        //rowSanitair.lon = sanitairMember.value(forKey: "LON") as! Double
+        
+        print(rowSanitair)
+      }
+    } catch {
+    }
+  }
+  
+  
+  func parseTram (context:NSManagedObjectContext)
+  {
+    let url = URL(string: "http://web10.weopendata.com/measurements/tram.json")
+    do {
+      
+      let tramData = try Data(contentsOf: url!)
+      let tramArray:NSArray = try JSONSerialization.jsonObject(with: tramData) as! NSArray
+      
+      for item in tramArray {
+        
+        let tramMember:NSDictionary = item as! NSDictionary
+        let rowTram = Tram(context: context)
+        
+        //strings omzetten waar nodig
+        let latStr = tramMember.value(forKey: "LAT") as? String
+        rowTram.stop_lat = Double(latStr!)!
+        let lonStr = tramMember.value(forKey: "LON") as? String
+        rowTram.stop_lon = Double(lonStr!)!
+        
+        rowTram.stop_id = tramMember.value(forKey: "stop_id") as? String
+        rowTram.stop_code = tramMember.value(forKey: "stop_code") as? String
+        rowTram.naam = tramMember.value(forKey: "stop_name") as? String
+        rowTram.stop_desc = tramMember.value(forKey: "stop_desc") as? String
+        rowTram.zone_id = tramMember.value(forKey: "zone_id") as? String
+        rowTram.stop_url = tramMember.value(forKey: "stop_url") as? String
+        rowTram.location_type = tramMember.value(forKey: "location_type") as? String
+        rowTram.parent_station = tramMember.value(forKey: "parent_station") as? String
+        rowTram.weelchair_boarding = tramMember.value(forKey: "weelchair_boarding") as? String
+        //rowTram.stop_lat = tramMember.value(forKey: "stop_lat") as! Double
+        //rowTram.stop_lon = tramMember.value(forKey: "stop_lon") as! Double
+      }
+    } catch  {
+      print("parse error tram")
+    }
+    print("tram gelukt")
+  }
+  
+  
+  func parseVPP (context:NSManagedObjectContext)
+  {
+    let url = URL(string: "http://web10.weopendata.com/measurements/vpp.json")
+    do {
+      
+      let vppData = try Data(contentsOf: url!)
+      let vppArray:NSArray = try JSONSerialization.jsonObject(with: vppData) as! NSArray
+      
+      for item in vppArray {
+        
+        let vppMember:NSDictionary = item as! NSDictionary
+        let rowVPP = VPP(context: context)
+        
+        //strings omzetten waar nodig
+        let latStr = vppMember.value(forKey: "LAT") as? String
+        rowVPP.lat = Double(latStr!)!
+        let lonStr = vppMember.value(forKey: "LON") as? String
+        rowVPP.lon = Double(lonStr!)!
+        
+        rowVPP.id_westkans = vppMember.value(forKey: "ID_WESTKANS") as? String
+        rowVPP.adres_straat = vppMember.value(forKey: "ADRES_STRAAT") as? String
+        rowVPP.adres_nr = vppMember.value(forKey: "ADRES_NR") as? String
+        rowVPP.postcode = vppMember.value(forKey: "POSTCODE") as? String
+        rowVPP.gemeente = vppMember.value(forKey: "GEMEENTE") as? String
+        rowVPP.deelgemeente = vppMember.value(forKey: "DEELGEMEENTE") as? String
+        rowVPP.regio = vppMember.value(forKey: "REGIO") as? String
+        rowVPP.parking_aanduiding_verkeersbord = vppMember.value(forKey: "PARKING_AANDUIDING_VERKEERSBORD") as? String
+        rowVPP.parking_aanduiding_omlijning = vppMember.value(forKey: "PARKING_AANDUIDING_OMLIJNING") as? String
+        rowVPP.parking_aanduiding_score = vppMember.value(forKey: "PARKING_AANDUIDING_SCORE") as? String
+        rowVPP.parking_orientatie = vppMember.value(forKey: "PARKING_ORIENTATIE") as? String
+        rowVPP.parking_breedte_data = vppMember.value(forKey: "PARKING_BREEDTE_DATA") as? String
+        rowVPP.parking_lengte_data = vppMember.value(forKey: "PARKING_LENGTE_DATA") as? String
+        rowVPP.parking_ondergrond_materiaal = vppMember.value(forKey: "PARKING_ONDERGROND_MATERIAAL") as? String
+        rowVPP.parking_ondergrond_materiaal_score = vppMember.value(forKey: "PARKING_ONDERGROND_MATERIAAL_score") as? String
+        rowVPP.parking_breedte_tekst = vppMember.value(forKey: "PARKING_BREEDTE_TEKST") as? String
+        rowVPP.parking_lengte_tekst = vppMember.value(forKey: "PARKING_LENGTE_TEKST") as? String
+        rowVPP.parking_breedte_uitstapzone_tekst = vppMember.value(forKey: "PARKING_PARKING_BREEDTE_UITSTAPZONE_TEKST") as? String
+        rowVPP.parking_lengte_uitstapzone_tekst = vppMember.value(forKey: "PARKING_LENGTE_UITSTAPZONE_TEKST") as? String
+        rowVPP.url_picture_main = vppMember.value(forKey: "URL_PICTURE_MAIN") as? String
+        //rowVPP.lat = vppMember.value(forKey: "LAT") as! Double
+        //rowVPP.lon = vppMember.value(forKey: "LON") as! Double
+      }
+    } catch  {
+      print("parse error VPP")
+    }
+    print("vpp gelukt")
+  }
 }
