@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,10 +22,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="assets_accesseable/accesseable.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dr8-Wi-pLc">
-                                <rect key="frame" x="16" y="150" width="343" height="333"/>
+                                <rect key="frame" x="12.5" y="150" width="350" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="HIp-BM-hbR"/>
+                                    <constraint firstAttribute="height" constant="350" id="baF-xS-f6l"/>
+                                </constraints>
                             </imageView>
-                            <activityIndicatorView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="iHG-X8-Eke">
-                                <rect key="frame" x="177" y="564" width="20" height="20"/>
+                            <activityIndicatorView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="iHG-X8-Eke">
+                                <rect key="frame" x="177.5" y="581" width="20" height="3"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </activityIndicatorView>
                         </subviews>
@@ -39,9 +42,7 @@
                             <constraint firstItem="Dr8-Wi-pLc" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="5XF-gC-Mqv"/>
                             <constraint firstItem="Dr8-Wi-pLc" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="130" id="KIs-F4-5OI"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="iHG-X8-Eke" secondAttribute="bottom" constant="83" id="YG2-6k-jhg"/>
-                            <constraint firstItem="Dr8-Wi-pLc" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="hSp-1l-Qk2"/>
                             <constraint firstItem="iHG-X8-Eke" firstAttribute="top" secondItem="Dr8-Wi-pLc" secondAttribute="bottom" constant="81" id="l0W-Hf-Mkq"/>
-                            <constraint firstItem="iHG-X8-Eke" firstAttribute="centerX" secondItem="Dr8-Wi-pLc" secondAttribute="centerX" id="rqq-AG-GGY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3mV-c8-Xmp"/>
