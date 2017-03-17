@@ -21,28 +21,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="assets_accesseable/accesseable.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dr8-Wi-pLc">
-                                <rect key="frame" x="12.5" y="150" width="350" height="350"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="350" id="HIp-BM-hbR"/>
-                                    <constraint firstAttribute="height" constant="350" id="baF-xS-f6l"/>
-                                </constraints>
-                            </imageView>
                             <activityIndicatorView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="iHG-X8-Eke">
-                                <rect key="frame" x="177.5" y="581" width="20" height="3"/>
+                                <rect key="frame" x="178" y="564" width="20" height="20"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </activityIndicatorView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="assets_accesseable/accesseable.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dr8-Wi-pLc">
+                                <rect key="frame" x="62" y="208" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="4Bm-Za-Cvm"/>
+                                    <constraint firstAttribute="width" constant="250" id="64W-89-U6G"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <accessibility key="accessibilityConfiguration">
                             <accessibilityTraits key="traits" notEnabled="YES"/>
                         </accessibility>
                         <constraints>
-                            <constraint firstItem="iHG-X8-Eke" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="5Ei-38-bPr"/>
-                            <constraint firstItem="Dr8-Wi-pLc" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="5XF-gC-Mqv"/>
-                            <constraint firstItem="Dr8-Wi-pLc" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="130" id="KIs-F4-5OI"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="iHG-X8-Eke" secondAttribute="bottom" constant="83" id="YG2-6k-jhg"/>
-                            <constraint firstItem="iHG-X8-Eke" firstAttribute="top" secondItem="Dr8-Wi-pLc" secondAttribute="bottom" constant="81" id="l0W-Hf-Mkq"/>
+                            <constraint firstItem="iHG-X8-Eke" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="7NX-I1-gXV"/>
+                            <constraint firstItem="Dr8-Wi-pLc" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="KOf-8k-42x"/>
+                            <constraint firstItem="iHG-X8-Eke" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="240.5" id="TiG-r2-TKS"/>
+                            <constraint firstItem="Dr8-Wi-pLc" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="kn6-eY-i18"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3mV-c8-Xmp"/>
