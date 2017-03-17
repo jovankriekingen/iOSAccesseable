@@ -51,9 +51,7 @@ class LijstweergaveViewController: UIViewController, UITableViewDataSource, UITa
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return itemList.count
   }
-  
-  
-  
+    
   /*
    // MARK: - Navigation
    
@@ -63,5 +61,4 @@ class LijstweergaveViewController: UIViewController, UITableViewDataSource, UITa
    // Pass the selected object to the new view controller.
    }
    */
-  
-}
+  }

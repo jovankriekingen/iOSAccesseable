@@ -160,10 +160,10 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     //regio om op te focussen
     func createRegion()     {
-        //begin met middelpunt aan de kust
-        let center = CLLocationCoordinate2DMake(51.2220, 2.9288)
+        //begin met middelpunt West Vlaanderen
+        let center = CLLocationCoordinate2DMake(50.9922978,3.0376462)
         //spanweide: bepalen hoeveel inzoomen
-        let span = MKCoordinateSpan.init(latitudeDelta: 0.09, longitudeDelta: 0.09)
+        let span = MKCoordinateSpan.init(latitudeDelta: 1, longitudeDelta: 1)
         let region = MKCoordinateRegion.init(center: center, span: span)
         //aanspreken van middelpunt op kaart
         mapview.region = region
