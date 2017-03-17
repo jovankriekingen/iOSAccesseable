@@ -584,7 +584,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="GSD-bY-pR4" id="PXA-qU-PXD"/>
                         <outlet property="mapview" destination="GSD-bY-pR4" id="j0w-wp-3M6"/>
                     </connections>
                 </viewController>
@@ -685,7 +684,7 @@
         <!--RecentVC-->
         <scene sceneID="fEw-KJ-hkv">
             <objects>
-                <viewController title="Recent" id="VKh-ba-ycu" userLabel="RecentVC" customClass="RecentViewController" sceneMemberID="viewController">
+                <viewController title="Recent" id="VKh-ba-ycu" userLabel="RecentVC" customClass="LijstweergaveViewController" customModule="AccesSEAble" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="du5-4r-YuU"/>
                         <viewControllerLayoutGuide type="bottom" id="oNo-PD-21b"/>
@@ -711,9 +710,6 @@
                             <constraint firstAttribute="bottom" secondItem="ZmY-La-iB8" secondAttribute="bottom" constant="20" symbolic="YES" id="Wo1-go-Xle"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="recentTabel" destination="ZmY-La-iB8" id="He5-hY-9NK"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C0e-C1-vQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
