@@ -29,18 +29,18 @@ public class DAO {
     private init() {
         let parser = parserMethodes()
         //parsen en laten opslaan binnen context, dit komt uit CoreData container
-       if(!UserDefaults.standard.bool(forKey: "db_al_gevuld"))
-       {
-        //parser.parseDijk(context: persistentContainer.viewContext)
-        parser.parseInfo(context: persistentContainer.viewContext)
-        //parser.parseLogies(context: persistentContainer.viewContext)
-        parser.parsePOI(context: persistentContainer.viewContext)
-        //parser.parseSanitair(context: persistentContainer.viewContext)
-        //parser.parseTram(context: persistentContainer.viewContext)
-        //parser.parseReca(context: persistentContainer.viewContext)
-        //parser.parseVPP(context: persistentContainer.viewContext)
-        
-        UserDefaults.standard.set(true, forKey: "db_al_gevuld")
+        if(!UserDefaults.standard.bool(forKey: "db_al_gevuld"))
+        {
+            //parser.parseDijk(context: persistentContainer.viewContext)
+            parser.parseInfo(context: persistentContainer.viewContext)
+            //parser.parseLogies(context: persistentContainer.viewContext)
+            parser.parsePOI(context: persistentContainer.viewContext)
+            //parser.parseSanitair(context: persistentContainer.viewContext)
+            //parser.parseTram(context: persistentContainer.viewContext)
+            //parser.parseReca(context: persistentContainer.viewContext)
+            //parser.parseVPP(context: persistentContainer.viewContext)
+            
+            UserDefaults.standard.set(true, forKey: "db_al_gevuld")
         }
         
         saveContext()
