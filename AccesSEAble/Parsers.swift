@@ -11,149 +11,34 @@ import CoreData
 
 public class parserMethodes {
   
-  func parsePOI (context:NSManagedObjectContext)
+  func parseDijk (context:NSManagedObjectContext)
   {
-    let url = URL(string: "http://web10.weopendata.com/measurements/poi.json")
+    let url = URL(string: "http://web10.weopendata.com/measurements/dijk")
     do {
       
-      let poiData = try Data(contentsOf: url!)
-      let poiArray:NSArray = try JSONSerialization.jsonObject(with: poiData) as! NSArray
+      let dijkData = try Data(contentsOf: url!)
+      let dijkArray:NSArray = try JSONSerialization.jsonObject(with: dijkData) as! NSArray
       
-      for item in poiArray {
+      for item in dijkArray {
         
-        let poiMember:NSDictionary = item as! NSDictionary
-        let rowPOI = POI(context: context)
+        let dijkMember:NSDictionary = item as! NSDictionary
+        let rowDijk = Dijk(context: context)
         
-        //strings omzetten waar nodig
-        let latStr = poiMember.value(forKey: "LAT") as! String
-        rowPOI.lat = Double(latStr)!
-        let lonStr = poiMember.value(forKey: "LON") as! String
-        rowPOI.lon = Double(lonStr)!
+        // strings omzetten waar nodig
+        let latStr = dijkMember.value(forKey: "LAT") as? String
+        rowDijk.lat = Double(latStr!)!
+        let lonStr = dijkMember.value(forKey: "LON") as? String
+        rowDijk.lon = Double(lonStr!)!
         
-        //De entiteiten worden (normaal gezien) met deze blok ingevuld
-        rowPOI.id_westkans = poiMember.value(forKey: "ID_WESTKANS") as? String
-        rowPOI.id_westtoer = poiMember.value(forKey: "ID_WESTTOER") as? String
-        rowPOI.type = poiMember.value(forKey: "TYPE") as? String
-        rowPOI.subtype = poiMember.value(forKey: "SUBTYPE") as? String
-        rowPOI.naam = poiMember.value(forKey: "NAAM") as? String
-        rowPOI.adres_straat = poiMember.value(forKey: "ADRES_STRAAT") as? String
-        rowPOI.adres_nr = poiMember.value(forKey: "ADRES_NR") as? String
-        rowPOI.postcode = poiMember.value(forKey: "PNR") as? String
-        rowPOI.gemeente = poiMember.value(forKey: "GEMEENTE") as? String
-        rowPOI.deelgemeente = poiMember.value(forKey: "DEELGEMEENTE") as? String
-        rowPOI.regio = poiMember.value(forKey: "REGIO") as? String
-        rowPOI.tel = poiMember.value(forKey: "TEL") as? String
-        rowPOI.fax = poiMember.value(forKey: "FAX") as? String
-        rowPOI.web = poiMember.value(forKey: "WEB") as? String
-        rowPOI.mail = poiMember.value(forKey: "MAIL") as? String
-        rowPOI.openingsuren = poiMember.value(forKey: "OPENINGSUREN") as? String
-        rowPOI.score = poiMember.value(forKey: "SCORE") as? String
-        rowPOI.voorzieningen_blinden_doven = poiMember.value(forKey: "voorzieningen_blinden_doven") as? String
-        rowPOI.parking_score = poiMember.value(forKey: "PARKING_SCORE") as? String
-        rowPOI.parking_aanduiding_verkeersbord = poiMember.value(forKey: "PARKING_AANDUIDING_VERKEERSBORD") as? String
-        rowPOI.parking_aanduiding_omlijning = poiMember.value(forKey: "PARKING_AANDUIDING_OMLIJNING") as? String
-        rowPOI.parking_aanduiding_zichtbaar = poiMember.value(forKey: "PARKING_AANDUIDING_ZICHTBAAR") as? String
-        rowPOI.parking_aanduiding_score = poiMember.value(forKey: "PARKING_AANDUIDING_SCORE") as? String
-        rowPOI.parking_orientatie = poiMember.value(forKey: "PARKING_ORIENTATIE") as? String
-        rowPOI.parking_breedte_data = poiMember.value(forKey: "PARKING_BREEDTE_DATA") as? String
-        rowPOI.parking_lengte_data = poiMember.value(forKey: "PARKING_LENGTE_DATA") as? String
-        rowPOI.parking_breedte_tekst = poiMember.value(forKey: "PARKING_BREEDTE_TEKST") as? String
-        rowPOI.parking_lengte_tekst = poiMember.value(forKey: "PARKING_LENGTE_TEKST") as? String
-        rowPOI.parking_breedte_uitstapzone_tekst = poiMember.value(forKey: "PARKING_PARKING_BREEDTE_UITSTAPZONE_TEKST") as? String
-        rowPOI.parking_lengte_uitstapzone_tekst = poiMember.value(forKey: "PARKING_LENGTE_UITSTAPZONE_TEKST") as? String
-        rowPOI.parking_ondergrond_materiaal = poiMember.value(forKey: "PARKING_ONDERGROND_MATERIAAL") as? String
-        
-        
-        
+        rowDijk.id_westkans = dijkMember.value(forKey: "ID_WESTKANS") as? String
+        rowDijk.type = dijkMember.value(forKey: "TYPE") as? String
+        rowDijk.naam = dijkMember.value(forKey: "NAAM") as? String
+        rowDijk.adres_locatie = dijkMember.value(forKey: "ADRES_LOCATIE") as? String
+        rowDijk.postcode = dijkMember.value(forKey: "POSTCODE") as? String
+        rowDijk.lat = dijkMember.value(forKey: "LAT") as! Double
+        rowDijk.lon = dijkMember.value(forKey: "LON") as! Double
       }
-    } catch  {
-      print("parse error POI")
-    }
-  }
-  
-  
-  func parseVPP (context:NSManagedObjectContext)
-  {
-    
-    let url = URL(string: "http://web10.weopendata.com/measurements/vpp.json")
-    do {
-      
-      let vppData = try Data(contentsOf: url!)
-      let vppArray:NSArray = try JSONSerialization.jsonObject(with: vppData) as! NSArray
-      
-      for item in vppArray {
-        
-        let vppMember:NSDictionary = item as! NSDictionary
-        let rowVPP = VPP(context: context)
-        
-        //strings omzetten waar nodig
-        let latStr = vppMember.value(forKey: "LAT") as! String
-        rowVPP.lat = Double(latStr)!
-        let lonStr = vppMember.value(forKey: "LON") as! String
-        rowVPP.lon = Double(lonStr)!
-        
-        rowVPP.id_westkans = vppMember.value(forKey: "ID_WESTKANS") as? String
-        rowVPP.adres_straat = vppMember.value(forKey: "ADRES_STRAAT") as? String
-        rowVPP.adres_nr = vppMember.value(forKey: "ADRES_NR") as? String
-        rowVPP.postcode = vppMember.value(forKey: "POSTCODE") as? String
-        rowVPP.gemeente = vppMember.value(forKey: "GEMEENTE") as? String
-        rowVPP.deelgemeente = vppMember.value(forKey: "DEELGEMEENTE") as? String
-        rowVPP.regio = vppMember.value(forKey: "REGIO") as? String
-        rowVPP.parking_aanduiding_verkeersbord = vppMember.value(forKey: "PARKING_AANDUIDING_VERKEERSBORD") as? String
-        rowVPP.parking_aanduiding_omlijning = vppMember.value(forKey: "PARKING_AANDUIDING_OMLIJNING") as? String
-        rowVPP.parking_aanduiding_score = vppMember.value(forKey: "PARKING_AANDUIDING_SCORE") as? String
-        rowVPP.parking_orientatie = vppMember.value(forKey: "PARKING_ORIENTATIE") as? String
-        rowVPP.parking_breedte_data = vppMember.value(forKey: "PARKING_BREEDTE_DATA") as? String
-        rowVPP.parking_lengte_data = vppMember.value(forKey: "PARKING_LENGTE_DATA") as? String
-        rowVPP.parking_ondergrond_materiaal = vppMember.value(forKey: "PARKING_ONDERGROND_MATERIAAL") as? String
-        rowVPP.parking_ondergrond_materiaal_score = vppMember.value(forKey: "PARKING_ONDERGROND_MATERIAAL_score") as? String
-        rowVPP.parking_breedte_tekst = vppMember.value(forKey: "PARKING_BREEDTE_TEKST") as? String
-        rowVPP.parking_lengte_tekst = vppMember.value(forKey: "PARKING_LENGTE_TEKST") as? String
-        rowVPP.parking_breedte_uitstapzone_tekst = vppMember.value(forKey: "PARKING_PARKING_BREEDTE_UITSTAPZONE_TEKST") as? String
-        rowVPP.parking_lengte_uitstapzone_tekst = vppMember.value(forKey: "PARKING_LENGTE_UITSTAPZONE_TEKST") as? String
-        rowVPP.url_picture_main = vppMember.value(forKey: "URL_PICTURE_MAIN") as? String
-        
-      }
-    } catch  {
-      print("parse error VPP")
-    }
-  }
-  
-  
-  
-  func parseTram (context:NSManagedObjectContext)
-  {
-    
-    let url = URL(string: "http://web10.weopendata.com/measurements/tram.json")
-    do {
-      
-      let tramData = try Data(contentsOf: url!)
-      let tramArray:NSArray = try JSONSerialization.jsonObject(with: tramData) as! NSArray
-      
-      for item in tramArray {
-        
-        let tramMember:NSDictionary = item as! NSDictionary
-        let rowTram = Tram(context: context)
-        
-        //strings omzetten waar nodig
-        let latStr = tramMember.value(forKey: "LAT") as! String
-        rowTram.stop_lat = Double(latStr)!
-        let lonStr = tramMember.value(forKey: "LON") as! String
-        rowTram.stop_lon = Double(lonStr)!
-        
-        rowTram.stop_id = tramMember.value(forKey: "stop_id") as? String
-        rowTram.stop_code = tramMember.value(forKey: "stop_code") as? String
-        rowTram.naam = tramMember.value(forKey: "stop_name") as? String
-        rowTram.stop_desc = tramMember.value(forKey: "stop_desc") as? String
-        rowTram.zone_id = tramMember.value(forKey: "zone_id") as? String
-        rowTram.stop_url = tramMember.value(forKey: "stop_url") as? String
-        rowTram.location_type = tramMember.value(forKey: "location_type") as? String
-        rowTram.parent_station = tramMember.value(forKey: "parent_station") as? String
-        rowTram.weelchair_boarding = tramMember.value(forKey: "weelchair_boarding") as? String
-        print(tramMember)
-      }
-    } catch  {
-      print("parse error tram")
+    } catch {
     }
   }
   
@@ -171,10 +56,10 @@ public class parserMethodes {
         let rowInfo = Info(context: context)
         
         //strings omzetten waar nodig
-        let latStr = infoMember.value(forKey: "LAT") as! String
-        rowInfo.lat = Double(latStr)!
-        let lonStr = infoMember.value(forKey: "LON") as! String
-        rowInfo.lon = Double(lonStr)!
+        let latStr = infoMember.value(forKey: "LAT") as? String
+        rowInfo.lat = Double(latStr!)!
+        let lonStr = infoMember.value(forKey: "LON") as? String
+        rowInfo.lon = Double(lonStr!)!
         
         rowInfo.id_westkans = infoMember.value(forKey: "ID_WESTKANS") as? String
         rowInfo.id_westtoer = infoMember.value(forKey: "ID_WESTTOER") as? String
@@ -272,12 +157,14 @@ public class parserMethodes {
         rowInfo.url_picture_extra2 = infoMember.value(forKey: "URL_PICTURE_EXTRA2") as? String
         rowInfo.x = infoMember.value(forKey: "X") as? String
         rowInfo.y = infoMember.value(forKey: "Y") as? String
-        // rowInfo.lat = infoMember.value(forKey: "LAT") as? String
-        // rowInfo.lon = infoMember.value(forKey: "LON") as? String
+        //rowInfo.lat = infoMember.value(forKey: "LAT") as! Double
+        //rowInfo.lon = infoMember.value(forKey: "LON") as! Double
       }
     } catch {
     }
+    print("info gelukt")
   }
+  
   
   
   func parseLogies (context:NSManagedObjectContext)
@@ -294,10 +181,10 @@ public class parserMethodes {
         let rowLogies = Logies(context: context)
         
         //strings omzetten waar nodig
-        let latStr = logiesMember.value(forKey: "LAT") as! String
-        rowLogies.lat = Double(latStr)!
-        let lonStr = logiesMember.value(forKey: "LON") as! String
-        rowLogies.lon = Double(lonStr)!
+        let latStr = logiesMember.value(forKey: "LAT") as? String
+        rowLogies.lat = Double(latStr!)!
+        let lonStr = logiesMember.value(forKey: "LON") as? String
+        rowLogies.lon = Double(lonStr!)!
         
         rowLogies.id_westkans = logiesMember.value(forKey: "ID_WESTKANS") as? String
         rowLogies.id_westtoer = logiesMember.value(forKey: "ID_WESTTOER") as? String
@@ -324,12 +211,12 @@ public class parserMethodes {
         rowLogies.url_picture_extra2 = logiesMember.value(forKey: "URL_PICTURE_EXTRA2") as? String
         rowLogies.x = logiesMember.value(forKey: "X") as? String
         rowLogies.y = logiesMember.value(forKey: "Y") as? String
-              }
+        //rowLogies.lat = logiesMember.value(forKey: "LAT") as! Double
+        //rowLogies.lon = logiesMember.value(forKey: "LON") as! Double
+        
+      }
     } catch {
     }
   }
     
 }
-
-
-

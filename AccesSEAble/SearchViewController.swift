@@ -21,14 +21,6 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     
     var zoekresultaten = [NSManagedObject]()
     
-    func toetsenbord() {
-        if zoekBalk.isFocused {
-            view.endEditing(false)
-        } else {
-            view.endEditing(true)
-        }
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +34,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     }
     
     @IBAction func btnZoek() {
-   
+        
     }
     
     
@@ -71,6 +63,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         if swiHelling.isOn {
             
         }
+        print(zoekresultaten)
     }
     
 

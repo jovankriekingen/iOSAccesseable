@@ -28,9 +28,15 @@ public class DAO {
     
     private init() {
         let parser = parserMethodes()
-        
         //parsen en laten opslaan binnen context, dit komt uit CoreData container
+        
+        //parser.parseDijk(context: persistentContainer.viewContext)
+        parser.parseInfo(context: persistentContainer.viewContext)
+        //parser.parseLogies(context: persistentContainer.viewContext)
         parser.parsePOI(context: persistentContainer.viewContext)
+        //parser.parseSanitair(context: persistentContainer.viewContext)
+        //parser.parseTram(context: persistentContainer.viewContext)
+        //parser.parseReca(context: persistentContainer.viewContext)
         parser.parseVPP(context: persistentContainer.viewContext)
         
         saveContext()
@@ -66,6 +72,7 @@ public class DAO {
         return []
     }
     
+    
     //MARK: Logie functies
     func getAlleLogies() -> [Logies] {
         let request = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Logies")
@@ -85,6 +92,7 @@ public class DAO {
     func getAllePOI() -> [POI] {
         let request = NSFetchRequest<NSFetchRequestResult>.init(entityName: "POI")
         
+        
         do {
             let pointsOfInterest = try persistentContainer.viewContext.fetch(request) as! [POI]
             
@@ -92,18 +100,17 @@ public class DAO {
         } catch {
             print("Opvragen poi mislukt!")
         }
-        
-        return []
+        return[]
     }
     
     func getPOILijstMetZoek(zoekVoorwaarde: String) -> [POI] {
         let req = NSFetchRequest<NSFetchRequestResult>.init(entityName: "POI")
-        //req.naamIsZoek = NSPredicate(format: "naam contains[c] %@", zoekVoorwaarde)
         let zoekenOpInputText = NSPredicate(format: "naam CONTAINS[c] %@", zoekVoorwaarde)
         req.predicate = zoekenOpInputText
         
         do {
             let pointsOfInterest = try persistentContainer.viewContext.fetch(req) as! [POI]
+            print(pointsOfInterest)
             return pointsOfInterest
         } catch {
             print("Opvragen poi niet mogelijk!")
@@ -167,13 +174,8 @@ public class DAO {
         } catch {
             print("Opvragen vpp mislukt!")
         }
-        
         return []
     }
-    
-    
-    
-    
     
     func saveContext () {
         let context = persistentContainer.viewContext
@@ -187,3 +189,4 @@ public class DAO {
         }
     }
 }
+
